@@ -9,7 +9,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 
-DATABASE_URL = process.env.DATABASE_URL === undefined ? './GARFIELD-6.0.db' : process.env.DATABASE_URL;
+DATABASE_URL = process.env.DATABASE_URL === undefined ? './Aurora.db' : process.env.DATABASE_URL;
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
     ANTILINKMSG: process.env.ANTILINK_MESSAGE === undefined ? 'default' : process.env.ANTILINK_MESSAGE,
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     PROXY: process.env.PROXY === undefined ? 'false' : process.env.PROXY,
-    GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png' : process.env.GAN_IMAGE,
+    GANSTYLE: process.env.WELCOME_IMAGE === undefined ? 'https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png' : process.env.WELCOME_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'EN' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
@@ -46,8 +46,8 @@ module.exports = {
         APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME
     },
     DATABASE_URL: DATABASE_URL,
-    DATABASE: DATABASE_URL === './GARFIELD-6.0.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
-    RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? false : process.env.REMOVE_BG_API_KEY,
+    DATABASE: DATABASE_URL === './Aurora.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
+    RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? 'KuZztPhpu3Ki4w4A7cksCNe6' : process.env.REMOVE_BG_API_KEY,
     DEEPAI: process.env.DEEPAI_API_KEY === undefined ? false : process.env.DEEPAI_API_KEY,
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
