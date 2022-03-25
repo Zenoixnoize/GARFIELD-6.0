@@ -1,0 +1,80 @@
+{
+    "name": "GARFIELD",
+    "description": "GARFIELD LATEST VERSION BY NOIZEPROJECTS.",
+    "logo": "https://i.ibb.co/yYJy1bM/logo.png",
+    "keywords": ["whatsapp", "userbot", "Garfield", "NOIZE", "bot", "api", "ZENOI", "Tharindu", "ai-bot", "Zenoixnoize", "ZENOI", "wabot noize", "wp bot"],
+    "repository": "https://github.com/Zenoixnoize/GARFIELD-6.0",
+    "website":   "https://t.me/ipandaproject",
+    "success_url": "https://t.me/ipandaproject",
+    "stack": "container",
+    "env": {
+        "GARFIELD_SESSION": {
+            "description": "Enter Code You Reserved GARFIELD QR Linking.",
+            "required": true
+        },
+        "LANGUAGE": {
+            "description": "Do not change",
+            "required": true,
+            "value": "EN"
+        },
+        "PROXY": {
+            "description": "Do not change",
+            "required": false,
+            "value": "false"
+        },
+        "ANTI_LINK": {
+            "description": "X-nodes Link blocking system by NOIZE (Do not change) .",
+            "required": true,
+            "value": "false"
+        },
+        "AUTO_BIO": {
+            "description": "Do not change",
+            "required": true,
+            "value": "false"
+        },
+        "HANDLERS": {
+            "description": "Do not change.",
+            "required": true,
+            "value": "^[.!;]"
+        },
+        "HEROKU": {
+            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Herokuda API Keyiniz. Heroku API Key. ===> https://t.me/herokuapikeyscraper",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Re-enter the app name above ",
+            "required": true
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "Enter the API code here only if you need it Link - https://remove.bg",
+            "value": "false",
+            "required": false
+        },
+        "ALIVE_MESSAGE": {
+            "description": "Enter anything you want here ",
+            "required": false,
+            "value": "default"
+        },
+        "WELCOME_IMAGE": {
+            "description": "Enter link welcome Image",
+            "required": true,
+            "value": "https://i.hizliresim.com/loUtAb.jpg"
+        },
+        "NO_ONLINE": {
+            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
