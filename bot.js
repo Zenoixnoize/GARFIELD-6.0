@@ -66,7 +66,7 @@ async function Aurora () {
     conn.version = [3,2147,14];
     const Session = new StringSession();
     
-    conn.browserDescription = ["X-nodes Server by NOIZE(Secured)"]
+    conn.browserDescription = ["X-nodes Server(Secured)","ZENOI",'6.0.0']
 
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
