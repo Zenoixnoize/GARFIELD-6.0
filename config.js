@@ -49,7 +49,7 @@ module.exports = {
     DEBUG: DEBUG,
     WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
     WORKTYPE: "public",
-    LANG: "AZ",
+    LANG: "EN",
     GANSTYLE: "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png",
     HANDLERS: "^[.!/;]",
     RBG_API_KEY: "KuZztPhpu3Ki4w4A7cksCNe6",
