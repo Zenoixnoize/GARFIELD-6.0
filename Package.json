@@ -1,7 +1,7 @@
 {
   "name": "GARFIELDLLC-BOT",
   "version": "V 6.0.0",
-  "description": ".",
+  "description": "GARFIELD BOT BY NOIZE",
   "main": "./GARFIELD-6.0/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
@@ -11,11 +11,11 @@
     "url": "git+https://github.com/Zenoixnoize/GARFIELD-6.0.git"
   },
   "keywords": [
-    "whatsapp",
-    "bot",
-    "ai",
-    "T-REX",
-    "T-REX WA"
+    "WHATSAPP",
+    "BOT",
+    "GARFIELD-BOT",
+    "NOIZE",
+    "ZENOI"
   ],
   "author": "NOIZE",
   "developer": "@ZENOI / @NOIZE",
