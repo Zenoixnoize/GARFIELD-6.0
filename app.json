@@ -29,11 +29,6 @@
             "description": "Enter You name",
             "required": false,
             "value": "User 97626"
-        },
-        "LANGUAGE": {
-            "description": "Do not change",
-            "required": true,
-            "value": "EN"
         }
     },
     "addons": [{
