@@ -108,8 +108,8 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             chalk.blueBright.italic('🛰️️ Connecting to Garfield Server...')
         );
 
-        var X-nodes = await plugindb.PluginDB.findAll();
-        X-nodes.map(async (plugin) => {
+        var plugins = await plugindb.PluginDB.findAll();
+        plugins.map(async (plugin) => {
             if (!fs.existsSync('./X-nodes/' + plugin.dataValues.name + '.js')) {
                 console.log(plugin.dataValues.name);
                 var response = await got(plugin.dataValues.url);
