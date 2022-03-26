@@ -6,9 +6,8 @@ if (fs.existsSync('./language/' + Config.LANG + '.json')) {
     console.log(
         chalk.green.bold('Loading ' + Config.LANG + ' language...')
     );
-
-    var json = JSON.parse(fs.readFileSync('./language/' + Config.LANG + '.json'));
-} else {
+}
+{
     console.log(
         chalk.red.bold('You entered an invalid language. English language was chosen.')
     );
