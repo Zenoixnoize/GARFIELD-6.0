@@ -1,7 +1,7 @@
 {
     "name": "GARFIELD BOT BY NOIZE v6.0",
-    "description": "Garfield whatsapp bot by NOIZE DEVELOPERS CODED BY THARINDU LIYANAGE (ZENOI).",
-    "logo": "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png",
+    "description": "GARFIELD WHATSAPP BOT FROM NOIZE DEVELOPERS CODED BY THARINDU LIYANAGE (ZENOI).",
+    "logo": "https://i.ibb.co/G2bpd2B/Pics-Art-22-03-26-14-51-06-509.png",
     "keywords": ["whatsapp", "userbot", "Secured", "speed", "bot", "best bot", "ai", "asena", "ai-bot", "NOIZE", "wabot", "wabot Fast", "ZENOI"],
     "repository": "https://github.com/Zenoixnoize/GARFIELD-6.0",
     "website":   "https://garfieldbot.yolasite.com/",
@@ -13,7 +13,7 @@
             "required": true
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "description": "Do not change.",
             "required": true,
             "value": "true"
         },
