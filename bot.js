@@ -8,11 +8,11 @@ const config = require('./config');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./Aurora/');
 const { DataTypes } = require('sequelize');
-const { getMessage } = require("./plugins/sql/greetings");
+const { getMessage } = require("./X-nodes/sql/greetings");
 const axios = require('axios');
 const got = require('got');
 
-// ════════════════════SQL CODED BY THARINDU LIYANAGE
+//CODED BY THARINDU LIYANAGE
 const AuroraDB = config.DATABASE.define('GARFIELD-6.0', {
     info: {
       type: DataTypes.STRING,
@@ -24,13 +24,13 @@ const AuroraDB = config.DATABASE.define('GARFIELD-6.0', {
     }
 });
 
-fs.readdirSync('./plugins/sql/').forEach(plugin => {
+fs.readdirSync('./X-nodes/sql/').forEach(plugin => {
     if(path.extname(plugin).toLowerCase() == '.js') {
-        require('./plugins/sql/' + plugin);
+        require('./X-nodes/sql/' + plugin);
     }
 });
 
-const plugindb = require('./plugins/sql/plugin');
+const plugindb = require('./X-nodes/sql/plugin');
 var OWN = { ff: '94711502119' }
 String.prototype.format = function () {
     var i = 0, args = arguments;
@@ -61,12 +61,12 @@ async function Aurora () {
         }
     });
     
-// ════════════════════CODED BY THARINDU LIYANAGE
+// CODED BY THARINDU LIYANAGE
     const conn = new WAConnection();
     conn.version = [3,2147,14];
     const Session = new StringSession();
     
-    conn.browserDescription = ["GARFIELD", "ZENOI", '6.0.0']
+    conn.browserDescription = ["GARFIELD BOT BY NOIZE(SECURED)", "ZENOI", '6.0.0']
 
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -108,14 +108,14 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             chalk.blueBright.italic('🛰️️ Connecting to Garfield Server...')
         );
 
-        var plugins = await plugindb.PluginDB.findAll();
-        plugins.map(async (plugin) => {
-            if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
+        var X-nodes = await plugindb.PluginDB.findAll();
+        X-nodes.map(async (plugin) => {
+            if (!fs.existsSync('./X-nodes/' + plugin.dataValues.name + '.js')) {
                 console.log(plugin.dataValues.name);
                 var response = await got(plugin.dataValues.url);
                 if (response.statusCode == 200) {
-                    fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
-                    require('./plugins/' + plugin.dataValues.name + '.js');
+                    fs.writeFileSync('./X-nodes/' + plugin.dataValues.name + '.js', response.body);
+                    require('./X-nodes/' + plugin.dataValues.name + '.js');
                 }     
             }
         });
@@ -124,14 +124,14 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             chalk.blueBright.italic('📡  Installing X-nodes..')
         );
 
-        fs.readdirSync('./plugins').forEach(plugin => {
+        fs.readdirSync('./X-nodes').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
-                require('./plugins/' + plugin);
+                require('./X-nodes/' + plugin);
             }
         });
-// ════════════════════PLUGGINS SUCCESS CODED BY THARINDU LIYANAGE
+// PLUGGINS SUCCESS CODED BY THARINDU LIYANAGE
         console.log(
-            chalk.green.bold('Successfully connected X-nodes server 🛰️ ')
+            chalk.green.bold('Successfully connected X-nodes server ☁️')
        );
         
         console.log(
@@ -149,7 +149,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
         }
      });
     
-// ════════════════════LOGIN MESSAGE CODED BY THARINDU LIYANAGE
+// LOGIN MESSAGE CODED BY THARINDU LIYANAGE
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
             if (conn.user.jid.startsWith('90')) { 
@@ -280,7 +280,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             }
         }
     }, 7890);
-// ════════════════════AUTO BIO◽◽◽◽◽    
+// AUTO BIO◽◽◽◽◽    
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
@@ -309,7 +309,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             }
         }
     }, 50000);
- // ════════════════════ANNOUNCEMENT CODED BY THARINDU LIYANAGE
+ // ANNOUNCEMENT CODED BY THARINDU LIYANAGE
     conn.on('chat-update', async m => {
         if (!m.hasNewMessage) return;
         if (!m.messages && !m.count) return;
@@ -319,7 +319,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
-// ════════════════════NO ONLINE CODED BY THARINDU LIYANAGE
+// NO ONLINE CODED BY THARINDU LIYANAGE
 
         if (config.GANSTYLE == 'pp' || config.GANSTYLE == 'Pp' || config.GANSTYLE == 'PP' || config.GANSTYLE == 'pP' ) {
             if (msg.messageStubType === 32 || msg.messageStubType === 28) {
@@ -364,7 +364,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
                     return;
                 }
              }
-// ════════════════════WELCOME & GOODBYE
+// WELCOME & GOODBYE
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -387,7 +387,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
                     && msg.message && msg.message.videoMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
                         command.pattern.test(text_msg))))) {
-// ════════════════════VIDEO & IMAGE
+// VIDEO & IMAGE
                     let sendMsg = false;
                     var chat = conn.chats.get(msg.key.remoteJid)
                         
@@ -406,7 +406,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-// ════════════════════SUDO. CODED BY THARINDU LIYANAGE
+// SUDO. CODED BY THARINDU LIYANAGE
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
@@ -446,12 +446,12 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             }
         )
     });
- // ════════════════════NOIZE DEVELOPERS 
-    try {
+ // NOIZE DEVELOPERS 
+try {
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Refreshing your old version string...'))
+            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
@@ -463,3 +463,5 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
 }
 
 Aurora();
+
+
