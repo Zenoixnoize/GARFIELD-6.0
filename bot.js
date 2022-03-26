@@ -66,7 +66,7 @@ async function Aurora () {
     conn.version = [3,2147,14];
     const Session = new StringSession();
     
-    conn.browserDescription = ["X-nodes Server(Secured)","ZENOI",'6.0.0']
+    conn.browserDescription = ["GARFIELD BOT BY NOIZE(SECURED)", "ZENOI", '6.0.0']
 
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -110,12 +110,12 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
 
         var plugins = await plugindb.PluginDB.findAll();
         plugins.map(async (plugin) => {
-            if (!fs.existsSync('./X-nodes/' + plugin.dataValues.name + '.js')) {
+            if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
                 console.log(plugin.dataValues.name);
                 var response = await got(plugin.dataValues.url);
                 if (response.statusCode == 200) {
-                    fs.writeFileSync('./X-nodes/' + plugin.dataValues.name + '.js', response.body);
-                    require('./X-nodes/' + plugin.dataValues.name + '.js');
+                    fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
+                    require('./plugins/' + plugin.dataValues.name + '.js');
                 }     
             }
         });
@@ -126,7 +126,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
 
         fs.readdirSync('./X-nodes').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
-                require('./X-nodes/' + plugin);
+                require('./plugins/' + plugin);
             }
         });
 // PLUGGINS SUCCESS CODED BY THARINDU LIYANAGE
