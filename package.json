@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Zenoixnoize/THEESIX9#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "^4.0.1",
+    "@adiwajshing/baileys": "^3.5.2",
     "@lh2020/speedtest-net": "^2.1.1",
     "textmaker-thiccy": "^1.2.5",
     "browser-id3-writer": "^4.4.0",
