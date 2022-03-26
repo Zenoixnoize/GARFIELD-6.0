@@ -53,6 +53,7 @@ module.exports = {
     GANSTYLE: "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png",
     HANDLERS: "^[.!/;]",
     RBG_API_KEY: "KuZztPhpu3Ki4w4A7cksCNe6",
+    Auroraxc : "OFF",
     PROJECT_SIX: "NOIZE PROJECTS",
     TELEGRAM: "https://t.me/ipandx",
     ZXVH: "94711502119,0",
