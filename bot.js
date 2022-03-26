@@ -1,4 +1,5 @@
 /*COPYRIGHT (C) 2022 CODED BY NOIZE */
+//(c) bot.js by FARHAN AND  AFNA MUCH LOVE BROTHERS
 
 const os = require("os");
 const fs = require("fs");
@@ -104,7 +105,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait.')}`);
         );
 
         console.log(
-            chalk.blueBright.italic(' 🛰️️ Connecting to GARFIELD Server...')
+            chalk.blueBright.italic(' 🛰️️ Connecting to Garfield Server...')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -130,7 +131,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.green.bold('GARFIELD working ' + config.WORKTYPE + ' now 🐼'));
+            chalk.green.bold('Garfield working ' + config.WORKTYPE + ' now 🐼'));
             await conn.sendMessage(conn.user.jid, "*GARFIELD started successfully 💌*", MessageType.text);
             await conn.sendMessage(conn.user.jid, "*𝗘𝗻𝗷𝗼𝘆 𝗻𝗼𝘄 💌*  \n  *GARFIELD   v6.0* \n *𝗗𝗲𝗽𝗹𝗼𝘆𝗲𝗿 𝗜𝗻𝘀𝘁𝗿𝘂𝗰𝘁𝗶𝗼𝗻𝘀 🐼* \n🅾️ You must place a dot(.) at the beginning of the command \n🅾️ The letters in the command should be lowercase \n *🅾️ This will stop after about 22 days. That's because you are in the heroku free version. Or you have to pay but do not. By remake you can easily deploy and use this* \n\n\n\n*𝗛𝗼𝘄 𝘁𝗼 𝗴𝗲𝘁 𝗺𝗲𝗻𝘂 💬*\n🐼  .𝗺𝗲𝗻𝘂  \n🅾️ You can easily and quickly create this for anyone without any programming knowledge\n\n\n\n *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 💬* \nℹ️ GARFIELD-6.0 Bot is a free open source program  \nℹ️ This does nothing for your privacy \nℹ️ Developers do not get any benefit from this. Only self-satisfaction is obtained \nℹ️ This is updated and developed day by day \nℹ️ You can also get this from the telegram - https://t.me/ipandx \nℹ️ You cant get obscene stuff out of this \n\n*𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙈𝙀𝙉𝙏* \n\n *ℹ️ Follow Us* \n https://www.facebook.com/garfieldbots/    \n\n" , MessageType.text);
     });
@@ -144,56 +145,56 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait.')}`);
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
-	    var _0x109e6c=_0x1953;(function(_0x5df745,_0x36a093){var _0x1a770a=_0x1953,_0xbbf86f=_0x5df745();while(!![]){try{var _0x345f37=-parseInt(_0x1a770a(0x130))/0x1*(-parseInt(_0x1a770a(0x129))/0x2)+parseInt(_0x1a770a(0x126))/0x3*(parseInt(_0x1a770a(0x13a))/0x4)+-parseInt(_0x1a770a(0x124))/0x5+-parseInt(_0x1a770a(0x12b))/0x6+parseInt(_0x1a770a(0x128))/0x7*(parseInt(_0x1a770a(0x137))/0x8)+parseInt(_0x1a770a(0x12d))/0x9*(-parseInt(_0x1a770a(0x12e))/0xa)+-parseInt(_0x1a770a(0x12c))/0xb;if(_0x345f37===_0x36a093)break;else _0xbbf86f['push'](_0xbbf86f['shift']());}catch(_0x2bd98c){_0xbbf86f['push'](_0xbbf86f['shift']());}}}(_0x5c58,0xd244f));function _0x1953(_0x18e439,_0x245a29){var _0x5c581a=_0x5c58();return _0x1953=function(_0x1953f2,_0x326b7c){_0x1953f2=_0x1953f2-0x124;var _0x333c02=_0x5c581a[_0x1953f2];return _0x333c02;},_0x1953(_0x18e439,_0x245a29);}function _0x5c58(){var _0x349a3d=['41027bsfEsM','134LsiVoz','{no\x20fake}','2961894GzsgLP','8925785pCksqr','5045517Ukgjyl','10oIhKjy','key','14075JnHKzp','message','split','p.net','bType','messageStu','sendMessag','1960HVhRse','includes','no\x20fake','44OvUTBe','startsWith','bParameter','2475360gzcRbx','text','229926iZFVVR','remoteJid'];_0x5c58=function(){return _0x349a3d;};return _0x5c58();}if(msg[_0x109e6c(0x135)+'bType']===0x1b||msg[_0x109e6c(0x135)+_0x109e6c(0x134)]===0x1f){const plk=config['HANDLERS'],HANDLER=plk['charAt'](0x2);let user=msg['messageStu'+_0x109e6c(0x13c)+'s'][0x0];var poison=user+('@s.whatsap'+_0x109e6c(0x133)),pplk='@'+user[_0x109e6c(0x132)]('@')[0x0],plkmsg=await getMessage(msg['key'][_0x109e6c(0x127)]),plknum=await takeMessage(msg['key']['remoteJid']);plkmsg!==![]&&(plkmsg[_0x109e6c(0x131)][_0x109e6c(0x138)](_0x109e6c(0x12a))&&(plknum==![]&&(!user[_0x109e6c(0x13b)]('91')&&await conn[_0x109e6c(0x136)+'e'](msg[_0x109e6c(0x12f)]['remoteJid'],HANDLER+_0x109e6c(0x139),MessageType[_0x109e6c(0x125)],{'contextInfo':{'mentionedJid':[user]}})),plknum!==![]&&!user['startsWith'](plknum)&&await conn[_0x109e6c(0x136)+'e'](msg[_0x109e6c(0x12f)][_0x109e6c(0x127)],HANDLER+_0x109e6c(0x139),MessageType[_0x109e6c(0x125)],{'contextInfo':{'mentionedJid':[user]}})));}
+	    var _0x109e6c=_0x1953;(function(_0x5df745,_0x36a093){var _0x1a770a=_0x1953,_0xbbf86f=_0x5df745();while(!![]){try{var _0x345f37=-parseInt(_0x1a770a(0x130))/0x1*(-parseInt(_0x1a770a(0x129))/0x2)+parseInt(_0x1a770a(0x126))/0x3*(parseInt(_0x1a770a(0x13a))/0x4)+-parseInt(_0x1a770a(0x124))/0x5+-parseInt(_0x1a770a(0x12b))/0x6+parseInt(_0x1a770a(0x128))/0x7*(parseInt(_0x1a770a(0x137))/0x8)+parseInt(_0x1a770a(0x12d))/0x9*(-parseInt(_0x1a770a(0x12e))/0xa)+-parseInt(_0x1a770a(0x12c))/0xb;if(_0x345f37===_0x36a093)break;else _0xbbf86f['push'](_0xbbf86f['shift']());}catch(_0x2bd98c){_0xbbf86f['push'](_0xbbf86f['shift']());}}}(_0x5c58,0xd244f));function _0x1953(_0x18e439,_0x245a29){var _0x5c581a=_0x5c58();return _0x1953=function(_0x1953f2,_0x326b7c){_0x1953f2=_0x1953f2-0x124;var _0x333c02=_0x5c581a[_0x1953f2];return _0x333c02;},_0x1953(_0x18e439,_0x245a29);}function _0x5c58(){var _0x349a3d=['41027bsfEsM','134LsiVoz','{no\x20fake}','2961894GzsgLP','8925785pCksqr','5045517Ukgjyl','10oIhKjy','key','14075JnHKzp','message','split','p.net','bType','messageStu','sendMessag','1960HVhRse','includes','no\x20fake','44OvUTBe','startsWith','bParameter','2475360gzcRbx','text','229926iZFVVR','remoteJid'];_0x5c58=function(){return _0x349a3d;};return _0x5c58();}if(msg[_0x109e6c(0x135)+'bType']===0x1b||msg[_0x109e6c(0x135)+_0x109e6c(0x134)]===0x1f){const garf=config['HANDLERS'],HANDLER=garf['charAt'](0x2);let user=msg['messageStu'+_0x109e6c(0x13c)+'s'][0x0];var poison=user+('@s.whatsap'+_0x109e6c(0x133)),pgarf='@'+user[_0x109e6c(0x132)]('@')[0x0],garfsimsg=await getMessage(msg['key'][_0x109e6c(0x127)]),garfnum=await takeMessage(msg['key']['remoteJid']);garfsimsg!==![]&&(garfsimsg[_0x109e6c(0x131)][_0x109e6c(0x138)](_0x109e6c(0x12a))&&(garfnum==![]&&(!user[_0x109e6c(0x13b)]('91')&&await conn[_0x109e6c(0x136)+'e'](msg[_0x109e6c(0x12f)]['remoteJid'],HANDLER+_0x109e6c(0x139),MessageType[_0x109e6c(0x125)],{'contextInfo':{'mentionedJid':[user]}})),garfnum!==![]&&!user['startsWith'](garfnum)&&await conn[_0x109e6c(0x136)+'e'](msg[_0x109e6c(0x12f)][_0x109e6c(0x127)],HANDLER+_0x109e6c(0x139),MessageType[_0x109e6c(0x125)],{'contextInfo':{'mentionedJid':[user]}})));}
 
         
 
        if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-        var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+        var garf_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        var plk_here = new Date().toLocaleDateString(get_localized_date)
-	    var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
+        var garf_here = new Date().toLocaleDateString(get_localized_date)
+	    var six_garf_ = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\nGARFIELD BY NOIZE PROJECTS '
 
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
             if (gb !== false) {
                 if (gb.message.includes('{pp}')) {
                 let pp 
                 try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                    var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
+                    var garfjson = await conn.groupMetadata(msg.key.remoteJid)
                 await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{gphead}', pinkjson.subject).replace('{time}', afn_plk_).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) }); });                           
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{gphead}', garfjson.subject).replace('{time}', six_garf_).replace('{gpmaker}', garfjson.owner).replace('{gpdesc}', garfjson.desc).replace('{owner}', conn.user.name) }); });                           
             } else if (gb.message.includes('{gif}')) {
                 //created by NOIZE
-                    var plkpinky = await axios.get(config.GIF_BYE, { responseType: 'arraybuffer' })
-                    var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(plkpinky.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', afn_plk_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) });
+                    var sixgarfield = await axios.get(config.GANSTYLE, { responseType: 'arraybuffer' })
+                    var garfjson = await conn.groupMetadata(msg.key.remoteJid)
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(sixgarfield.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', six_garf_).replace('{gphead}', garfjson.subject).replace('{gpmaker}', garfjson.owner).replace('{gpdesc}', garfjson.desc).replace('{owner}', conn.user.name) });
             } else {
-                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{time}', afn_plk_).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name), MessageType.text);
+                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', garfjson.subject).replace('{gpmaker}', garfjson.owner).replace('{time}', six_garf_).replace('{gpdesc}', garfjson.desc).replace('{owner}', conn.user.name), MessageType.text);
               } 
-            }//thanks to farhan      
+            }//(c) bot.js by FARHAN AND  AFNA MUCH LOVE BROTHERS
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // welcome
-            var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+            var garf_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-           var plk_here = new Date().toLocaleDateString(get_localized_date)
-	       var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
+           var garf_here = new Date().toLocaleDateString(get_localized_date)
+	       var six_garf_ = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\nGARFIELD BY NOIZE PROJECTS '
              var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {		    
                 if (gb.message.includes('{pp}')) {
                 let pp
                 try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                    var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
+                    var garfjson = await conn.groupMetadata(msg.key.remoteJid)
                 await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
                     //created by NOIZE
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{time}', afn_plk_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name).replace('{no fake}', '') }); });                           
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{time}', six_garf_).replace('{gphead}', garfjson.subject).replace('{gpmaker}', garfjson.owner).replace('{gpdesc}', garfjson.desc).replace('{owner}', conn.user.name).replace('{no fake}', '') }); });                           
             } else if (gb.message.includes('{gif}')) {
-                var plkpinky = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
-                var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(plkpinky.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', afn_plk_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name).replace('{no fake}', '') });
+                var sixgarfield = await axios.get(config.GANSTYLE, { responseType: 'arraybuffer' })
+                var garfjson = await conn.groupMetadata(msg.key.remoteJid)
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(sixgarfield.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', six_garf_).replace('{gphead}', garfjson.subject).replace('{gpmaker}', garfjson.owner).replace('{gpdesc}', garfjson.desc).replace('{owner}', conn.user.name).replace('{no fake}', '') });
             } else {
-                var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
-                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{time}', afn_plk_).replace('{owner}', conn.user.name).replace('{no fake}', ''), MessageType.text);
+                var garfjson = await conn.groupMetadata(msg.key.remoteJid)
+                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', garfjson.subject).replace('{gpmaker}', garfjson.owner).replace('{gpdesc}', garfjson.desc).replace('{time}', six_garf_).replace('{owner}', conn.user.name).replace('{no fake}', ''), MessageType.text);
             }
           }   	    
             return;                               
@@ -237,8 +238,8 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait.')}`);
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
                     
-                    else if ((config.MAHN !== false && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && config.MAHN.includes(',') ? config.MAHN.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.MAHN || config.MAHN.includes(',') ? config.MAHN.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.MAHN)
+                    else if ((config.ZXVH !== false && msg.key.fromMe === false && command.fromMe === true &&
+                        (msg.participant && config.ZXVH.includes(',') ? config.ZXVH.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.ZXVH || config.ZXVH.includes(',') ? config.ZXVH.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.ZXVH)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
