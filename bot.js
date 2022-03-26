@@ -274,9 +274,9 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait.')}`);
                             await command.function(whats, match);
                         }
                         catch (error) {
-                            if (config.NOLOG == 'true') return;
+                            if (config.NOLOG == 'false') return;
 		            if (error.message.includes('includes')) return;
-                            if (config.LANG == 'ES') {
+                            if (config.LANG == 'ZXCBJ') {
                                 await conn.sendMessage(conn.user.jid, '*🐼  ERROR ANALYSIS [GARFIELD-6.0] *' + 
                                     '\n*GARFIELD-6.0 bot program crashed*'+
                                     '\n_BOT CRASHED_' +
