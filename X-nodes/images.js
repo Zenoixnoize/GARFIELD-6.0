@@ -794,7 +794,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Garfield.addXnodes({pattern: 'alive', fromMe: false, desc: Lang.WP}, (async (message, match) => {
+    Garfield.addXnodes({pattern: 'owner', fromMe: false, desc: Lang.WP}, (async (message, match) => {
 
         var r_text = new Array ();
 

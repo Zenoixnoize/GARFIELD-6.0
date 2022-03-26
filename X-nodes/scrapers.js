@@ -825,7 +825,7 @@ else if (config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio,quoted: message.data,  ptt: true});
     }));
 
-    Garfield.addXnodes({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    Garfield.addXnodes({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -853,8 +853,8 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n```'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data , mimetype: Mimetype.mp4Audio, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Song Name :\n'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: false});
             });
     }));
 
@@ -931,7 +931,7 @@ else if (config.WORKTYPE == 'public') {
                 
                 stream.then(async (image) => {
                     await message.client.sendMessage(message.jid,image, MessageType.image);
-                }); //recoded by afnanplk
+                }); //coded by Tharindu Liyanage 
             }
 
             message.reply(Lang.IMG.format((result.length < afnn ? result.length : afnn), plkk));
