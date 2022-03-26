@@ -4,10 +4,11 @@ const chalk = require('chalk');
 
 if (fs.existsSync('./language/EN.json')) {
     console.log(
-        chalk.green.bold('Loading language...')
+        chalk.green.bold('./language/EN.json')
     );
-}
-{
+
+    var json = JSON.parse(fs.readFileSync('./language/EN.json'));
+} else {
     console.log(
         chalk.red.bold('You entered an invalid language. English language was chosen.')
     );
