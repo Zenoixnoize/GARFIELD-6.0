@@ -798,9 +798,9 @@ else if (Config.WORKTYPE == 'public') {
 
         var r_text = new Array ();
 
-        r_text[0] = "./x369/cover.png";
-        r_text[1] = "./x369/server.png";
-        r_text[2] = "./x369/server.png";
+        r_text[0] = "https://i.ibb.co/vcs662H/cover.png";
+        r_text[1] = "https://i.ibb.co/mhW4xhQ/server.jpg";
+        r_text[2] = "https://i.ibb.co/vcs662H/cover.png";
         var i = Math.floor(3*Math.random())
 
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
