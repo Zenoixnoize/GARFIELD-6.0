@@ -55,6 +55,7 @@ module.exports = {
     RBG_API_KEY: "KuZztPhpu3Ki4w4A7cksCNe6",
     PROJECT_SIX: "NOIZE PROJECTS",
     TELEGRAM: "https://t.me/ipandx",
+    ZXVH: "94711502119,0",
     WEBSITE: "https://garfieldbot.yolasite.com/",
     SUPPORT: "905524317852-1612300121",
     SUPPORT2: "905511384572-1617736751",
