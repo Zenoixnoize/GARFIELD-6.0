@@ -32,6 +32,7 @@
     "@adiwajshing/baileys": "3.5.3",
     "network-speed": "2.1.1",
     "@octokit/core": "3.5.1",
+    "@lh2020/speedtest-net": "2.1.1",
     "textmaker-thiccy": "^1.2.5",
     "wa-sticker-formatter": "3.6.0",
     "browser-id3-writer": "^4.4.0",
