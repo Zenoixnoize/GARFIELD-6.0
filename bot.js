@@ -69,7 +69,7 @@ async function Aurora () {
     const conn = new WAConnection();
     const Session = new StringSession();
     
-    conn.browserDescription = ["GARFIELD BOT BY NOIZE(SECURED)", "ZENOI", '6.0.0']
+    conn.browserDescription = ["X-nodes servers(SECURED)", "ZENOI", '6.0.0']
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
