@@ -30,10 +30,10 @@
             "required": false,
             "value": "User 97626"
         },
-        "WELCOME_IMAGE": {
-            "description": "Enter the link to the welcome Image",
+        "LANGUAGE": {
+            "description": "Do not change",
             "required": true,
-            "value": "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png"
+            "value": "EN"
         }
     },
     "addons": [{
