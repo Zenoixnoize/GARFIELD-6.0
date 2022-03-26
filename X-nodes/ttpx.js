@@ -9,7 +9,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
 let wk = Config.WORKTYPE == 'public' ? false : true
-const WhatsAsenaStack = require('aurora-npm')
+const auroraStack = require('aurora-npm')
 const request = require('request');
 
 const Language = require('../language');
@@ -82,7 +82,7 @@ Garfield.addXnodes({ pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -97,7 +97,7 @@ Garfield.addXnodes({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -115,7 +115,7 @@ Garfield.addXnodes({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -130,7 +130,7 @@ Garfield.addXnodes({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -148,7 +148,7 @@ Garfield.addXnodes({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -163,7 +163,7 @@ Garfield.addXnodes({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -181,7 +181,7 @@ Garfield.addXnodes({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -196,7 +196,7 @@ Garfield.addXnodes({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -214,7 +214,7 @@ Garfield.addXnodes({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -229,7 +229,7 @@ Garfield.addXnodes({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -247,7 +247,7 @@ Garfield.addXnodes({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -262,7 +262,7 @@ Garfield.addXnodes({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -280,7 +280,7 @@ Garfield.addXnodes({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true
 Garfield.addXnodes({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -295,7 +295,7 @@ Garfield.addXnodes({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: tru
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -313,7 +313,7 @@ Garfield.addXnodes({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: tru
 Garfield.addXnodes({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
-    var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -328,7 +328,7 @@ Garfield.addXnodes({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   } else {
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
-    var ttinullimage = await WhatsAsenaStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var ttinullimage = await auroraStack.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
     var download = async(uri, filename, callback) => {
       await request.head(uri, async(err, res, body) => {    
         await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
