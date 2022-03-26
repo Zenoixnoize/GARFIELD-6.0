@@ -7,24 +7,34 @@ const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
 const Config = require('../config');
-const exec = require('child_process').exec;
+
 const Language = require('../language');
 const Lang = Language.getString('conventer');
 
+if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
-    Garfield.addXnodes({pattern: 'media$', fromMe: true, desc: Lang.XMEDİA_DESC}, (async (message, match) => {    
-        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
-            await message.sendMessage('💬Usage: *.mp4enhance*\n🐼Desc: 🇹🇷 Videnun kalitesini artırır.\n\n💬Usage: *.interp*\n🐼Desc: 🇹🇷 Videonun FPS değerini arttırır.\n\n💬Usage: *.mp4slowmo*\n🐼Desc: 🇹🇷 Ağır çekim olmayan videolara true-slowmo uygular.\n\n💬Usage: *.x4mp4*\n🐼Desc: 🇹🇷 Video Kalitesini 4 kat düşürür.\n\n💬Usage: *.x2mp4*\n🐼Desc: 🇹🇷 Video Kalitesini 2 kat düşürür.\n\n💬Usage: *.gif*\n🐼Desc: 🇹🇷 Videoyu gif’e çevirir.\n\n💬Usage: *.agif*\n🐼Desc: 🇹🇷 Videoyu sesli gif’e çevirir.\n\n💬Usage: *.mp4blur*\n🐼Desc: 🇹🇷 Video arka planını bulanıklaştırır.\n\n💬Usage: *.mp4stab*\n🐼Desc: 🇹🇷 Videonun titreşimini azaltır.\n\n💬Usage: *.mp4rainbow*\n🐼Desc: 🇹🇷 Videoya gökkuşağı efekti uygular.\n\n💬Usage: *.mp4color*\n🐼Desc: 🇹🇷 Videonun renklerini daha canlı ve çekici yapar.\n\n💬Usage: *.mp4art*\n🐼Desc: 🇹🇷 Videoya çizim efekti uygular.\n\n💬Usage: *.mp4negative*\n🐼Desc: 🇹🇷 Videoya negatif renk filtresi uygular.\n\n💬Usage: *.mp4vintage*\n🐼Desc: 🇹🇷 Videoya nostaji efekti uygular.\n\n💬Usage: *.mp4bw*\n🐼Desc: 🇹🇷 Videoya monochrome efekti uygular.\n\n💬Usage: *.mp4reverse*\n🐼Desc: 🇹🇷 Videoyu tersten oynatır.\n\n💬Usage: *.mp4edge*\n🐼Desc: 🇹🇷 Videoya edge efekti uygular.\n\n💬Usage: *.mp4image*\n🐼Desc: 🇹🇷 Fotoğrafı 5 saniyelik videoya çevirir.\n\n💬Usage: *.spectrum*\n🐼Desc: 🇹🇷 Sesin spektrum görüntüsünü video yapar.\n\n💬Usage: *.waves*\n🐼Desc: 🇹🇷 Sesin dalga aralığını videoya çevirir.\n\n💬Usage: *.frequency*\n🐼Desc: 🇹🇷 Sesin frekans aralığını videoya çevirir.\n\n💬Usage: *.avec*\n🐼Desc: 🇹🇷 Sesin farklı bir histogramını videoya çevirir.\n\n💬Usage: *.volumeaudio*\n🐼Desc: 🇹🇷 Sesin Desibel Değerini Videoya Dönüştürür.\n\n💬Usage: *.cqtaudio*\n🐼Desc: 🇹🇷 Ses CQT değerini videoya çevirir.\n\n💬Usage: *.mp3eq*\n🐼Desc: 🇹🇷 Sesi kristal berraklık düzeyinde ayarlar.\n\n💬Usage: *.mp3crusher*\n🐼Desc: 🇹🇷 Sesi bozar ve gülünç hale getirir.\n\n💬Usage: *.mp3reverse*\n🐼Desc: 🇹🇷 Sesi Tersen Oynatır.\n\n💬Usage: *.mp3bass* \n🐼Desc: 🇹🇷 Müziğin bass düzeyini, sesi bozmadan arttırır.\n\n💬Usage: *.mp3pitch*\n🐼Desc: 🇹🇷 Sesi inceltir ve hızlandırır.\n\n💬Usage *.mp3low*\n🐼Desc: 🇹🇷 Sesi kalınlaştırır ve yavaşlatır.\n\n💬Usage: *.x2mp3*\n🐼Desc: 🇹🇷 Sesi 2 kat hızlandırır.\n\n💬Usage: *.mp3volume*\n🐼Desc: 🇹🇷 Ses seviyesini fazalca arttırır.\n\n💬Usage: *.bwimage*\n🐼Desc: 🇹🇷 Fotoğrafa monochrome efekti uygular.\n\n💬Usage: *.vintageimage*\n🐼Desc: 🇹🇷 Fotoğrafa vintage efekti uygular.\n\n💬Usage: *.edgeimage*\n🐼Desc: 🇹🇷 Fotoğrafa edge efekti uygular.\n\n💬Usage: *.enhanceimage*\n🐼Desc: 🇹🇷 Fotoğrafı daha net hale getirir.\n\n💬Usage: *.blurimage*\n🐼Desc: 🇹🇷 Fotoğrafın arka planını bulanıklaştırır.\n\n💬Usage: *.grenimage*\n🐼Desc: 🇹🇷 Fotoğrafa gren efekti uygular.\n\n💬Usage: *.negativeimage*\n🐼Desc: 🇹🇷 Fotoğrafa negatif renk filtresi uygular.\n\n💬Usage: *.rainbowimage*\n🐼Desc: 🇹🇷 Fotoğrafa gökkuşağı efekti uygular.\n\n💬Usage: *.colorimage*\n🐼Desc: 🇹🇷 Fotoğrafın renklerini daha canlı ve çekici yapar.\n\n💬Usage: *.artimage*\n🐼Desc: 🇹🇷 Fotoğrafa çizim efekti uygular.');
-        } else { 
-            await message.sendMessage('💬Usage: *.mp4enhance*\n🐼Desc: 🇱🇰 Enhance video’s quality.\n\n💬Usage: *.interp*\n🐼Desc: 🇱🇰 Increases the FPS of the video.\n\n💬Usage: *.mp4slowmo*\n🐼Desc: 🇱🇰 Applies true-slowmo to non-slow motion videos.\n\n💬Usage: *.x4mp4*\n🐼Desc: 🇱🇰 Reduce video’s quality by 75%.\n\n💬Usage: *.x2mp4*\n🐼Desc: 🇱🇰 Reduce video’s quality by 50%.\n\n💬Usage: *.gif*\n🐼Desc: 🇱🇰 Converts video to gif.\n\n💬Usage: *.agif*\n🐼Desc: 🇱🇰 Converts video to voiced gif.\n\n💬Usage: *.mp4blur*\n🐼Desc: 🇱🇰 Blurs the background of the video.\n\n💬Usage: *.mp4stab*\n🐼Desc: 🇱🇰 Decreases the vibration of the video.\n\n💬Usage: *.mp4rainbow*\n🐼Desc: 🇱🇰 Applies a rainbow effect to video.\n\n💬Usage: *.mp4color*\n🐼Desc: 🇱🇰 Makes the colors of the video more vivid and beautiful.\n\n💬Usage: *.mp4art*\n🐼Desc: 🇱🇰 Applies a art effect to the video.\n\n💬Usage: *.mp4negative*\n🐼Desc: 🇱🇰 Applies a negative color filter to the video.\n\n💬Usage: *.mp4vintage*\n🐼Desc: 🇱🇰 Applies a nostalgic effect to video.\n\n💬Usage: *.mp4bw*\n🐼Desc: 🇱🇰 Applies a monochrome effect to video.\n\n💬Usage: *.mp4reverse*\n🐼Desc: 🇱🇰 Plays the video in reverse.\n\n💬Usage: *.mp4edge*\n🐼Desc: 🇱🇰 Applies a edge effect to the video.\n\n💬Usage: *.mp4image*\n🐼Desc: 🇱🇰 Converts photo to 5 sec video.\n\n💬Usage: *.spectrum*\n🐼Desc: 🇱🇰 Converts the spectrum of sound into video.\n\n💬Usage: *.waves*\n🐼Desc: 🇱🇰 Converts the wave range of sound to video.\n\n💬Usage: *.frequency*\n🐼Desc: 🇱🇰 Converts the frequency range of sound to video.\n\n💬Usage: *.avec*\n🐼Desc: 🇱🇰 Converts the histogram of sound to video.\n\n💬Usage: *.volumeaudio*\n🐼Desc: 🇱🇰 Converts the decibel value of the sound into video.\n\n💬Usage: *.cqtaudio*\n🐼Desc: 🇱🇰 Converts the CQT value of audio to video.\n\n💬Usage: *.mp3eq*\n🐼Desc: 🇱🇰 Adjusts the sound to a crystal clear level.\n\n💬Usage: *.mp3bass* \n🐼Desc: 🇱🇰 Adds crystal bass without distorting the sound.\n\n💬Usage: *.mp3crusher*\n🐼Desc: 🇱🇰 Distorts the sound, makes ridiculous.\n\n💬Usage: *.mp3reverse*\n🐼Desc: 🇱🇰 Plays the sound in reverse.\n\n💬Usage: *.mp3pitch*\n🐼Desc: 🇱🇰 Makes the sound thinner and faster.\n\n💬Usage *.mp3low*\n🐼Desc: 🇱🇰 Makes the sound deep and slower.\n\n💬Usage: *.x2mp3*\n🐼Desc: 🇱🇰 Makes the sound twice as fast.\n\n💬Usage: *.mp3volume*\n🐼Desc: 🇱🇰 Increase sound level so much.\n\n💬Usage: *.bwimage*\n🐼Desc: 🇱🇰 Applies a monochrome effect to image.\n\n💬Usage: *.vintageimage*\n🐼Desc: 🇱🇰 Applies a vinatge effect to photo.\n\n💬Usage: *.edgeimage*\n🐼Desc: 🇹🇷 Fotoğrafa edge efekti uygular.\n🇱🇰 Applies a edge effect to the photo.\n\n💬Usage: *.enhanceimage*\n🐼Desc: 🇹🇷 Fotoğrafı daha net hale getirir.\n🇱🇰 Makes the photo clearer.\n\n💬Usage: *.blurimage*\n🐼Desc: 🇹🇷 Fotoğrafın arka planını bulanıklaştırır.\n🇱🇰 Blurs the background of the photo.\n\n💬Usage: *.grenimage*\n🐼Desc: 🇹🇷 Fotoğrafa gren efekti uygular.\n🇱🇰 Applies grain effect to the photo.\n\n💬Usage: *.negativeimage*\n🐼Desc: 🇱🇰 Applies a negative color filter to the photo.\n\n💬Usage: *.rainbowimage*\n🐼Desc: 🇱🇰 Applies rainbow effect to the photo.\n\n💬Usage: *.colorimage*\n🐼Desc: 🇱🇰 It makes the colors of the photo more vivid and attractive.\n\n💬Usage: *.artimage*\n🐼Desc: 🇱🇰 Applies a art effect to the photo.');
-        }
-    }));
+    Garfield.addXnodes({pattern: 'media', fromMe: true, desc: Lang.XMEDİA_DESC}, (async (message, match) => {    
 
-    Garfield.addXnodes({pattern: 'x4mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+        await message.sendMessage('*XMEDIA COMMANDS ARE ⚽* \n\n    \n\n🐼Usage: *.mp4enhance*\n⚽Desc:Enhance video’s quality.\n\n🐼Usage: *.interp*\n⚽Desc:Increases the FPS of the video.\n\n🐼Usage: *.mp4slowmo*\n⚽Desc:Applies true-slowmo to non-slow motion videos.\n\n🐼Usage: *.x4mp4*\n⚽Desc:Reduce video’s quality by 75%.\n\n🐼Usage: *.x2mp4*\n⚽Desc: Reduce video’s quality by 50%.\n\n🐼Usage: *.gif*\n⚽Desc:Converts video to gif.\n\n🐼Usage: *.agif*\n⚽Desc:Converts video to voiced gif.\n\n🐼Usage: *.mp4blur*\n⚽Desc: Blurs the background of the video.\n\n🐼Usage: *.mp4stab*\n⚽Desc: Decreases the vibration of the video.\n\n🐼Usage: *.mp4rainbow*\n⚽Desc: Applies a rainbow effect to video.\n\n🐼Usage: *.mp4color*\n⚽Desc:Makes the colors of the video more vivid and beautiful.\n\n🐼Usage: *.mp4art*\n⚽Desc:Applies a art effect to the video.\n\n🐼Usage: *.mp4negative*\n⚽Desc:Applies a negative color filter to the video.\n\n🐼Usage: *.mp4vintage*\n⚽Desc:Applies a nostalgic effect to video.\n\n🐼Usage: *.mp4bw*\n⚽Desc: Applies a monochrome effect to video.\n\n🐼Usage: *.mp4reverse*\n⚽Desc: Plays the video in reverse.\n\n🐼Usage: *.mp4edge*\n⚽Desc:Applies a edge effect to the video.\n\n🐼Usage: *.mp4image*\n⚽Desc: Converts photo to 5 sec video.\n\n🐼Usage: *.spectrum*\n⚽Desc: Converts the spectrum of sound into video.\n\n🐼Usage: *.waves*\n⚽Desc: Converts the wave range of sound to video.\n\n🐼Usage: *.frequency*\n⚽Desc: Converts the frequency range of sound to video.\n\n🐼Usage: *.avec*\n⚽Desc: Converts the histogram of sound to video.\n\n🐼Usage: *.volumeaudio*\n⚽Desc: Converts the decibel value of the sound into video.\n\n🐼Usage: *.cqtaudio*\n⚽Desc: Converts the CQT value of audio to video.\n\n🐼Usage: *.mp3eq*\n⚽Desc: Adjusts the sound to a crystal clear level.\n\n🐼Usage: *.mp3crusher*\n⚽Desc:Distorts the sound, makes ridiculous.\n\n🐼Usage: *.mp3reverse*\n⚽Desc:Plays the sound in reverse.\n\n🐼Usage: *.mp3pitch*\n⚽Desc:Makes the sound thinner and faster.\n\n🐼Usage *.mp3low*\n⚽Desc:Makes the sound deep and slower.\n\n🐼Usage: *.x2mp3*\n⚽Desc:  Makes the sound twice as fast.\n\n🐼Usage: *.mp3volume*\n⚽Desc: 🇱🇰 Ses seviyesini fazalca arttırır.\n🇬🇧 Increase sound level so much.\n\n🐼Usage: *.bwimage*\n⚽Desc: 🇱🇰 Fotoğrafa monochrome efekti uygular.\n🇬🇧 Applies a monochrome effect to image.\n\n🐼Usage: *.vintageimage*\n⚽Desc: 🇱🇰 Fotoğrafa vintage efekti uygular.\n🇬🇧 Applies a vinatge effect to video.\n\n🐼Usage: *.edgeimage*\n⚽Desc: 🇱🇰 Fotoğrafa edge efekti uygular.\n🇬🇧 Applies a edge effect to the photo.\n\n🐼Usage: *.enhanceimage*\n⚽Desc: 🇱🇰 Fotoğrafı daha net hale getirir.\n🇬🇧 Makes the photo clearer.\n\n🐼Usage: *.blurimage*\n⚽Desc: 🇱🇰 Fotoğrafın arka planını bulanıklaştırır.\n🇬🇧 Blurs the background of the photo.\n\n🐼Usage: *.grenimage*\n⚽Desc: 🇱🇰 Fotoğrafa gren efekti uygular.\n🇬🇧 Applies grain effect to the photo.\n\n🐼Usage: *.negativeimage*\n⚽Desc: 🇱🇰 Fotoğrafa negatif renk filtresi uygular.\n🇬🇧 Applies a negative color filter to the photo.\n\n🐼Usage: *.rainbowimage*\n⚽Desc: 🇱🇰 Fotoğrafa gökkuşağı efekti uygular.\n🇬🇧 Applies rainbow effect to the photo.\n\n🐼Usage: *.colorimage*\n⚽Desc: 🇱🇰 Fotoğrafın renklerini daha canlı ve çekici yapar.\n🇬🇧 It makes the colors of the photo more vivid and attractive.\n\n🐼Usage: *.artimage*\n⚽Desc: 🇱🇰 Fotoğrafa çizim efekti uygular.\n🇬🇧 Applies a art effect to the photo.');
+
+    }));
+      Garfield.addXnodes({pattern: 'mycmndbbb', fromMe: true, desc: 'set of commands for bot user or sudo'}, (async (message, match) => {    
+       
+        await message.sendMessage('\n ``` BOT OWNER COMMANDS ARE 👇``` \n\n    \n\n🦠 Command: !install\n📍 Description: Install external plugins.\n\n🦠 Command: !plugin\n📍 Description: Shows the plugins you have installed.\n\n🦠 Command: !remove\n📍 Description: Removes the plugin.\n\n🦠 Command: !ban\n📍 Description: Ban someone in the group. Reply to message or tag a person to use command.\n\n🦠 Command: !add\n📍 Description: Adds someone to the group.\n\n🦠 Command: !promote\n📍 Description: Makes any person an admin.\n\n🦠 Command: !demote\n📍 Description: Takes the authority of any admin.\n\n🦠 Command: !mute\n📍 Description: Mute the group chat. Only the admins can send a message.\n\n🦠 Command: !unmute\n📍 Description: Unmute the group chat. Anyone can send a message.\n\n🦠 Command: !invite\n📍 Description: Provides the groups invitation link.\n\n🦠 Command: !afk\n📍 Description: It makes you AFK - Away From Keyboard.\n\n🦠 Command: !del\n📍 Description: Deletes The Replied Message Send By The Bot [ ✅ Official External Plugin ]\n\n🦠 Command: !justspam\n📍 Description: spam the sticker you replyed.\n\n🦠 Command: !welcome\n📍 Description: It sets the welcome message. If you leave it blank it shows the welcome message.\n\n🦠 Command: !goodbye\n📍 Description: Sets the goodbye message. If you leave blank, it shows the goodbye message\n\n🦠 Command: !phelp\n📍 Description: Gives information about using the bot from the Help menu.\n\n🦠 Command: !degis\n\n🦠 Command: !restart\n📍 Description: Restart Garfield\n\n🦠 Command: !shutdown\n📍 Description: Shutdown Garfield\n\n🦠 Command: !dyno\n📍 Description: Check heroku dyno usage\n\n🦠 Command: !setvar\n📍 Description: Set heroku config var\n\n🦠 Command: !delvar\n📍 Description: Delete heroku config var\n\n🦠 Command: !getvar\n📍 Description: Get heroku config var\n\n🦠 Command: !leave\n📍 Description: It kicks you from the group you are using it in.\n\n🦠 Command: !pp\n📍 Description: Makes the profile photo what photo you reply.\n\n🦠 Command: !block\n📍 Description: Block user.\n\n🦠 Command: !unblock\n📍 Description: Unblock user.\n\n🦠 Command: !jid\n📍 Description: Giving users JID.\n\n🦠 Command: !scam\n📍 Description: Creates 5 minutes of fake actions.\n\n🦠 Command: !spam\\n📍 Description: It spam until you stop it.\n⌨️ Example: .spam test\n\n🦠 Command: !filtre\n📍 Description: add filtre in chats\neg: .filter "input" "output"\n\n🦠 Command: !tagall\n📍 Description: Tags everyone in the group.\n\n🦠 Command: !stam\n📍 Description: sends the replyed messages to all the members in the group \n\n🦠 Command: !update\n📍 Description: Checks the update.\n\n🦠 Command: update now\n📍 Description: It makes updates.');    
+   
+    }));
+    
+    Garfield.addXnodes({pattern: 'codtts', fromMe: false, desc: 'language code to change the voice in .tts & also for .trt translation'}, (async (message, match) => {  
+       
+        await message.sendMessage('\n https://drive.google.com/file/d/1r4l7QcdEiu9wAOgqxTGB6KWBVsg_U1cu/view?usp=drivesdk \n');
+        
+    }));    
+
+    Garfield.addXnodes({pattern: 'px4mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message.video) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text)
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -42,29 +52,11 @@ if (Config.WORKTYPE == 'private') {
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    Garfield.addXnodes({pattern: 'mp3bass$', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
-        var location = await message.client.downloadAndSaveMediaMessage({
-            key: {
-                remoteJid: message.reply_message.jid,
-                id: message.reply_message.id
-            },
-            message: message.reply_message.data.quotedMessage
-        });
 
-        ffmpeg(location)
-            .outputOptions(["-y", "-filter:a", "bass=g=9:f=110:w=0.6"])
-            .save('output.mp3')
-            .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
-            });
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-    }));
-    Garfield.addXnodes({pattern: 'x2mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'px2mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message.video) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -83,7 +75,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4image', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4image', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message.image) return await message.sendMessage('*Need Photo!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -107,7 +99,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'spectrum', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pspectrum', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -128,7 +120,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'waves', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pwaves', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -149,7 +141,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'frequency', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pfrequency', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -170,7 +162,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'avec', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
+    Garfield.addXnodes({pattern: 'pavec', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
  
         if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -191,7 +183,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'volumeaudio', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pvolumeaudio', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -212,7 +204,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'cqtaudio', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pcqtaudio', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -233,10 +225,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp3eq', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp3eq', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -254,10 +246,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp3crusher', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp3crusher', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -275,7 +267,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp3reverse', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp3reverse', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -296,10 +288,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4vintage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4vintage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -318,10 +310,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4reverse', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
+    Garfield.addXnodes({pattern: 'pmp4reverse', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -341,10 +333,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4bw', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4bw', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -363,10 +355,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'bwimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pbwimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -377,17 +369,17 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "hue=s=0"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'vintageimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pvintageimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -398,17 +390,17 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=vintage"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4enhance', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4enhance', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -427,7 +419,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'blurimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
+    Garfield.addXnodes({pattern: 'pblurimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -441,17 +433,17 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "split[original][copy];[copy]scale=ih*16/9:-1,crop=h=iw*9/16,gblur=sigma=20[blurred];[blurred][original]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4blur', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
+    Garfield.addXnodes({pattern: 'pmp4blur', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -469,10 +461,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp3pitch', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp3pitch', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -490,7 +482,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4edge', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4edge', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Edging Video..```',MessageType.text);
@@ -512,10 +504,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp3low', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp3low', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -533,10 +525,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'x2mp3', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'px2mp3', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -554,7 +546,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'edgeimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pedgeimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo*');
         var downloading = await message.client.sendMessage(message.jid,'```Edging Image..```',MessageType.text);
@@ -568,14 +560,14 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-filter:v", "edgedetect=low=0.9:high=0.2"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'enhanceimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'penhanceimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
@@ -589,17 +581,17 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "unsharp=3:3:1.5"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp3volume', fromMe: true, dontAddCommandList: true}, (async (message, match) => { 
+    Garfield.addXnodes({pattern: 'pmp3volume', fromMe: true, dontAddCommandList: true}, (async (message, match) => { 
    
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -617,7 +609,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     })); 
 
-    Garfield.addXnodes({pattern: 'gif', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pgif', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('Need Video!');
         var downloading = await message.client.sendMessage(message.jid,'```Converting to Gif..```',MessageType.text);
@@ -640,7 +632,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'agif', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pagif', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('Need Video!');
         var downloading = await message.client.sendMessage(message.jid,'```Converting to Gif..```',MessageType.text);
@@ -662,7 +654,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'grenimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
+    Garfield.addXnodes({pattern: 'pgrenimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.sendMessage('Need Photo!');
         var downloading = await message.client.sendMessage(message.jid,'```Adding Gren..```',MessageType.text);
@@ -676,18 +668,20 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .videoFilters('noise=alls=100:allf=t+u')
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'interp ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false && match[1] === '') return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
-        if (match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
-        if (match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*');
-        await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
+    Garfield.addXnodes({pattern: 'pinterp ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
+        if (message.reply_message.video && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
+        if (message.reply_message.video && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
+   
+        var downloading = await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -695,161 +689,22 @@ if (Config.WORKTYPE == 'private') {
             },
             message: message.reply_message.data.quotedMessage
         });
-        
-        exec('ffprobe -hide_banner -loglevel fatal -show_error -show_format -show_streams -show_programs -show_chapters -show_private_data -print_format json ' + location, async (err, st, stderr) => {
-            var stdout = JSON.parse(st)
-            var value = { value: 100 }
-            var time_c = { time: 1 }
-            if (stdout.format.size / 1000000 > 0 && stdout.format.size / 1000000 < 6) {
-                value.value = value.value - 2
-                time_c.time = time_c.time + 1
-            }
-            if (stdout.format.size / 1000000 > 5 && stdout.format.size / 1000000 < 11) {
-                value.value = value.value - 5
-                time_c.time = time_c.time + 1.4
-            }
-            if (stdout.format.size / 1000000 > 10 && stdout.format.size / 1000000 < 21) {
-                value.value = value.value - 9
-                time_c.time = time_c.time + 2
-            }
-            if (stdout.format.size / 1000000 > 20 && stdout.format.size / 1000000 < 31) {
-                value.value = value.value - 25
-                time_c.time = time_c.time + 2.3
-            }
-            if (stdout.format.size / 1000000 > 30) {
-                value.value = value.value - 39
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].duration > 0 && stdout.streams[0].duration < 21) {
-                value.value = value.value - 4
-                time_c.time = time_c.time + 1
-            }
-            if (stdout.streams[0].duration > 20 && stdout.streams[0].duration < 41) {
-                value.value = value.value - 9
-                time_c.time = time_c.time + 1.4
-            }
-            if (stdout.streams[0].duration > 40 && stdout.streams[0].duration < 61) {
-                value.value = value.value - 11
-                time_c.time = time_c.time + 2
-            }
-            if (stdout.streams[0].duration > 60 && stdout.streams[0].duration < 81) {
-                value.value = value.value - 15
-                time_c.time = time_c.time + 2.7
-            }
-            if (stdout.streams[0].duration > 80 && stdout.streams[0].duration < 101) {
-                value.value = value.value - 21
-                time_c.time = time_c.time + 3.4
-            }
-            if (stdout.streams[0].duration > 100 && stdout.streams[0].duration < 121) {
-                value.value = value.value - 27
-                time_c.time = time_c.time + 4
-            }
-            if (stdout.streams[0].duration > 120) {
-                value.value = value.value - 39
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 0 && stdout.streams[0].r_frame_rate.split('/')[0] < 11) {
-                value.value = value.value + 1
-                time_c.time = time_c.time - 0.6
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 10 && stdout.streams[0].r_frame_rate.split('/')[0] < 21) {
-                value.value = value.value - 3
-                time_c.time = time_c.time + 1
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 20 && stdout.streams[0].r_frame_rate.split('/')[0] < 31) {
-                value.value = value.value - 19
-                time_c.time = time_c.time + 2.3
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41) {
-                value.value = value.value - 31
-                time_c.time = time_c.time + 4.3
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40) {
-                value.value = value.value - 40
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 9 && stdout.streams[0].r_frame_rate.split('/')[0] < 31 && match[1] > 39) {
-                time_c.time = time_c.time + 3.3
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 39) {
-                time_c.time = time_c.time + 5
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 49) {
-                time_c.time = time_c.time + 5.4
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 59) {
-                time_c.time = time_c.time + 6
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 69) {
-                time_c.time = time_c.time + 7.5
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 59) {
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 64) {
-                time_c.time = time_c.time + 9.2
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 69) {
-                time_c.time = time_c.time + 9.5
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 75) {
-                time_c.time = time_c.time + 10
-            }
-            let prcs = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '_Bu işlem biraz uzun sürebilir._\n_Öngörülen Süre:_ *' + time_c.time + ' Dakika*\n_Başarı Oranı:_ *' + value.value + '%*' : '_This process may take a while._\n_Envisaged Time:_ *' + time_c.time + ' Minute*\n_Success Rate:_ *' + value.value + '%*'
-            await message.client.sendMessage(message.jid,prcs, MessageType.text);
-            var dam = 10
-            ffmpeg(location)
-                .videoFilters(`minterpolate=fps=${match[1]}:mi_mode=mci:me_mode=bidir`)
-                .format('mp4')
-                .save('output.mp4')
-                .on('progress', async (progress) => {
-                    var l = progress.percent
-                    while (l > 10 && dam == 10) {
-                        dam = 1
-                        let yon = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%10 Tamamlandı!*' : '*Completed %10!*'
-                        await message.client.sendMessage(message.jid,yon, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 30 && dam == 1) {
-                        dam = 2
-                        let yotuz = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%30 Tamamlandı!*' : '*Completed %30!*'
-                        await message.client.sendMessage(message.jid,yotuz, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 50 && dam == 2) {
-                        dam = 3
-                        let yelli = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%50 Tamamlandı!*' : '*Completed %50!*'
-                        await message.client.sendMessage(message.jid,yelli, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 70 && dam == 3) {
-                        dam = 4
-                        let yetmis = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%70 Tamamlandı!*' : '*Completed %70!*'
-                        await message.client.sendMessage(message.jid,yetmis, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 90 && dam == 4) {
-                        dam = 5
-                        let vprocc = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Video Hazırlanıyor..*' : '*Preparing Video..*'
-                        await message.client.sendMessage(message.jid,vprocc, MessageType.text)
-                        
-                    }
-                })
-                .on('end', async () => {
-                    dam = 10
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by Garfield\n_Interpolated to ${match[1]} FPS_`});
-                });
-        });
+        await message.sendMessage('_This process may take a while.._');
+
+        ffmpeg(location)
+            .videoFilters(`minterpolate=fps=${match[1]}:mi_mode=mci:me_mode=bidir`)
+            .format('mp4')
+            .save('output.mp4')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by WhatsAsena\n_Interpolated to ${match[1]} FPS_`});
+            });
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'rainbowimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'prainbowimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -860,18 +715,18 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)"])
-            .videoFilters('eq=brightness=0.6')
-            .save('output.png')
+            .videoFilters('eq=brightness=0.5')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4rainbow', fromMe: true, dontAddCommandList: true}, (async (message, match) => {  
+    Garfield.addXnodes({pattern: 'pmp4rainbow', fromMe: true, dontAddCommandList: true}, (async (message, match) => {  
   
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -890,10 +745,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'negativeimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {  
+    Garfield.addXnodes({pattern: 'pnegativeimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {  
   
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -904,17 +759,17 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=color_negative"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4negative', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
+    Garfield.addXnodes({pattern: 'pmp4negative', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -933,10 +788,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4art', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4art', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -955,10 +810,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'artimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'partimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -969,17 +824,17 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "convolution=-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4stab', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4stab', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -998,10 +853,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4color', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4color', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1020,10 +875,10 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'colorimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pcolorimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1034,14 +889,14 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Garfield.addXnodes({pattern: 'mp4slowmo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Garfield.addXnodes({pattern: 'pmp4slowmo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
         if (!message.reply_message.video) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Motion Render Interpolating..```',MessageType.text);
@@ -1062,26 +917,35 @@ if (Config.WORKTYPE == 'private') {
             .format('mp4')
             .save('slowmo.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('slowmo.mp4'), MessageType.video, {caption: '```Follow Us Facebook - https://www.facebook.com/garfieldbots/```'});
+                await message.sendMessage(fs.readFileSync('slowmo.mp4'), MessageType.video, {caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Garfield.addXnodes({pattern: 'media$', fromMe: false, desc: Lang.XMEDİA_DESC}, (async (message, match) => {    
-        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
-            await message.sendMessage(' *Garfield Media* \n \n 💬Usage: *.mp4enhance*\n🐼Desc: 🇹🇷 Videnun kalitesini artırır.\n\n💬Usage: *.interp*\n🐼Desc: 🇹🇷 Videonun FPS değerini arttırır.\n\n💬Usage: *.mp4slowmo*\n🐼Desc: 🇹🇷 Ağır çekim olmayan videolara true-slowmo uygular.\n\n💬Usage: *.x4mp4*\n🐼Desc: 🇹🇷 Video Kalitesini 4 kat düşürür.\n\n💬Usage: *.x2mp4*\n🐼Desc: 🇹🇷 Video Kalitesini 2 kat düşürür.\n\n💬Usage: *.gif*\n🐼Desc: 🇹🇷 Videoyu gif’e çevirir.\n\n💬Usage: *.agif*\n🐼Desc: 🇹🇷 Videoyu sesli gif’e çevirir.\n\n💬Usage: *.mp4blur*\n🐼Desc: 🇹🇷 Video arka planını bulanıklaştırır.\n\n💬Usage: *.mp4stab*\n🐼Desc: 🇹🇷 Videonun titreşimini azaltır.\n\n💬Usage: *.mp4rainbow*\n🐼Desc: 🇹🇷 Videoya gökkuşağı efekti uygular.\n\n💬Usage: *.mp4color*\n🐼Desc: 🇹🇷 Videonun renklerini daha canlı ve çekici yapar.\n\n💬Usage: *.mp4art*\n🐼Desc: 🇹🇷 Videoya çizim efekti uygular.\n\n💬Usage: *.mp4negative*\n🐼Desc: 🇹🇷 Videoya negatif renk filtresi uygular.\n\n💬Usage: *.mp4vintage*\n🐼Desc: 🇹🇷 Videoya nostaji efekti uygular.\n\n💬Usage: *.mp4bw*\n🐼Desc: 🇹🇷 Videoya monochrome efekti uygular.\n\n💬Usage: *.mp4reverse*\n🐼Desc: 🇹🇷 Videoyu tersten oynatır.\n\n💬Usage: *.mp4edge*\n🐼Desc: 🇹🇷 Videoya edge efekti uygular.\n\n💬Usage: *.mp4image*\n🐼Desc: 🇹🇷 Fotoğrafı 5 saniyelik videoya çevirir.\n\n💬Usage: *.spectrum*\n🐼Desc: 🇹🇷 Sesin spektrum görüntüsünü video yapar.\n\n💬Usage: *.waves*\n🐼Desc: 🇹🇷 Sesin dalga aralığını videoya çevirir.\n\n💬Usage: *.frequency*\n🐼Desc: 🇹🇷 Sesin frekans aralığını videoya çevirir.\n\n💬Usage: *.avec*\n🐼Desc: 🇹🇷 Sesin farklı bir histogramını videoya çevirir.\n\n💬Usage: *.volumeaudio*\n🐼Desc: 🇹🇷 Sesin Desibel Değerini Videoya Dönüştürür.\n\n💬Usage: *.cqtaudio*\n🐼Desc: 🇹🇷 Ses CQT değerini videoya çevirir.\n\n💬Usage: *.mp3eq*\n🐼Desc: 🇹🇷 Sesi kristal berraklık düzeyinde ayarlar.\n\n💬Usage: *.mp3crusher*\n🐼Desc: 🇹🇷 Sesi bozar ve gülünç hale getirir.\n\n💬Usage: *.mp3reverse*\n🐼Desc: 🇹🇷 Sesi Tersen Oynatır.\n\n💬Usage: *.mp3bass* \n🐼Desc: 🇹🇷 Müziğin bass düzeyini, sesi bozmadan arttırır.\n\n💬Usage: *.mp3pitch*\n🐼Desc: 🇹🇷 Sesi inceltir ve hızlandırır.\n\n💬Usage *.mp3low*\n🐼Desc: 🇹🇷 Sesi kalınlaştırır ve yavaşlatır.\n\n💬Usage: *.x2mp3*\n🐼Desc: 🇹🇷 Sesi 2 kat hızlandırır.\n\n💬Usage: *.mp3volume*\n🐼Desc: 🇹🇷 Ses seviyesini fazalca arttırır.\n\n💬Usage: *.bwimage*\n🐼Desc: 🇹🇷 Fotoğrafa monochrome efekti uygular.\n\n💬Usage: *.vintageimage*\n🐼Desc: 🇹🇷 Fotoğrafa vintage efekti uygular.\n\n💬Usage: *.edgeimage*\n🐼Desc: 🇹🇷 Fotoğrafa edge efekti uygular.\n\n💬Usage: *.enhanceimage*\n🐼Desc: 🇹🇷 Fotoğrafı daha net hale getirir.\n\n💬Usage: *.blurimage*\n🐼Desc: 🇹🇷 Fotoğrafın arka planını bulanıklaştırır.\n\n💬Usage: *.grenimage*\n🐼Desc: 🇹🇷 Fotoğrafa gren efekti uygular.\n\n💬Usage: *.negativeimage*\n🐼Desc: 🇹🇷 Fotoğrafa negatif renk filtresi uygular.\n\n💬Usage: *.rainbowimage*\n🐼Desc: 🇹🇷 Fotoğrafa gökkuşağı efekti uygular.\n\n💬Usage: *.colorimage*\n🐼Desc: 🇹🇷 Fotoğrafın renklerini daha canlı ve çekici yapar.\n\n💬Usage: *.artimage*\n🐼Desc: 🇹🇷 Fotoğrafa çizim efekti uygular.');
-        } else { 
-            await message.sendMessage('*Garfield Media* \n \n 💬Usage: *.mp4enhance*\n🐼Desc: 🇱🇰 Enhance video’s quality.\n\n💬Usage: *.interp*\n🐼Desc: 🇱🇰 Increases the FPS of the video.\n\n💬Usage: *.mp4slowmo*\n🐼Desc: 🇱🇰 Applies true-slowmo to non-slow motion videos.\n\n💬Usage: *.x4mp4*\n🐼Desc: 🇱🇰 Reduce video’s quality by 75%.\n\n💬Usage: *.x2mp4*\n🐼Desc: 🇱🇰 Reduce video’s quality by 50%.\n\n💬Usage: *.gif*\n🐼Desc: 🇱🇰 Converts video to gif.\n\n💬Usage: *.agif*\n🐼Desc: 🇱🇰 Converts video to voiced gif.\n\n💬Usage: *.mp4blur*\n🐼Desc: 🇱🇰 Blurs the background of the video.\n\n💬Usage: *.mp4stab*\n🐼Desc: 🇱🇰 Decreases the vibration of the video.\n\n💬Usage: *.mp4rainbow*\n🐼Desc: 🇱🇰 Applies a rainbow effect to video.\n\n💬Usage: *.mp4color*\n🐼Desc: 🇱🇰 Makes the colors of the video more vivid and beautiful.\n\n💬Usage: *.mp4art*\n🐼Desc: 🇱🇰 Applies a art effect to the video.\n\n💬Usage: *.mp4negative*\n🐼Desc: 🇱🇰 Applies a negative color filter to the video.\n\n💬Usage: *.mp4vintage*\n🐼Desc: 🇱🇰 Applies a nostalgic effect to video.\n\n💬Usage: *.mp4bw*\n🐼Desc: 🇱🇰 Applies a monochrome effect to video.\n\n💬Usage: *.mp4reverse*\n🐼Desc: 🇱🇰 Plays the video in reverse.\n\n💬Usage: *.mp4edge*\n🐼Desc: 🇱🇰 Applies a edge effect to the video.\n\n💬Usage: *.mp4image*\n🐼Desc: 🇱🇰 Converts photo to 5 sec video.\n\n💬Usage: *.spectrum*\n🐼Desc: 🇱🇰 Converts the spectrum of sound into video.\n\n💬Usage: *.waves*\n🐼Desc: 🇱🇰 Converts the wave range of sound to video.\n\n💬Usage: *.frequency*\n🐼Desc: 🇱🇰 Converts the frequency range of sound to video.\n\n💬Usage: *.avec*\n🐼Desc: 🇱🇰 Converts the histogram of sound to video.\n\n💬Usage: *.volumeaudio*\n🐼Desc: 🇱🇰 Converts the decibel value of the sound into video.\n\n💬Usage: *.cqtaudio*\n🐼Desc: 🇱🇰 Converts the CQT value of audio to video.\n\n💬Usage: *.mp3eq*\n🐼Desc: 🇱🇰 Adjusts the sound to a crystal clear level.\n\n💬Usage: *.mp3bass* \n🐼Desc: 🇱🇰 Adds crystal bass without distorting the sound.\n\n💬Usage: *.mp3crusher*\n🐼Desc: 🇱🇰 Distorts the sound, makes ridiculous.\n\n💬Usage: *.mp3reverse*\n🐼Desc: 🇱🇰 Plays the sound in reverse.\n\n💬Usage: *.mp3pitch*\n🐼Desc: 🇱🇰 Makes the sound thinner and faster.\n\n💬Usage *.mp3low*\n🐼Desc: 🇱🇰 Makes the sound deep and slower.\n\n💬Usage: *.x2mp3*\n🐼Desc: 🇱🇰 Makes the sound twice as fast.\n\n💬Usage: *.mp3volume*\n🐼Desc: 🇱🇰 Increase sound level so much.\n\n💬Usage: *.bwimage*\n🐼Desc: 🇱🇰 Applies a monochrome effect to image.\n\n💬Usage: *.vintageimage*\n🐼Desc: 🇱🇰 Applies a vinatge effect to photo.\n\n💬Usage: *.edgeimage*\n🐼Desc: 🇹🇷 Fotoğrafa edge efekti uygular.\n🇱🇰 Applies a edge effect to the photo.\n\n💬Usage: *.enhanceimage*\n🐼Desc: 🇹🇷 Fotoğrafı daha net hale getirir.\n🇱🇰 Makes the photo clearer.\n\n💬Usage: *.blurimage*\n🐼Desc: 🇹🇷 Fotoğrafın arka planını bulanıklaştırır.\n🇱🇰 Blurs the background of the photo.\n\n💬Usage: *.grenimage*\n🐼Desc: 🇹🇷 Fotoğrafa gren efekti uygular.\n🇱🇰 Applies grain effect to the photo.\n\n💬Usage: *.negativeimage*\n🐼Desc: 🇱🇰 Applies a negative color filter to the photo.\n\n💬Usage: *.rainbowimage*\n🐼Desc: 🇱🇰 Applies rainbow effect to the photo.\n\n💬Usage: *.colorimage*\n🐼Desc: 🇱🇰 It makes the colors of the photo more vivid and attractive.\n\n💬Usage: *.artimage*\n🐼Desc: 🇱🇰 Applies a art effect to the photo.');
-        }
+    Garfield.addXnodes({pattern: 'media', fromMe: false, desc: Lang.XMEDİA_DESC}, (async (message, match) => {    
+
+       await message.sendMessage(' *MEDIA COMMANDS ARE 🎲* \n\n 🐼Usage: *.mp4enhance*\n⚽Desc:Enhance video’s quality.\n\n🐼Usage: *.interp*\n⚽Desc:Increases the FPS of the video.\n\n🐼Usage: *.mp4slowmo*\n⚽Desc:Applies true-slowmo to non-slow motion videos.\n\n🐼Usage: *.x4mp4*\n⚽Desc:Reduce video’s quality by 75%.\n\n🐼Usage: *.x2mp4*\n⚽Desc: Reduce video’s quality by 50%.\n\n🐼Usage: *.gif*\n⚽Desc:Converts video to gif.\n\n🐼Usage: *.agif*\n⚽Desc:Converts video to voiced gif.\n\n🐼Usage: *.mp4blur*\n⚽Desc: Blurs the background of the video.\n\n🐼Usage: *.mp4stab*\n⚽Desc: Decreases the vibration of the video.\n\n🐼Usage: *.mp4rainbow*\n⚽Desc: Applies a rainbow effect to video.\n\n🐼Usage: *.mp4color*\n⚽Desc:Makes the colors of the video more vivid and beautiful.\n\n🐼Usage: *.mp4art*\n⚽Desc:Applies a art effect to the video.\n\n🐼Usage: *.mp4negative*\n⚽Desc:Applies a negative color filter to the video.\n\n🐼Usage: *.mp4vintage*\n⚽Desc:Applies a nostalgic effect to video.\n\n🐼Usage: *.mp4bw*\n⚽Desc: Applies a monochrome effect to video.\n\n🐼Usage: *.mp4reverse*\n⚽Desc: Plays the video in reverse.\n\n🐼Usage: *.mp4edge*\n⚽Desc:Applies a edge effect to the video.\n\n🐼Usage: *.mp4image*\n⚽Desc: Converts photo to 5 sec video.\n\n🐼Usage: *.spectrum*\n⚽Desc: Converts the spectrum of sound into video.\n\n🐼Usage: *.waves*\n⚽Desc: Converts the wave range of sound to video.\n\n🐼Usage: *.frequency*\n⚽Desc: Converts the frequency range of sound to video.\n\n🐼Usage: *.avec*\n⚽Desc: Converts the histogram of sound to video.\n\n🐼Usage: *.volumeaudio*\n⚽Desc: Converts the decibel value of the sound into video.\n\n🐼Usage: *.cqtaudio*\n⚽Desc: Converts the CQT value of audio to video.\n\n🐼Usage: *.mp3eq*\n⚽Desc: Adjusts the sound to a crystal clear level.\n\n🐼Usage: *.mp3crusher*\n⚽Desc:Distorts the sound, makes ridiculous.\n\n🐼Usage: *.mp3reverse*\n⚽Desc:Plays the sound in reverse.\n\n🐼Usage: *.mp3pitch*\n⚽Desc:Makes the sound thinner and faster.\n\n🐼Usage *.mp3low*\n⚽Desc:Makes the sound deep and slower.\n\n🐼Usage: *.x2mp3*\n⚽Desc:  Makes the sound twice as fast.\n\n🐼Usage: *.mp3volume*\n⚽Desc: 🇱🇰 Ses seviyesini fazalca arttırır.\n🇬🇧 Increase sound level so much.\n\n🐼Usage: *.bwimage*\n⚽Desc: 🇱🇰 Fotoğrafa monochrome efekti uygular.\n🇬🇧 Applies a monochrome effect to image.\n\n🐼Usage: *.vintageimage*\n⚽Desc: 🇱🇰 Fotoğrafa vintage efekti uygular.\n🇬🇧 Applies a vinatge effect to video.\n\n🐼Usage: *.edgeimage*\n⚽Desc: 🇱🇰 Fotoğrafa edge efekti uygular.\n🇬🇧 Applies a edge effect to the photo.\n\n🐼Usage: *.enhanceimage*\n⚽Desc: 🇱🇰 Fotoğrafı daha net hale getirir.\n🇬🇧 Makes the photo clearer.\n\n🐼Usage: *.blurimage*\n⚽Desc: 🇱🇰 Fotoğrafın arka planını bulanıklaştırır.\n🇬🇧 Blurs the background of the photo.\n\n🐼Usage: *.grenimage*\n⚽Desc: 🇱🇰 Fotoğrafa gren efekti uygular.\n🇬🇧 Applies grain effect to the photo.\n\n🐼Usage: *.negativeimage*\n⚽Desc: 🇱🇰 Fotoğrafa negatif renk filtresi uygular.\n🇬🇧 Applies a negative color filter to the photo.\n\n🐼Usage: *.rainbowimage*\n⚽Desc: 🇱🇰 Fotoğrafa gökkuşağı efekti uygular.\n🇬🇧 Applies rainbow effect to the photo.\n\n🐼Usage: *.colorimage*\n⚽Desc: 🇱🇰 Fotoğrafın renklerini daha canlı ve çekici yapar.\n🇬🇧 It makes the colors of the photo more vivid and attractive.\n\n🐼Usage: *.artimage*\n⚽Desc: 🇱🇰 Fotoğrafa çizim efekti uygular.\n🇬🇧 Applies a art effect to the photo.');
+
     }));
-
-
+     
+   Garfield.addXnodes({pattern: 'mycmndbbb', fromMe: true, desc: 'set of commands for bot user or sudo'}, (async (message, match) => {    
+       
+        await message.sendMessage('\n ``` BOT OWNER COMMANDS ARE 👇``` \n\n    \n\n🦠 Command: !install\n📍 Description: Install external plugins.\n\n🦠 Command: !plugin\n📍 Description: Shows the plugins you have installed.\n\n🦠 Command: !remove\n📍 Description: Removes the plugin.\n\n🦠 Command: !ban\n📍 Description: Ban someone in the group. Reply to message or tag a person to use command.\n\n🦠 Command: !add\n📍 Description: Adds someone to the group.\n\n🦠 Command: !promote\n📍 Description: Makes any person an admin.\n\n🦠 Command: !demote\n📍 Description: Takes the authority of any admin.\n\n🦠 Command: !mute\n📍 Description: Mute the group chat. Only the admins can send a message.\n\n🦠 Command: !unmute\n📍 Description: Unmute the group chat. Anyone can send a message.\n\n🦠 Command: !invite\n📍 Description: Provides the groups invitation link.\n\n🦠 Command: !afk\n📍 Description: It makes you AFK - Away From Keyboard.\n\n🦠 Command: !del\n📍 Description: Deletes The Replied Message Send By The Bot [ ✅ Official External Plugin ]\n\n🦠 Command: !justspam\n📍 Description: spam the sticker you replyed.\n\n🦠 Command: !welcome\n📍 Description: It sets the welcome message. If you leave it blank it shows the welcome message.\n\n🦠 Command: !goodbye\n📍 Description: Sets the goodbye message. If you leave blank, it shows the goodbye message\n\n🦠 Command: !phelp\n📍 Description: Gives information about using the bot from the Help menu.\n\n🦠 Command: !degis\n\n🦠 Command: !restart\n📍 Description: Restart Garfield\n\n🦠 Command: !shutdown\n📍 Description: Shutdown Garfield\n\n🦠 Command: !dyno\n📍 Description: Check heroku dyno usage\n\n🦠 Command: !setvar\n📍 Description: Set heroku config var\n\n🦠 Command: !delvar\n📍 Description: Delete heroku config var\n\n🦠 Command: !getvar\n📍 Description: Get heroku config var\n\n🦠 Command: !leave\n📍 Description: It kicks you from the group you are using it in.\n\n🦠 Command: !pp\n📍 Description: Makes the profile photo what photo you reply.\n\n🦠 Command: !block\n📍 Description: Block user.\n\n🦠 Command: !unblock\n📍 Description: Unblock user.\n\n🦠 Command: !jid\n📍 Description: Giving users JID.\n\n🦠 Command: !scam\n📍 Description: Creates 5 minutes of fake actions.\n\n🦠 Command: !spam\\n📍 Description: It spam until you stop it.\n⌨️ Example: .spam test\n\n🦠 Command: !filtre\n📍 Description: add filtre in chats\neg: .filter "input" "output"\n\n🦠 Command: !tagall\n📍 Description: Tags everyone in the group.\n\n🦠 Command: !stam\n📍 Description: sends the replyed messages to all the members in the group \n\n🦠 Command: !update\n📍 Description: Checks the update.\n\n🦠 Command: update now\n📍 Description: It makes updates.');    
+   
+    }));
+     
+     Garfield.addXnodes({pattern: 'codtts', fromMe: false, desc: 'language code to change the voice in .tts & also for .trt translation'}, (async (message, match) => {  
+       
+        await message.sendMessage('\n https://drive.google.com/file/d/1r4l7QcdEiu9wAOgqxTGB6KWBVsg_U1cu/view?usp=drivesdk \n');
+        
+    })); 
+    
     Garfield.addXnodes({pattern: 'x4mp4', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1103,7 +967,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'x2mp4', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1275,7 +1139,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp3eq', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1296,7 +1160,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp3crusher', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1338,7 +1202,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4vintage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1360,7 +1224,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4reverse', fromMe: false, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1383,7 +1247,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4bw', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1405,7 +1269,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'bwimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1416,9 +1280,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "hue=s=0"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1426,7 +1290,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'vintageimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1437,9 +1301,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=vintage"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1447,7 +1311,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4enhance', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1480,9 +1344,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "split[original][copy];[copy]scale=ih*16/9:-1,crop=h=iw*9/16,gblur=sigma=20[blurred];[blurred][original]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1490,7 +1354,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4blur', fromMe: false, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1511,7 +1375,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp3pitch', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1554,7 +1418,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp3low', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1575,7 +1439,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'x2mp3', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1607,9 +1471,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-filter:v", "edgedetect=low=0.9:high=0.2"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1628,9 +1492,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "unsharp=3:3:1.5"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1638,7 +1502,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp3volume', fromMe: false, dontAddCommandList: true}, (async (message, match) => { 
    
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1715,18 +1579,20 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .videoFilters('noise=alls=100:allf=t+u')
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
     Garfield.addXnodes({pattern: 'interp ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false && match[1] === '') return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
-        if (match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
-        if (match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*');
-        await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
+
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
+        if (message.reply_message.video && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
+        if (message.reply_message.video && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
+   
+        var downloading = await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1734,161 +1600,22 @@ else if (Config.WORKTYPE == 'public') {
             },
             message: message.reply_message.data.quotedMessage
         });
-        
-        exec('ffprobe -hide_banner -loglevel fatal -show_error -show_format -show_streams -show_programs -show_chapters -show_private_data -print_format json ' + location, async (err, st, stderr) => {
-            var stdout = JSON.parse(st)
-            var value = { value: 100 }
-            var time_c = { time: 1 }
-            if (stdout.format.size / 1000000 > 0 && stdout.format.size / 1000000 < 6) {
-                value.value = value.value - 2
-                time_c.time = time_c.time + 1
-            }
-            if (stdout.format.size / 1000000 > 5 && stdout.format.size / 1000000 < 11) {
-                value.value = value.value - 5
-                time_c.time = time_c.time + 1.4
-            }
-            if (stdout.format.size / 1000000 > 10 && stdout.format.size / 1000000 < 21) {
-                value.value = value.value - 9
-                time_c.time = time_c.time + 2
-            }
-            if (stdout.format.size / 1000000 > 20 && stdout.format.size / 1000000 < 31) {
-                value.value = value.value - 25
-                time_c.time = time_c.time + 2.3
-            }
-            if (stdout.format.size / 1000000 > 30) {
-                value.value = value.value - 39
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].duration > 0 && stdout.streams[0].duration < 21) {
-                value.value = value.value - 4
-                time_c.time = time_c.time + 1
-            }
-            if (stdout.streams[0].duration > 20 && stdout.streams[0].duration < 41) {
-                value.value = value.value - 9
-                time_c.time = time_c.time + 1.4
-            }
-            if (stdout.streams[0].duration > 40 && stdout.streams[0].duration < 61) {
-                value.value = value.value - 11
-                time_c.time = time_c.time + 2
-            }
-            if (stdout.streams[0].duration > 60 && stdout.streams[0].duration < 81) {
-                value.value = value.value - 15
-                time_c.time = time_c.time + 2.7
-            }
-            if (stdout.streams[0].duration > 80 && stdout.streams[0].duration < 101) {
-                value.value = value.value - 21
-                time_c.time = time_c.time + 3.4
-            }
-            if (stdout.streams[0].duration > 100 && stdout.streams[0].duration < 121) {
-                value.value = value.value - 27
-                time_c.time = time_c.time + 4
-            }
-            if (stdout.streams[0].duration > 120) {
-                value.value = value.value - 39
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 0 && stdout.streams[0].r_frame_rate.split('/')[0] < 11) {
-                value.value = value.value + 1
-                time_c.time = time_c.time - 0.6
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 10 && stdout.streams[0].r_frame_rate.split('/')[0] < 21) {
-                value.value = value.value - 3
-                time_c.time = time_c.time + 1
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 20 && stdout.streams[0].r_frame_rate.split('/')[0] < 31) {
-                value.value = value.value - 19
-                time_c.time = time_c.time + 2.3
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41) {
-                value.value = value.value - 31
-                time_c.time = time_c.time + 4.3
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40) {
-                value.value = value.value - 40
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 9 && stdout.streams[0].r_frame_rate.split('/')[0] < 31 && match[1] > 39) {
-                time_c.time = time_c.time + 3.3
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 39) {
-                time_c.time = time_c.time + 5
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 49) {
-                time_c.time = time_c.time + 5.4
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 59) {
-                time_c.time = time_c.time + 6
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 30 && stdout.streams[0].r_frame_rate.split('/')[0] < 41 && match[1] > 69) {
-                time_c.time = time_c.time + 7.5
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 59) {
-                time_c.time = time_c.time + 9
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 64) {
-                time_c.time = time_c.time + 9.2
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 69) {
-                time_c.time = time_c.time + 9.5
-            }
-            if (stdout.streams[0].r_frame_rate.split('/')[0] > 40 && stdout.streams[0].r_frame_rate.split('/')[0] < 61 && match[1] > 75) {
-                time_c.time = time_c.time + 10
-            }
-            let prcs = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '_Bu işlem biraz uzun sürebilir._\n_Öngörülen Süre:_ *' + time_c.time + ' Dakika*\n_Başarı Oranı:_ *' + value.value + '%*' : '_This process may take a while._\n_Envisaged Time:_ *' + time_c.time + ' Minute*\n_Success Rate:_ *' + value.value + '%*'
-            await message.client.sendMessage(message.jid,prcs, MessageType.text);
-            var dam = 10
-            ffmpeg(location)
-                .videoFilters(`minterpolate=fps=${match[1]}:mi_mode=mci:me_mode=bidir`)
-                .format('mp4')
-                .save('output.mp4')
-                .on('progress', async (progress) => {
-                    var l = progress.percent
-                    while (l > 10 && dam == 10) {
-                        dam = 1
-                        let yon = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%10 Tamamlandı!*' : '*Completed %10!*'
-                        await message.client.sendMessage(message.jid,yon, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 30 && dam == 1) {
-                        dam = 2
-                        let yotuz = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%30 Tamamlandı!*' : '*Completed %30!*'
-                        await message.client.sendMessage(message.jid,yotuz, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 50 && dam == 2) {
-                        dam = 3
-                        let yelli = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%50 Tamamlandı!*' : '*Completed %50!*'
-                        await message.client.sendMessage(message.jid,yelli, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 70 && dam == 3) {
-                        dam = 4
-                        let yetmis = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*%70 Tamamlandı!*' : '*Completed %70!*'
-                        await message.client.sendMessage(message.jid,yetmis, MessageType.text)
-                        
-                    }
-                    
-                    while (l > 90 && dam == 4) {
-                        dam = 5
-                        let vprocc = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Video Hazırlanıyor..*' : '*Preparing Video..*'
-                        await message.client.sendMessage(message.jid,vprocc, MessageType.text)
-                        
-                    }
-                })
-                .on('end', async () => {
-                    dam = 10
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by Garfield\n_Interpolated to ${match[1]} FPS_`});
-                });
-        });
+        await message.sendMessage('_This process may take a while.._');
+
+        ffmpeg(location)
+            .videoFilters(`minterpolate=fps=${match[1]}:mi_mode=mci:me_mode=bidir`)
+            .format('mp4')
+            .save('output.mp4')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by WhatsAsena\n_Interpolated to ${match[1]} FPS_`});
+            });
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
     Garfield.addXnodes({pattern: 'rainbowimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1900,9 +1627,9 @@ else if (Config.WORKTYPE == 'public') {
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)"])
             .videoFilters('eq=brightness=0.5')
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1910,7 +1637,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4rainbow', fromMe: false, dontAddCommandList: true}, (async (message, match) => {  
   
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1932,7 +1659,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'negativeimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {  
   
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1943,9 +1670,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=color_negative"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1953,7 +1680,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4negative', fromMe: false, dontAddCommandList: true}, (async (message, match) => {   
  
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1975,7 +1702,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4art', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1997,7 +1724,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'artimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -2008,9 +1735,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "convolution=-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2"])
-            .save('output.png')
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -2018,7 +1745,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4stab', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -2040,7 +1767,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'mp4color', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -2062,7 +1789,7 @@ else if (Config.WORKTYPE == 'public') {
     Garfield.addXnodes({pattern: 'colorimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Garfield Editing..```',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'```Garfield editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -2072,10 +1799,10 @@ else if (Config.WORKTYPE == 'public') {
         });
 
         ffmpeg(location)
-            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.2"])
-            .save('output.png')
+            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1"])
+            .save('output.jpg')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -2101,8 +1828,9 @@ else if (Config.WORKTYPE == 'public') {
             .format('mp4')
             .save('slowmo.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('slowmo.mp4'), MessageType.video, {caption: '```Follow Us Facebook - https://www.facebook.com/garfieldbots/```'});
+                await message.sendMessage(fs.readFileSync('slowmo.mp4'), MessageType.video, {caption: '  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` '});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
+}
 }
