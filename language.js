@@ -2,18 +2,18 @@ const Config = require('./config');
 const fs = require('fs');
 const chalk = require('chalk');
 
-if (fs.existsSync('./language/AZ.json')) {
+if (fs.existsSync('./language/en.json')) {
     console.log(
         chalk.green.bold('Loading English Language...')
     );
 
-    var json = JSON.parse(fs.readFileSync('./language/AZ.json'));
+    var json = JSON.parse(fs.readFileSync('./language/en.json'));
 } else {
     console.log(
         chalk.red.bold('You entered an invalid language. English language was chosen.')
     );
 
-    var json = JSON.parse(fs.readFileSync('./language/AZ.json'));
+    var json = JSON.parse(fs.readFileSync('./language/en.json'));
 }
 
 function getString(file) {
