@@ -124,7 +124,7 @@ ${chalk.blue.italic('🐼 Connecting to WhatsApp... Please wait')}`);
             chalk.blueBright.italic('📡  Installing X-nodes..')
         );
 
-        fs.readdirSync('./X-nodes').forEach(plugin => {
+        fs.readdirSync('./plugins').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
                 require('./plugins/' + plugin);
             }
