@@ -1,7 +1,7 @@
 {
-    "name": "GARFIELD",
+    "name": "GARFIELD WHATSAPP BOT",
     "description": "GARFIELD LATEST VERSION BY NOIZEPROJECTS.",
-    "logo": "https://i.ibb.co/yYJy1bM/logo.png",
+    "logo": "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png",
     "keywords": ["whatsapp", "userbot", "Garfield", "NOIZE", "bot", "api", "ZENOI", "Tharindu", "ai-bot", "Zenoixnoize", "ZENOI", "wabot noize", "wp bot"],
     "repository": "https://github.com/Zenoixnoize/GARFIELD-6.0",
     "website":   "https://t.me/ipandaproject",
@@ -43,7 +43,7 @@
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key. ===> https://t.me/herokuapikeyscraper",
+            "description": "Enter your Heroku API ===> https://dashboard.heroku.com/account ",
             "required": true
         },
         "HEROKU_APP_NAME": {
@@ -63,11 +63,11 @@
         "WELCOME_IMAGE": {
             "description": "Enter link welcome Image",
             "required": true,
-            "value": "https://i.hizliresim.com/loUtAb.jpg"
+            "value": "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png"
         },
         "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
-            "required": false,
+            "description": "Do not.change.",
+            "required": true,
             "value": "true"
         }
     },
