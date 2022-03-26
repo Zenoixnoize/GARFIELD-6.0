@@ -1,10 +1,10 @@
-/*COPYRIGHT (C) 2022 CODED BY THARINDU LIYANAGE (ZENOI) */
+/*COPYRIGHT (C) 2022 CODED BY NOIZE */
 
 const Garfield = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
-const Garfield = require('../Garfield');
+const xv364 = require('../X-364');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
@@ -126,7 +126,7 @@ if (config.LANG == 'RU') {
     dlang_input = 'Обработанный текст:'
 }
 
-if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
+if (config.Auroraxc == 'off' || config.Auroraxc == 'OFF') {
 if (config.WORKTYPE == 'private') {
 
     Garfield.addXnodes({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
@@ -382,10 +382,10 @@ if (config.WORKTYPE == 'private') {
     Garfield.addXnodes({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
             const p_lk = 'BEGIN:VCARD\n'
-            + 'VERSION:3.0\n' 
-            + 'FN:' + Garfield.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'VERSION:6.0\n' 
+            + 'FN:' + xv364.OA_NAME + '\n' //created afnanplk, please copy this with credit..
             + 'ORG:Coded by Tharindu Liyanage;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + Garfield.PHONE + ':' + Garfield.PHONE + ' \n'
+            + 'TEL;type=CELL;type=VOICE;waid=' + xv364.PHONE + ':' + xv364.PHONE + ' \n'
             + 'END:VCARD'
 await message.client.sendMessage(message.jid, {displayname: "Garfield", vcard: p_lk}, MessageType.contact);
 
@@ -853,35 +853,35 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n```'+ title +' 🐼```\n\n' + ```Uploading song ☁️``` +'\n' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n```'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data , mimetype: Mimetype.mp4Audio, ptt: false});
             });
     }));
 
     Garfield.addXnodes({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
-        var VID = '';
         try {
-            if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } else {     
-                VID = match[1].split('/')[3]
-            }
+            var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
         } catch {
             return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
         }
+
         var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
 
-        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
+        var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+        yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1, isForwarded: true }, quoted: message.data, caption: '\n```'+ arama.title +'```\n\n'+ Lang.UPLOADING_VIDEO +'\n'});
+
         });
     }));
 
@@ -1019,10 +1019,10 @@ else if (config.WORKTYPE == 'public') {
       Garfield.addXnodes({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
             const p_lk = 'BEGIN:VCARD\n'
-            + 'VERSION:3.0\n' 
-            + 'FN:' + Garfield.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'VERSION:6.0\n' 
+            + 'FN:' + xv364.OA_NAME + '\n' //created afnanplk, please copy this with credit..
             + 'ORG:Coded By Tharindu Liyanage;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + Garfield.PHONE + ':' + Garfield.PHONE + ' \n'
+            + 'TEL;type=CELL;type=VOICE;waid=' + xv364.PHONE + ':' + xv364.PHONE + ' \n'
             + 'END:VCARD'
 await message.client.sendMessage(message.jid, {displayname: "Garfield", vcard: p_lk}, MessageType.contact);
 

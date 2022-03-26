@@ -30,8 +30,8 @@ const spotifyApi = new SpotifyWebApi({
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const LOAD_ING = "```Downloading media...```"
-if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
-Garfield.addXnodes({pattern: 'high ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (async (message, match) => { 
+if (config.Auroraxc == 'off' || config.Auroraxc == 'OFF') {
+Garfield.addXnodes({pattern: 'get ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_SOME,MessageType.text);    
         if (!match[1].includes('mp3') && match[1].includes('youtu.be') || match[1].includes('youtube.com')) {
