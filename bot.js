@@ -66,6 +66,7 @@ async function Aurora () {
     });
     
     
+    conn.browserDescription = ["X-nodes server(Secured)", "ZENOI", '6.0.0']
     const conn = new WAConnection();
     const Session = new StringSession();
 
