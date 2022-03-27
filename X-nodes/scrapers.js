@@ -853,7 +853,7 @@ Garfield.addXnodes({pattern: 'sojsk ?(.*)', fromMe: true, desc: Lang.SONG_DESC},
                     });
                 writer.addTag();
 
-reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n```'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
+reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n*'+ title +' 🐼*\n\n' + Lang.UPLOADING_SONG +'\n' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
             });
     }));
@@ -880,7 +880,7 @@ reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + titl
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1, isForwarded: true }, quoted: message.data, caption: '\n```'+ arama.title +'```\n\n'+ Lang.UPLOADING_VIDEO +'\n'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1, isForwarded: true }, quoted: message.data, caption: '\n*'+ arama.title +'*\n\n'+ Lang.UPLOADING_VIDEO +'\n'});
 
         });
     }));
@@ -919,7 +919,7 @@ reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + titl
     }));
 
      
-    Garfield.addXnodes({pattern: 'imjdjdg ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+    Garfield.addXnodes({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         if (!match[1].includes(' & ')) return await message.client.sendMessage(message.jid,' ```please enter the number of images you need \n\n example :``` *name of image* & *number of image* ',MessageType.text);
         if (match[1].includes(' & ')) { var split = match[1].split(' & '), afnn = split[1], plkk = split[0]
@@ -967,8 +967,8 @@ reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + titl
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Song Name :\n'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'for iphone' + '.mp3', mimetype: 'audio/mpeg', quoted: message.data});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n*'+ title +' 🐼*\n\n' + Lang.UPLOADING_SONG +'\n' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'Garfield v6.0' + '.mp3', mimetype: 'audio/mpeg', quoted: message.data});
             });
     }));
 

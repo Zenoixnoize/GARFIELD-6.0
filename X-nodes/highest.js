@@ -129,9 +129,9 @@ Garfield.addXnodes({pattern: 'get ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n```'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n*'+ title +' 🐼*\n\n' + Lang.UPLOADING_SONG +'\n' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data , mimetype: Mimetype.mp4Audio, ptt: false});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'for iphone' + config.AFN + '.mp3', mimetype: 'audio/mpeg',quoted: message.data});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'garfield v6.0' + config.AFN + '.mp3', mimetype: 'audio/mpeg',quoted: message.data});
             });
     }
    if (match[1].includes('instagram.com') && match[1].includes('mp3') || match[1].includes('.gov') || match[1].includes('.edu') || match[1].includes('.org') || match[1].includes('.net') || match[1].includes('.biz') || match[1].includes('.info') || match[1].includes('.facebook')) {

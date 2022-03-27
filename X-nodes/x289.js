@@ -937,7 +937,7 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n```'+ title +' 🐼```\n\n' + Lang.UPLOADING_SONG +'\n' });
+reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n*'+ title +' 🐼*\n\n' + Lang.UPLOADING_SONG +'\n' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
             });
     }));
@@ -1002,7 +1002,7 @@ reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + titl
         await reply.delete();
     }));
 
-    Garfield.addXnodes({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+    Garfield.addXnodes({pattern: 'sjsjd ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
