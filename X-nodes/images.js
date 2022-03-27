@@ -794,14 +794,13 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Garfield.addXnodes({pattern: 'owner', fromMe: false, desc: Lang.TTP_DESC}, (async (message, match) => {
+    Garfield.addXnodes({pattern: 'owner', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {
 
         var r_text = new Array ();
 
         r_text[0] = "https://i.ibb.co/vcs662H/cover.png";
         r_text[1] = "https://i.ibb.co/mhW4xhQ/server.jpg";
-        r_text[2] = "https://i.ibb.co/vcs662H/cover.png";
-        var i = Math.floor(3*Math.random())
+        var i = Math.floor(2*Math.random())
 
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
