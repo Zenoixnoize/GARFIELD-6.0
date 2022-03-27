@@ -6,7 +6,7 @@ const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
 
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
+if (Config.Auroraxc == 'off' || Config.Auroraxc == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
 Garfield.addXnodes({pattern: 'logo', fromMe: true, desc: 'more txtit commands'}, (async (message, match) => {
@@ -68,7 +68,7 @@ Garfield.addXnodes({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
         var ttinullimage = await axios.get(`https://lolhuman.herokuapp.com/api/ephoto1/anonymhacker?apikey=990580a2e31add15990665b0&text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: ' ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` ' })
 
     }));
   
