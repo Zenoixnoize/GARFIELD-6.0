@@ -919,7 +919,7 @@ else if (config.WORKTYPE == 'public') {
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
+            quality: 'lowestaudio',
         });
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
