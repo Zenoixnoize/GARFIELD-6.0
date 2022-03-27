@@ -825,7 +825,12 @@ else if (config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio,quoted: message.data,  ptt: true});
     }));
 
-Garfield.addXnodes({pattern: 'sojsk ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    Garfield.addXnodes({pattern: 'play ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -835,7 +840,7 @@ Garfield.addXnodes({pattern: 'sojsk ?(.*)', fromMe: true, desc: Lang.SONG_DESC},
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
-            quality: 'lowestaudio',
+            quality: 'highestaudio',
         });
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
@@ -853,8 +858,8 @@ Garfield.addXnodes({pattern: 'sojsk ?(.*)', fromMe: true, desc: Lang.SONG_DESC},
                     });
                 writer.addTag();
 
-reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n*'+ title +' 🐼*\n\n' + Lang.UPLOADING_SONG +'\n' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Title -```\n*'+ title +'*\n```Wait Uploading```' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1, isForwarded: true }, quoted: message.data, ptt: false});
             });
     }));
 
@@ -880,7 +885,7 @@ reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + titl
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1, isForwarded: true }, quoted: message.data, caption: '\n*'+ arama.title +'*\n\n'+ Lang.UPLOADING_VIDEO +'\n'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1, isForwarded: true }, quoted: message.data, caption: '\n```Title -```\n*'+ arama.title +'*\n'});
 
         });
     }));
