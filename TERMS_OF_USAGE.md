@@ -7,7 +7,7 @@ These terms of service ("Terms") apply to your access and use of **GARFIELD v6.0
 
 ## Accepting these Terms
 
-If you access or use the Service, it means you agree to be bound by all of the terms below. So, before you use the Service, please read all of the terms. If you don't agree to all of the terms below, please do not use the Service. Also, if a term does not make sense to you, please let us know by e-mailing **birhic023@gmail.com** or reach me via telegram **t.me/Zenoixnoize**
+If you access or use the Service, it means you agree to be bound by all of the terms below. So, before you use the Service, please read all of the terms. If you don't agree to all of the terms below, please do not use the Service. Also, if a term does not make sense to you, please let us know by e-mailing **Tharindunayanthaliyanage@gmail.com** or reach me via telegram **t.me/Zenoixnoize**
 
 
 ## Changes to these Terms
@@ -88,4 +88,4 @@ Please let us know what you think of the Service, these Terms and, in general, *
 
 ## Questions & Contact Information
 
-Questions or comments about the Service may be directed to us at the email address **birhic023@gmail.com** or reach me via telegram **t.me/Zenoixnoize**.
+Questions or comments about the Service may be directed to us at the email address **Tharindunayanthaliyanage@gmail.com** or reach me via telegram **t.me/Zenoixnoize**.
