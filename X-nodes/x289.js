@@ -442,7 +442,7 @@ if (config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
-    Garfield.addXnodes({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    Garfield.addXnodes({pattern: 'play ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
