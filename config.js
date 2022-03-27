@@ -20,7 +20,7 @@ module.exports = {
     ANTILINKMSG: process.env.ANTILINK_MESSAGE === undefined ? 'default' : process.env.ANTILINK_MESSAGE,
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     PROXY: process.env.PROXY === undefined ? 'false' : process.env.PROXY,
-    ALIVEMSG: process.env.DEPLOYER === undefined ? 'default' : process.env.DEPLOYER,
+    ALIVEMSG: process.env.DEPLOYER === undefined ? 'User369' : process.env.DEPLOYER,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     WNUMBER: process.env.NUMBER === undefined ? '+94711502119' : process.env.NUMBER,
