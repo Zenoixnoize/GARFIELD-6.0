@@ -68,7 +68,7 @@ We take intellectual property rights seriously. We have adopted a policy of term
 
 ## Governing Law
 
-The validity of these Terms and the rights, obligations, and relations of the parties under these Terms will be construed and determined under and in accordance with the laws of the **Turkey Constitution**, without regard to conflicts of law principles.
+The validity of these Terms and the rights, obligations, and relations of the parties under these Terms will be construed and determined under and in accordance with the laws of the **Sri Lanka Constitution**, without regard to conflicts of law principles.
 
 
 ## Termination
@@ -78,7 +78,7 @@ If you breach any of these Terms, we have the right to suspend or disable your a
 
 ## Entire Agreement
 
-These Terms constitute the entire agreement between you and **Thiccy** regarding the use of the Service, superseding any prior agreements between you and **Thiccy** relating to your use of the Service.
+These Terms constitute the entire agreement between you and **ZENOI** regarding the use of the Service, superseding any prior agreements between you and **ZENOI** relating to your use of the Service.
 
 
 ## Feedback
