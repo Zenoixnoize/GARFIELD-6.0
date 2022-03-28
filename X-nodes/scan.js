@@ -7,6 +7,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('tagall');
 
+if (Config.Auroraxc == 'off' || Config.Auroraxc == 'OFF') {
 if (Config.WORKTYPE == 'private') {
     Garfield.addXnodes({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
 
@@ -34,4 +35,5 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text);
         }
     }));
+}
 }
