@@ -8,7 +8,6 @@ const Config = require('../config');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
-let wk = Config.WORKTYPE == 'public' ? false : true
 const AurorasX = require('aurora-npm')
 const request = require('request');
 
@@ -27,8 +26,8 @@ if (Config.LANG == 'HI') description = 'सभी ttp कमांड दिख�
 if (Config.LANG == 'ML') description = 'എല്ലാ ttp കമാൻഡുകളും കാണിക്കുന്നു.', cmd = '*കമാൻഡ്:* ', cmd_desc = '*വിശദീകരണം:* '
 if (Config.LANG == 'PT') description = 'Mostra todos os comandos ttp.', cmd = '*Comando:* ', cmd_desc = '*Explicação:* '
 if (Config.LANG == 'ID') description = '*Menampilkan semua perintah ttp.', cmd = '*Memerintah:* ', cmd_desc = '*Penjelasan:* '
-
-Garfield.addXnodes({pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'ttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var uri = encodeURI(text)
@@ -41,7 +40,8 @@ Garfield.addXnodes({pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.png, caption: ' ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` ' })
   }
 }));
-Garfield.addXnodes({pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'attp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var uri = encodeURI(text)
@@ -54,7 +54,8 @@ Garfield.addXnodes({pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true 
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
   }
 }));
-Garfield.addXnodes({pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'wttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
@@ -87,7 +88,8 @@ Garfield.addXnodes({pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true 
     })
   }
 }));
-Garfield.addXnodes({pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'http ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
@@ -120,7 +122,8 @@ Garfield.addXnodes({pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true 
     })
   }
 }));
-Garfield.addXnodes({pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'bttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
@@ -153,7 +156,8 @@ Garfield.addXnodes({pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true 
     })
   }
 }));
-Garfield.addXnodes({pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'gttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
@@ -186,7 +190,8 @@ Garfield.addXnodes({pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true 
     })
   }
 }));
-Garfield.addXnodes({pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'sttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
@@ -219,7 +224,8 @@ Garfield.addXnodes({pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true 
     })
   }
 }));
-Garfield.addXnodes({pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'ettp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
@@ -252,7 +258,8 @@ Garfield.addXnodes({pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true 
     })
   }
 }));
-Garfield.addXnodes({pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'ahttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
@@ -284,8 +291,9 @@ Garfield.addXnodes({pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true
       })
     })
   }
-}));
-Garfield.addXnodes({pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+}))
+if (Config.WORKTYPE == 'private')
+    Garfield.addXnodes({ pattern: 'pttp ?(.*)',fromMe: false,, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
