@@ -28,32 +28,7 @@ if (Config.LANG == 'ML') description = 'എല്ലാ ttp കമാൻഡു�
 if (Config.LANG == 'PT') description = 'Mostra todos os comandos ttp.', cmd = '*Comando:* ', cmd_desc = '*Explicação:* '
 if (Config.LANG == 'ID') description = '*Menampilkan semua perintah ttp.', cmd = '*Memerintah:* ', cmd_desc = '*Penjelasan:* '
 
-Garfield.addXnodes({ pattern: 'allttp$', fromMe: wk, desc: Lang.ATTP_DESC }, (async (message, match) => {
-  var t1 = Lang.TTP_DESC
-  var t2 = Lang.ATTP_DESC
-  var t3 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı su temalı sticker'e çevirir." : "Converts text to water-themed sticker."
-  var t4 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı el yazısıyla sticker'e çevirir." : "Converts text to hand writing sticker."
-  var t5 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı blackbird temalı sticker'e çevirir." : "Converts text to blackbird-themed sticker."
-  var t6 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı sakız temalı sticker'e çevirir." : "Converts text to gum-themed sticker."
-  var t7 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı şirinler temalı sticker'e çevirir." : "Converts text to smurfs-themed sticker."
-  var t8 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı elektrik temalı sticker'e çevirir." : "Converts text to electric-themed sticker."
-  var t9 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı vurgulayan animasyonlu sticker'e çevirir." : "Converts text to highlighted animated sticker."
-  var t10 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı geçiş animasyonlu sticker'e çevirir." : "Converts text to transition animated sticker."
-  
-  var payload = cmd + '.ttp' + '\n' + cmd_desc + t1 + '\n\n' +
-    cmd + '.attp' + '\n' + cmd_desc + t2 + '\n\n' +
-    cmd + '.wttp' + '\n' + cmd_desc + t3 + '\n\n' +
-    cmd + '.http' + '\n' + cmd_desc + t4 + '\n\n' +
-    cmd + '.ahttp' + '\n' + cmd_desc + t9 + '\n\n' +
-    cmd + '.bttp' + '\n' + cmd_desc + t5 + '\n\n' +
-    cmd + '.gttp' + '\n' + cmd_desc + t6 + '\n\n' +
-    cmd + '.sttp' + '\n' + cmd_desc + t7 + '\n\n' +
-    cmd + '.ettp' + '\n' + cmd_desc + t8 + '\n\n' +
-    cmd + '.pttp' + '\n' + cmd_desc + t10
-    
-  await message.client.sendMessage(message.jid,payload, MessageType.text)
-}));
-Garfield.addXnodes({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var uri = encodeURI(text)
@@ -66,7 +41,7 @@ Garfield.addXnodes({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true 
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.png, caption: ' ```Follow Us Facebook - https://www.facebook.com/garfieldbots/``` ' })
   }
 }));
-Garfield.addXnodes({ pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var uri = encodeURI(text)
@@ -79,7 +54,7 @@ Garfield.addXnodes({ pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
   }
 }));
-Garfield.addXnodes({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
@@ -112,7 +87,7 @@ Garfield.addXnodes({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
@@ -145,7 +120,7 @@ Garfield.addXnodes({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
@@ -178,7 +153,7 @@ Garfield.addXnodes({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
@@ -211,7 +186,7 @@ Garfield.addXnodes({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
@@ -244,7 +219,7 @@ Garfield.addXnodes({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
@@ -277,7 +252,7 @@ Garfield.addXnodes({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
@@ -310,7 +285,7 @@ Garfield.addXnodes({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: tru
     })
   }
 }));
-Garfield.addXnodes({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+Garfield.addXnodes({pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await AurorasX.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
