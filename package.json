@@ -1,7 +1,7 @@
 {
-  "name": "Garfieldllcbot",
+  "name": "nodx",
   "version": "1.0",
-  "description": "GARFIELD 5.0 BY NOIZE.",
+  "description": "GARFIELD 6.0 BY NOIZE.",
   "main": "./GARFIELD-6.0/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
