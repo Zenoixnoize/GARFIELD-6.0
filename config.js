@@ -37,7 +37,6 @@ module.exports = {
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     HEROKU: {
-        HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,
         APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME
     },
@@ -52,6 +51,7 @@ module.exports = {
     LANG: "EN",
     GANSTYLE: "https://i.ibb.co/qmR14hQ/Pics-Art-22-03-18-19-34-01-459.png",
     HANDLERS: "^[.!/;]",
+    HEROKU: "true",
     RBG_API_KEY: "KuZztPhpu3Ki4w4A7cksCNe6",
     Auroraxc : "OFF",
     PROJECT_SIX: "NOIZE PROJECTS",
