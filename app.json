@@ -12,11 +12,6 @@
             "description": "Enter the code you received when you Linked Garfield QR here",
             "required": true
         },
-        "HEROKU": {
-            "description": "Do not change.",
-            "required": true,
-            "value": "true"
-        },
         "HEROKU_API_KEY": {
             "description": "Enter Your Heroku API Key ===> https://dashboard.heroku.com/account",
             "required": true
