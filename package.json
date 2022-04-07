@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/Zenoixnoize/GARFIELD-6.0#readme",
   "dependencies": {
-    "aurora-npm": "5.0.0"
+    "aurora-npm": "5.1.0"
   }
 }
