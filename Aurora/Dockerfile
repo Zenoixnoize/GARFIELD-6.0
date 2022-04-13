@@ -1,4 +1,4 @@
-FROM zenoi/garfieldsixpoint:modules
+FROM zenoi/garfield:versionsix
 
 RUN git clone https://github.com/Zenoixnoize/GARFIELD-6.0 /root/GARFIELD-6.0
 WORKDIR /root/GARFIELD-6.0/
