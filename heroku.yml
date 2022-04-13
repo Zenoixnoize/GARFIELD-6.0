@@ -1,5 +1,5 @@
 build:
   docker:
-      worker: /Aurora/Dockerfile
+      worker: /HostDev/Server/Explore/x2838999/Appx/Dockerfile
 run:
    worker: npm start
