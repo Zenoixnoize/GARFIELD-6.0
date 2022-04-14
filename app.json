@@ -22,8 +22,7 @@
         },
         "DEPLOYER": {
             "description": "Enter Your name",
-            "required": false,
-            "value": "Deployer 198773"
+            "required": false
         }
     },
     "addons": [{
