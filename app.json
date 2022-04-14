@@ -8,11 +8,6 @@
     "success_url": "https://github.com/Zenoixnoize/GARFIELD-6.0",
     "stack": "container",
     "env": {
-         "HEROKU": {
-            "description": "Do not change.",
-            "required": true,
-            "value": "true"
-        },
         "GARFIELD_SESSION": {
             "description": "Enter the code you received when you Linked Garfield QR here",
             "required": true
@@ -28,7 +23,7 @@
         "DEPLOYER": {
             "description": "Enter Your name",
             "required": false,
-            "value": "User 97626"
+            "value": "Deployer 198773"
         }
     },
     "addons": [{
