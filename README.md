@@ -59,16 +59,13 @@ You can use it without any hesitation
    ⬇️ Then go More > View logs and Once loaded, open your WhatsApp and keep it online
 
 
-  <br>
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zenoixnoize/GARFIELD-6.0)
+  
   
 
 <br>
   
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
   </html>
-
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zenoixnoize/GARFIELD-6.0)
 
 
   
