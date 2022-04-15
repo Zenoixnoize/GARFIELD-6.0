@@ -74,7 +74,7 @@ Be sure to use a (.)dot at the beginning of the command  </b>
     <b>
       <br>
        𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 𝗡𝗢𝗧𝗜𝗖𝗘 💌
-      <br><b>
+      <b>
       <br>
 - Hi 🥰 I m
       <br>
@@ -97,6 +97,13 @@ Also I am Student
    <b>This has been updated to the latest 2022 npm module. There are 120+ plugins. Deploying is quick and easy. Download speeds and upload speeds are very fast.The speed of response has increased. Fixed some bugs. Updated daily baileys 2022 Updated</b>    
   <br>
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
+  <br>
+  </html>
+  <h1> Telegram helping group 💡 </h1>
+Join our Telegram Helping group  [Click Now](https://t.me/+Sz9DrxO1Bp80Y2U9)
+   <br>
+  You can get any help by joining this group to get help
+
   <br>
     <h1>Developer</h1>
     <b><table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr></b>
