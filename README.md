@@ -70,12 +70,34 @@ Be sure to use a (.)dot at the beginning of the command  </b>
  <br>
  <br>
   
-<h1>What's new 🐼</h1>
-
-  
+<h1>What's new v6.0 🐼 And Developer Notice 💌</h1>
+    <b>
+      <br>
+       𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 𝗡𝗢𝗧𝗜𝗖𝗘 💌
+      <br><b>
+      <br>
+- Hi 🥰 I m
+      <br>
+ＮＯＩＺ Ξ
+      <br>
+I am 16 years old
+      <br>
+developer... From Sri Lanka 🇱🇰
+      <br>
+I am a Learning. Not more..
+      <br>
+Also I am Student 
+    </b></b>
+<b>
+  <br>
+  <br>
+  <b>𝗩6.0 𝗡𝗲𝘄
+  </b>
+  <br>
+   <b>This has been updated to the latest 2022 npm module. There are 120+ plugins. Deploying is quick and easy. Download speeds and upload speeds are very fast.The speed of response has increased. Fixed some bugs. Updated daily baileys 2022 Updated</b>    
+  <br>
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
-    <br>
-    <br>
+  <br>
     <h1>Developer</h1>
     <b><table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr></b>
 
