@@ -56,11 +56,9 @@
     <td>Updated</td>
   </tr>
 </table>
-<b>And added more modules 120+ <br>
-  Boat making has been made easier</b>
-  
-</body>
+ </body>
 </html>
+<h1>What is Garfield Whatsapp Bot</h1>
 
   <br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zenoixnoize/GARFIELD-6.0)
