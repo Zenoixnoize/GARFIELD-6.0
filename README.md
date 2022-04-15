@@ -57,6 +57,11 @@ You can use it without any hesitation
    ⬇️ Then go to Resources and turn on worker ✏️ 
    <br>
    ⬇️ Then go More > View logs and Once loaded, open your WhatsApp and keep it online
+  <html>
+   <br>
+  
+   <img src="/TempCloud/cover.png">
+   
   <!DOCTYPE html>
 <html>
 <head>
