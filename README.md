@@ -42,11 +42,16 @@ You can use it without any hesitation
    <br>
    First, give the app a name. Use only lowercase letters here. Try changing the name until the tick is green
    <br>
-   
-  <img src="/TempCloud/Screenshot_20220415_134019.jpg" width="480" height="232"> 
-     
-   <br>
    Example - apple23bot
+   <br>
+   [CLICK to get your heroku API key](https://dashboard.heroku.com/account)
+  <br>
+   Enter the token you received when you scanned the QR for the  **GARFIELD_SESSION**
+   <br>
+   Then click on the Deploy App button. The app will be ready in about three minutes. 
+   <br>
+   ⚠️ Do not let the screen turn off without switching to other apps
+  
   <!DOCTYPE html>
 <html>
 <head>
