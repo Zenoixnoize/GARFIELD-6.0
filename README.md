@@ -34,6 +34,12 @@ This module does not harm your privacy or personal data. We do not have any of y
      This will not give us any funding. Only self-satisfaction is obtained
 You can use it without any hesitation
   <br>
+     <b><h1>How to deploy</h1></b></html>
+     
+  First create a Heroku account  [Click Now](https://signup.heroku.com/) Select Node js as your programming language
+  Click Deploy button
+  <img src="/TempCloud/Screenshot_20220415_134019.jpg" width="480" height="232"> 
+     
   <!DOCTYPE html>
 <html>
 <head>
