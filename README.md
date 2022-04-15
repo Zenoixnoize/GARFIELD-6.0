@@ -37,9 +37,16 @@ You can use it without any hesitation
      <b><h1>How to deploy</h1></b></html>
      
   First create a Heroku account  [Click Now](https://signup.heroku.com/) Select Node js as your programming language
-  Click Deploy button
+   <br>
+  After Click Deploy button <br>
+   <br>
+   First, give the app a name. Use only lowercase letters here. Try changing the name until the tick is green
+   <br>
+   
   <img src="/TempCloud/Screenshot_20220415_134019.jpg" width="480" height="232"> 
      
+   <br>
+   Example - apple23bot
   <!DOCTYPE html>
 <html>
 <head>
