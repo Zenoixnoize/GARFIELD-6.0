@@ -57,9 +57,17 @@ You can use it without any hesitation
    ⬇️ Then go to Resources and turn on worker ✏️ 
    <br>
    ⬇️ Then go More > View logs and Once loaded, open your WhatsApp and keep it online
-
-
-  
+<br>
+   <br>
+  <center><img src="/TempCloud/cover.png">
+    <h1><b>Deployer Instructions</h1></b>
+ <b> This only works when you are online. You can not use this from the number you created the bot yourself, so if you want to use it, use the command from another number.
+This works for any group you belong to.
+You can get the bot menu from the (.menu)
+Use the (.help) command to access the Help menu.
+Use only lowercase letters when applying commands
+Be sure to use a (.)dot at the beginning of the command  </b>
+    <br>
   
 
 <br>
