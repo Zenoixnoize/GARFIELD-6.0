@@ -19,17 +19,20 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
  
   <img src="/TempCloud/PicsArt_22-04-15_10-07-10-712.png">
     
-  <b><h1>Install Now</b></h1>
+  <b><h1>Get QR</b></h1>
   
  <center>
 
 
 <a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-15_12-12-27-979.png" alt="Pics-Art-02-24-01-59-18" width="350" height="350"></a>
 <br>
+   <b><h1>Deploy Now</b></h1>
    <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0%2Fblob%2Fmain%2FREADME.md&template=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0"><img src="/TempCloud/PicsArt_22-04-15_12-59-28-786.png">
-
-
-
+<br>
+<b><h1>Privacy and Security</h1></b>
+This module does not harm your privacy or personal data. We do not have any of your access. This is a completely secure program.     
+     This will not give us any funding. Only self-satisfaction is obtained
+You can use it without any hesitation
   <br>
   <!DOCTYPE html>
 <html>
