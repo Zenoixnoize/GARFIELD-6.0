@@ -19,7 +19,7 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
  
   <img src="/TempCloud/PicsArt_22-04-15_10-07-10-712.png">
     
-  <b><h1>Get QR</b></h1>
+  <b><h1>To scan the Qr code and Link to WhatsApp</b></h1>
   
  <center>
 
@@ -68,14 +68,16 @@ Use the (.help) command to access the Help menu.
 Use only lowercase letters when applying commands
 Be sure to use a (.)dot at the beginning of the command  </b>
  <br>
+ <br>
   
 
 
   
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
     <br>
+    <br>
     <h1>Developer</h1>
-    <table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr>
+    <b><table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr></b>
 
 </html>
 
