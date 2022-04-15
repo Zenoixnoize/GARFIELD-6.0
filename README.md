@@ -36,22 +36,27 @@ You can use it without any hesitation
   <br>
      <b><h1>How to deploy</h1></b></html>
      
-  First create a Heroku account  [Click Now](https://signup.heroku.com/) Select Node js as your programming language
+  ⬇️ First create a Heroku account  [Click Now](https://signup.heroku.com/) Select Node js as your programming language
    <br>
-  After Click Deploy button <br>
+  ⬇️ After Click Deploy button
    <br>
-   First, give the app a name. Use only lowercase letters here. Try changing the name until the tick is green
+   ⬇️ First, give the app a name. Use only lowercase letters here. Try changing the name until the tick is green
    <br>
    Example - apple23bot
    <br>
-   [CLICK to get your heroku API key](https://dashboard.heroku.com/account)
+   ⬇️ [CLICK to get your heroku API key](https://dashboard.heroku.com/account)
   <br>
-   Enter the token you received when you scanned the QR for the  **GARFIELD_SESSION**
+   ⬇️ Enter the token you received when you scanned the QR for the  **GARFIELD_SESSION**
+   <br> 
+   ⬇️ Then click on the Deploy App button. The app will be ready in about three minutes. 
    <br>
-   Then click on the Deploy App button. The app will be ready in about three minutes. 
+   ⬇️ Do not let the screen turn off without switching to other apps ⚠️ 
+  <br>
+   ⬇️ Then go to the Manage app.
    <br>
-   ⚠️ Do not let the screen turn off without switching to other apps
-  
+   ⬇️ Then go to Resources and turn on worker ✏️ 
+   <br>
+   ⬇️ Then go More > View logs and Once loaded, open your WhatsApp and keep it online
   <!DOCTYPE html>
 <html>
 <head>
