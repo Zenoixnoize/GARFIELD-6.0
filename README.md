@@ -1,5 +1,5 @@
 # GARFIELD-6.0 BY NOIZE
-<img src="/TempCloud/PicsArt_22-04-14_22-45-34-675.png">
+<img src="/TempCloud/PicsArt_22-04-15_08-12-34-740.png">
 
 <br>
   <html>
