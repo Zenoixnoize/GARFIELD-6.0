@@ -7,13 +7,14 @@
   <br>
   <span style="float:right;"><img src="/TempCloud/PicsArt_22-04-14_23-29-34-684.png"></span>
 
-  <br></html>
-  ## 🐼 What is Garfield?
-**Garfield is a WhatsApp user bot by [NOIZE PROJECTS](https://github.com/Zenoixnoize) 
+  <br>
+ 
+<b><h1>What is Garfield Whatsapp Bot</h1></b>
+<b>Garfield is a WhatsApp user bot by [NOIZE PROJECTS](https://github.com/Zenoixnoize) 
 and powered by by [X-nodes server](https://www.npmjs.com/package/aurora-npm).
 Garfield can make your work easier and do whatever you want. You can easily install this. This is updated daily. Once you install it, it will continue to be an indispensable tool for you
 Contains over 120+ plugins. This will give you a better experience on WhatsApp. You can download songs and videos fast. This is updated daily so more features are always added
-.This allows you to have fun with friends**
+.This allows you to have fun with friends<b>
   
   <br>
   <!DOCTYPE html>
@@ -66,7 +67,6 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
 </table>
  </body>
 </html>
-<h1>What is Garfield Whatsapp Bot</h1>
 
   <br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zenoixnoize/GARFIELD-6.0)
