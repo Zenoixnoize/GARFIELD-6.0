@@ -67,13 +67,17 @@ You can get the bot menu from the (.menu)
 Use the (.help) command to access the Help menu.
 Use only lowercase letters when applying commands
 Be sure to use a (.)dot at the beginning of the command  </b>
-    <br>
+ <br>
   
 
-<br>
+
   
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
-  </html>
+    <br>
+    <h1>Developer</h1>
+    <table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr>
+
+</html>
 
 
   
