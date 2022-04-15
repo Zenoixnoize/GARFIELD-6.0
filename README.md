@@ -88,7 +88,9 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
 <br>
   
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
+  </html>
 
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zenoixnoize/GARFIELD-6.0)
 
 
   
