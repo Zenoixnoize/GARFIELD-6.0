@@ -78,10 +78,7 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
 
 <br>
   
-
-
-8
- <center> <img src="/TempCloud/1649998420107.gif"></center>
+  <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
 
 
 
