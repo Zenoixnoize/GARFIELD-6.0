@@ -9,7 +9,7 @@
 
   <br>
  
-<b><h1>What is Garfield Whatsapp Bot</h1></b>
+<b><h1>What is Garfield Whatsapp Bot 🐼</h1></b>
 <b>Garfield is a WhatsApp user bot by [NOIZE PROJECTS](https://github.com/Zenoixnoize) 
 and powered by by [X-nodes server](https://www.npmjs.com/package/aurora-npm).
 Garfield can make your work easier and do whatever you want. You can easily install this. This is updated daily. Once you install it, it will continue to be an indispensable tool for you
