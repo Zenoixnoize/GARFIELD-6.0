@@ -7,6 +7,10 @@
   <br>
   <span style="float:right;"><img src="/TempCloud/PicsArt_22-04-14_23-29-34-684.png"></span>
 
+  <br></html>
+  ## 🐼 What is Garfield?
+**Garfield** is a WhatsApp user bot by [NOIZE PROJECTS](https://github.com/Zenoixnoize) and powered by by [X-nodes server](https://www.npmjs.com/package/aurora-npm)
+  
   <br>
   <!DOCTYPE html>
 <html>
