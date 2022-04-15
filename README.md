@@ -5,7 +5,7 @@
   
  <center> <img src="/TempCloud/PicsArt_22-04-15_08-19-19-888.png"> </center>
   <br>
-  <span style="float:right;"><img src="/TempCloud/PicsArt_22-04-14_23-29-34-684.png"width"180" height="70"></span>
+  <span style="float:right;"><img src="/TempCloud/PicsArt_22-04-14_23-29-34-684.png"></span>
   <h3>
    <span style="float:right;">My first sentence</span>
    
