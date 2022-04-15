@@ -2,10 +2,9 @@
 <img src="/TempCloud/PicsArt_22-04-15_08-12-34-740.png">
 
 <br>
+<center><img src="/TempCloud/PicsArt_22-04-15_10-13-49-205.png"><center>
   
- <center> <img src="/TempCloud/PicsArt_22-04-15_08-19-19-888.png"> </center>
  <br>
- <center> <img src="/TempCloud/1649998420107.gif"></center>
   <br>
   <span style="float:right;"><img src="/TempCloud/PicsArt_22-04-14_23-29-34-684.png"></span>
 
@@ -75,9 +74,14 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
 
   <br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zenoixnoize/GARFIELD-6.0)
+  
+
+<br>
+  
 
 
-
+8
+ <center> <img src="/TempCloud/1649998420107.gif"></center>
 
 
 
