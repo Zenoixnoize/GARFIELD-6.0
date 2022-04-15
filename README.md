@@ -99,11 +99,11 @@ Also I am Student
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
   <br>
   </html>
+    </html>
+    </html>
   <h1> Telegram helping group 💡 </h1>
-Join our Telegram Helping group  [Click Now](https://t.me/+Sz9DrxO1Bp80Y2U9)
-   <br>
-  You can get any help by joining this group to get help
-
+Join our Telegram Helping group [Click Now]<a href="https://t.me/+Sz9DrxO1Bp80Y2U9" You can get any help by joining this group to get help
+   
   <br>
     <h1>Developer</h1>
     <b><table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr></b>
