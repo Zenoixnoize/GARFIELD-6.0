@@ -15,6 +15,9 @@ and powered by by [X-nodes server](https://www.npmjs.com/package/aurora-npm).
 Garfield can make your work easier and do whatever you want. You can easily install this. This is updated daily. Once you install it, it will continue to be an indispensable tool for you
 Contains over 120+ plugins. This will give you a better experience on WhatsApp. You can download songs and videos fast. This is updated daily so more features are always added
 .This allows you to have fun with friends<b>
+ 
+  <img src="/TempCloud/PicsArt_22-04-15_10-07-10-712.png">
+    
   
   <br>
   <!DOCTYPE html>
