@@ -20,7 +20,13 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
   <img src="/TempCloud/PicsArt_22-04-15_10-07-10-712.png">
     
   <b><h1>Install Now</b></h1>
-  <a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-15_11-19-09-678.png"> alt="Pics-Art-02-24-01-59-18"</a>
+  
+ <center>
+
+
+<a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-15_12-12-27-979.png" alt="Pics-Art-02-24-01-59-18" width="350" height="350"></a>
+
+
 
 
   <br>
