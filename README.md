@@ -19,22 +19,22 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
  
   <img src="/TempCloud/PicsArt_22-04-15_10-07-10-712.png">
     
-  <b><h1>To scan the Qr code and Link to WhatsApp</b></h1>
+  <b><h1>To scan the Qr code and Link to WhatsApp 🛰️</b></h1>
   
  <center>
 
 
 <a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-15_12-12-27-979.png" alt="Pics-Art-02-24-01-59-18" width="350" height="350"></a>
 <br>
-   <b><h1>Deploy Now</b></h1>
+   <b><h1>Deploy Now ♨️</b></h1>
    <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0%2Fblob%2Fmain%2FREADME.md&template=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0"><img src="/TempCloud/PicsArt_22-04-15_12-59-28-786.png">
 <br>
-<b><h1>Privacy and Security</h1></b>
+<b><h1>Privacy and Security 🔒</h1></b>
 This module does not harm your privacy or personal data. We do not have any of your access. This is a completely secure program.     
      This will not give us any funding. Only self-satisfaction is obtained
 You can use it without any hesitation
   <br>
-     <b><h1>How to deploy</h1></b></html>
+     <b><h1>How to deploy 🍎</h1></b></html>
      
   ⬇️ First create a Heroku account  [Click Now](https://signup.heroku.com/) Select Node js as your programming language
    <br>
@@ -60,7 +60,7 @@ You can use it without any hesitation
 <br>
    <br>
   <center><img src="/TempCloud/cover.png">
-    <h1><b>Deployer Instructions</h1></b>
+    <h1><b>Deployer Instructions 🍿</h1></b>
  <b> This only works when you are online. You can not use this from the number you created the bot yourself, so if you want to use it, use the command from another number.
 This works for any group you belong to.
 You can get the bot menu from the (.menu)
@@ -70,7 +70,7 @@ Be sure to use a (.)dot at the beginning of the command  </b>
  <br>
  <br>
   
-
+<h1>What's new 🐼</h1>
 
   
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
