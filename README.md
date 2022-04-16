@@ -24,10 +24,10 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
  <center>
 
 
-<a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-15_12-12-27-979.png" alt="Pics-Art-02-24-01-59-18" width="350" height="350"></a>
+<a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-16_22-52-38-348.png" alt="Pics-Art-02-24-01-59-18">
 <br>
    <b><h1>Deploy Now ♨️</b></h1>
-   <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0%2Fblob%2Fmain%2FREADME.md&template=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0"><img src="/TempCloud/PicsArt_22-04-15_12-59-28-786.png">
+   <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0%2Fblob%2Fmain%2FREADME.md&template=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0"><img src="/TempCloud/PicsArt_22-04-15_12-59-28-786.png" width="1,237.5" height="898.5"></a>
 <br>
 <b><h1>Privacy and Security 🔒</h1></b>
 This module does not harm your privacy or personal data. We do not have any of your access. This is a completely secure program.     
@@ -67,16 +67,8 @@ You can get the bot menu from the (.menu)
 Use the (.help) command to access the Help menu.
 Use only lowercase letters when applying commands
 Be sure to use a (.)dot at the beginning of the command  </b>
- <br>
- <br>
-  
-<h1>What's new v6.0 🐼 And Developer Notice 💌</h1>
-    <b>
-      <br>
-       𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 𝗡𝗢𝗧𝗜𝗖𝗘 💌
-      <b>
-      <br>
-- Hi 🥰 I m
+  <h1><b>Developer Notice 💌</h1></b>
+<b> - Hi 🥰 I m
       <br>
 ＮＯＩＺ Ξ
       <br>
@@ -88,12 +80,8 @@ I am a Learning. Not more..
       <br>
 Also I am Student 
     </b></b>
-<b>
-  <br>
-  <br>
-  <b>𝗩6.0 𝗡𝗲𝘄
-  </b>
-  <br>
+
+   <h1>𝗩6.0 𝗡𝗲𝘄</h1>
    <b>This has been updated to the latest 2022 npm module. There are 120+ plugins. Deploying is quick and easy. Download speeds and upload speeds are very fast.The speed of response has increased. Fixed some bugs. Updated daily baileys 2022 Updated</b>    
   <br>
   <center><img src="/TempCloud/ezgif-1-d094ccfb2c.gif"></center>
