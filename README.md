@@ -23,7 +23,7 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
   
  <center>
 <a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-16_22-52-38-348.png"></center>
-<br></html>
+<br>
    <b><h1>Deploy Now ♨️</b></h1>
    <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0%2Fblob%2Fmain%2FREADME.md&template=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0"><img src="/TempCloud/PicsArt_22-04-15_12-59-28-786.png">
 <br>
@@ -32,7 +32,7 @@ This module does not harm your privacy or personal data. We do not have any of y
      This will not give us any funding. Only self-satisfaction is obtained
 You can use it without any hesitation
   <br>
-     <b><h1>How to deploy 🍎</h1></b></html>
+     <b><h1>How to deploy 🍎</h1></b>
      
   ⬇️ First create a Heroku account  [Click Now](https://signup.heroku.com/) Select Node js as your programming language
    <br>
@@ -59,10 +59,13 @@ You can use it without any hesitation
    <br>
   <center><img src="/TempCloud/cover.png">
     <br>
-    </html>
-  </html>
-    <b><h1>Licence 📑</h1></b>
-    This project is protected by GNU General Public Licence v3.0 license ©️ Copyright 2022.
+   <h1>Licence 📑</h1>
+    This project is protected by GNU General Public Licence v3.0 ©️ Copyright 2022.
+    <br>
+    <h1>Disclaimer ⚠️</h1>
+    We offer this completely free of charge. 
+    Do not fall prey to fraudulent activities that sell this for money.
+    If you see such a sale, notify the developer immediately
     <br>
     <h1><b>Deployer Instructions 🍿</h1></b>
  <b> This only works when you are online. You can not use this from the number you created the bot yourself, so if you want to use it, use the command from another number.
@@ -90,9 +93,9 @@ Also I am Student
   <br>
   <center><img src="/TempCloud/ezgif-4-e173d31b67.gif"></center>
   <br>
-  </html>
-    </html>
-    </html>
+  
+    
+    
   ## Telegram 💡
 Join our Telegram helping group [Click Now](https://t.me/xnodesbot) 
 
@@ -101,7 +104,7 @@ Join our Telegram helping group [Click Now](https://t.me/xnodesbot)
     <h1>Developer</h1>
     <b><table><tr><th>Ｚ Ξ ＮＯＩ</th></tr><tr><td><a href="https://github.com/Zenoixnoize"><img src="https://i.ibb.co/mBVtxkp/Screenshot-20220218-213033.jpg" width="180"</td></tr></b>
 
-</html>
+
 
 
   
