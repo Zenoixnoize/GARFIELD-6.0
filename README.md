@@ -22,10 +22,8 @@ Contains over 120+ plugins. This will give you a better experience on WhatsApp. 
   <b><h1>To scan the Qr code and Link to WhatsApp 🛰️</b></h1>
   
  <center>
-
-
-<a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-16_22-52-38-348.png" alt="Pics-Art-02-24-01-59-18">
-<br>
+<a href="https://replit.com/@zenoi/GARFIELD-v60-QR-GENERTOR?v=1"><img src="/TempCloud/PicsArt_22-04-16_22-52-38-348.png"></center>
+<br></html>
    <b><h1>Deploy Now ♨️</b></h1>
    <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0%2Fblob%2Fmain%2FREADME.md&template=https%3A%2F%2Fgithub.com%2FZenoixnoize%2FGARFIELD-6.0"><img src="/TempCloud/PicsArt_22-04-15_12-59-28-786.png">
 <br>
