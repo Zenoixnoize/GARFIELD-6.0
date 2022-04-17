@@ -84,8 +84,7 @@ Also I am Student
    <h1>𝗩6.0 𝗡𝗲𝘄</h1>
    <b>This has been updated to the latest 2022 npm module. There are 120+ plugins. Deploying is quick and easy. Download speeds and upload speeds are very fast.The speed of response has increased. Fixed some bugs. Updated daily baileys 2022 Updated</b>    
   <br>
-  <center><img src="/TempCloud/
-ezgif-4-e173d31b67.gif"></center>
+  <center><img src="/TempCloud/ezgif-4-e173d31b67.gif"></center>
   <br>
   </html>
     </html>
