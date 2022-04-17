@@ -17,7 +17,7 @@ Garfield can make your work easier and do whatever you want. You can easily inst
 Contains over 120+ plugins. This will give you a better experience on WhatsApp. You can download songs and videos fast. This is updated daily so more features are always added
 .This allows you to have fun with friends<b>
  
-  <img src="/TempCloud/PicsArt_22-04-17_16-14-40-894.png">
+  <img src="/TempCloud/PicsArt_22-04-17_17-16-40-999.png">
     
   <b><h1>To scan the Qr code and Link to WhatsApp 🛰️</b></h1>
   
