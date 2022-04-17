@@ -93,9 +93,9 @@ Also I am Student
   </html>
     </html>
     </html>
-  
- <html><h1> Telegram helping group 💡 </h1>
-Join our Telegram Helping group [Click Now]<a href="https://t.me/+Sz9DrxO1Bp80Y2U9" You can get any help by joining this group to get help</html>
+  ## Telegram 💡
+Join our Telegram helping group [Click Now](https://t.me/xnodesbot) 
+
    
   <br>
     <h1>Developer</h1>
