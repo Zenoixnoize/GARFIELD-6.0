@@ -1,5 +1,5 @@
 # GARFIELD WHATSAPP USER BOT LATEST VERSION
-<img src="/TempCloud/PicsArt_22-04-15_08-12-34-740.png">
+<img src="/TempCloud/PicsArt_22-04-17_16-25-53-440.png">
 
 <br>
 <center><img src="/TempCloud/PicsArt_22-04-15_10-13-49-205.png"><center>
@@ -17,7 +17,7 @@ Garfield can make your work easier and do whatever you want. You can easily inst
 Contains over 120+ plugins. This will give you a better experience on WhatsApp. You can download songs and videos fast. This is updated daily so more features are always added
 .This allows you to have fun with friends<b>
  
-  <img src="/TempCloud/PicsArt_22-04-15_10-07-10-712.png">
+  <img src="/TempCloud/PicsArt_22-04-17_16-14-40-894.png">
     
   <b><h1>To scan the Qr code and Link to WhatsApp 🛰️</b></h1>
   
@@ -60,6 +60,12 @@ You can use it without any hesitation
 <br>
    <br>
   <center><img src="/TempCloud/cover.png">
+    <br>
+    </html>
+  </html>
+    <b><h1>Licence 📑</h1></b>
+    This project is protected by GNU General Public Licence v3.0 license ©️ Copyright 2022.
+    <br>
     <h1><b>Deployer Instructions 🍿</h1></b>
  <b> This only works when you are online. You can not use this from the number you created the bot yourself, so if you want to use it, use the command from another number.
 This works for any group you belong to.
@@ -89,8 +95,9 @@ Also I am Student
   </html>
     </html>
     </html>
-  <h1> Telegram helping group 💡 </h1>
-Join our Telegram Helping group [Click Now]<a href="https://t.me/+Sz9DrxO1Bp80Y2U9" You can get any help by joining this group to get help
+  
+ <html><h1> Telegram helping group 💡 </h1>
+Join our Telegram Helping group [Click Now]<a href="https://t.me/+Sz9DrxO1Bp80Y2U9" You can get any help by joining this group to get help</html>
    
   <br>
     <h1>Developer</h1>
