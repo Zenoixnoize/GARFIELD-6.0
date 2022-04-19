@@ -97,10 +97,10 @@ Also I am Student
   
     
     
-  ## Telegram 💡
-Join our Telegram helping group [Click Now](https://t.me/xnodesbot) 
-  ## Watch Video 🔴
-     Watch on Youtube [Click Here](https://youtu.be/OY_75SjPZSQ)
+  <h1> Telegram 💡</h1>
+Join our Telegram helping group <a href="https://t.me/xnodesbot">Join Now</a>
+  <h1>Watch Video 📽️</h1>
+     Watch on Youtube <a href="https://youtu.be/OY_75SjPZSQ">Click now</a>
 
    
   <br>
