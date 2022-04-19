@@ -1,2 +1,29 @@
 /*COPYRIGHT (C) 2022 CODED BY NOIZE */
-const _0x272106=_0xac84;(function(_0x8a7466,_0x1a30c8){const _0x24bc55=_0xac84,_0x39ad41=_0x8a7466();while(!![]){try{const _0x421e4d=-parseInt(_0x24bc55(0x19a))/0x1*(-parseInt(_0x24bc55(0x1ab))/0x2)+-parseInt(_0x24bc55(0x1b0))/0x3+-parseInt(_0x24bc55(0x19e))/0x4+parseInt(_0x24bc55(0x1a2))/0x5*(parseInt(_0x24bc55(0x1a4))/0x6)+-parseInt(_0x24bc55(0x19d))/0x7*(parseInt(_0x24bc55(0x19f))/0x8)+-parseInt(_0x24bc55(0x1ad))/0x9*(parseInt(_0x24bc55(0x1a5))/0xa)+parseInt(_0x24bc55(0x198))/0xb;if(_0x421e4d===_0x1a30c8)break;else _0x39ad41['push'](_0x39ad41['shift']());}catch(_0x2fc33e){_0x39ad41['push'](_0x39ad41['shift']());}}}(_0x9252,0x3d9b7));function _0x9252(){const _0x4aa99c=['1161783mIhtoJ','12573935lvNgCr','split','46343uLdBEn','env','deCrypt','1174537QrDWrL','1426604qaimFW','16GtoyDQ','length','exports','1388370GoxvrJ','readFileSync','6KicMJC','10ItXZGG','base64','from','stringify','parse','existsSync','14CDBsSl','utf-8','3719907hEkNbp','toString','GARFIELD_SESSION'];_0x9252=function(){return _0x4aa99c;};return _0x9252();}const fs=require('fs');function _0xac84(_0x75b841,_0x463fd6){const _0x9252f2=_0x9252();return _0xac84=function(_0xac8459,_0x49e2c3){_0xac8459=_0xac8459-0x198;let _0x176113=_0x9252f2[_0xac8459];return _0x176113;},_0xac84(_0x75b841,_0x463fd6);}class StringSession{constructor(){}[_0x272106(0x19c)](_0x119831=undefined){const _0x2f9398=_0x272106;if(_0x2f9398(0x1af)in process[_0x2f9398(0x19b)]&&_0x119831===undefined)_0x119831=process[_0x2f9398(0x19b)]['STRING_SESSION'];else _0x119831!==undefined&&(fs[_0x2f9398(0x1aa)](_0x119831)&&(_0x119831=fs[_0x2f9398(0x1a3)](_0x119831,{'encoding':'utf8','flag':'r'})));var _0x16efdf=_0x119831[_0x2f9398(0x199)](';;;');if(_0x16efdf[_0x2f9398(0x1a0)]>=0x2)return JSON[_0x2f9398(0x1a9)](Buffer['from'](_0x16efdf[_0x16efdf[_0x2f9398(0x1a0)]-0x1],_0x2f9398(0x1a6))[_0x2f9398(0x1ae)](_0x2f9398(0x1ac)));}['createStringSession'](_0x2c1664){const _0x34a713=_0x272106;return'GARFIELD;;;'+Buffer[_0x34a713(0x1a7)](JSON[_0x34a713(0x1a8)](_0x2c1664))['toString']('base64');}}module[_0x272106(0x1a1)]=StringSession;
+
+const fs = require('fs');
+
+class StringSession {
+    constructor() {
+    }
+
+    deCrypt(string = undefined) {
+        if ('GARFIELD_SESSION' in process.env && string === undefined) {
+            string = process.env.STRING_SESSION;
+        } else if (string !== undefined) {
+            if (fs.existsSync(string)) {
+                string = fs.readFileSync(string, {encoding:'utf8', flag:'r'});
+            }
+        }
+        
+        var split = string.split(';;;');
+        if (split.length >= 2) {
+            return JSON.parse(Buffer.from(split[split.length - 1], 'base64').toString('utf-8'));
+        }
+    }
+
+    createStringSession(dict) {
+        return 'GARFIELD;;;' + Buffer.from(JSON.stringify(dict)).toString('base64');
+    }
+}
+
+module.exports = StringSession;
