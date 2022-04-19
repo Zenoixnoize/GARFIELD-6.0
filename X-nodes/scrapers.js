@@ -346,18 +346,6 @@ if (config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
-    Garfield.addXnodes({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'lowestaudio',
-        });
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
         ffmpeg(stream)
@@ -391,32 +379,6 @@ await message.client.sendMessage(message.jid, {displayname: "Garfield", vcard: p
 
   }));    
 
-    Garfield.addXnodes({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
-    
-        var VID = '';
-        try {
-            if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } else {     
-                VID = match[1].split('/')[3]
-            }
-        } catch {
-            return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        }
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
-
-        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
-
-        yt.on('end', async () => {
-            reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
-        });
-    }));
 
     Garfield.addXnodes({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
 
@@ -825,107 +787,10 @@ else if (config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio,quoted: message.data,  ptt: true});
     }));
 
-    Garfield.addXnodes({pattern: 'play ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(128)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
-
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Title -```\n*'+ title +'*\n```Wait Uploading```' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1, isForwarded: false }, quoted: message.data, ptt: false});
-            });
-    }));
 
 /*COPYRIGHT (C) 2022 CODED BY NOIZE */
-
-    Garfield.addXnodes({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
-
-reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Title -```\n*'+ title +'*\n```Wait Uploading```' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
-            });
-    }));
-
-/*COPYRIGHT (C) 2022 CODED BY NOIZE */
-    Garfield.addXnodes({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
-
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
-    
-        try {
-            var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
-        } catch {
-            return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        }
-
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
-
-        var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
-
-        yt.on('end', async () => {
-            reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1, isForwarded: false }, quoted: message.data, caption: '\n```Title -```\n*'+ arama.title +'*\n'});
-
-        });
-    }));
-
+ 
     Garfield.addXnodes({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
