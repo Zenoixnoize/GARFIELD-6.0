@@ -1,2 +1,22 @@
-/*COPYRIGHT (C) 2022 CODED BY NOIZE */
-function _0x4231(){const _0x3d255e=['1767910rzLVOt','12mqxHzZ','document','8447tdfnbr','36iOFNwT','386tHGaor','9BQlecg','&apiKey=begC4dFAup1b8LyRXxAfjetfqDg2uYx8PWmh9YJ59tTZXiUyh2Vs72HdYQB68vyc','../events','addXnodes','../config','../language','WORKTYPE','*You\x20must\x20enter\x20a\x20link!*','getString','GARFIELD-6.0.pdf','https://api.html2pdf.app/v1/generate?url=','95967vHonxD','9320380DdWfSN','144RTpoUP','jid','got','sendMessage','```Garfield\x20Converting\x20Site\x20to\x20PDF```','arraybuffer','Converts\x20Site\x20to\x20PDF.','@adiwajshing/baileys','unvoice','1541953GPUWSG','client','pdf','31946277LgsmFK','2064456WtEDQb'];_0x4231=function(){return _0x3d255e;};return _0x4231();}const _0x5a4504=_0x4110;function _0x4110(_0x400a76,_0x113ba6){const _0x423172=_0x4231();return _0x4110=function(_0x4110f4,_0x5c660a){_0x4110f4=_0x4110f4-0x1d7;let _0x301c7c=_0x423172[_0x4110f4];return _0x301c7c;},_0x4110(_0x400a76,_0x113ba6);}(function(_0x1847ce,_0xfcffb7){const _0x5a113c=_0x4110,_0x41d114=_0x1847ce();while(!![]){try{const _0x442aa4=parseInt(_0x5a113c(0x1e6))/0x1*(parseInt(_0x5a113c(0x1e8))/0x2)+-parseInt(_0x5a113c(0x1e9))/0x3*(-parseInt(_0x5a113c(0x1e2))/0x4)+parseInt(_0x5a113c(0x1e3))/0x5+parseInt(_0x5a113c(0x1e7))/0x6*(parseInt(_0x5a113c(0x1de))/0x7)+parseInt(_0x5a113c(0x1f6))/0x8*(-parseInt(_0x5a113c(0x1f4))/0x9)+-parseInt(_0x5a113c(0x1f5))/0xa+-parseInt(_0x5a113c(0x1e1))/0xb*(parseInt(_0x5a113c(0x1e4))/0xc);if(_0x442aa4===_0xfcffb7)break;else _0x41d114['push'](_0x41d114['shift']());}catch(_0x3f08f5){_0x41d114['push'](_0x41d114['shift']());}}}(_0x4231,0xc995a));const Garfield=require(_0x5a4504(0x1eb)),{MessageType,MessageOptions,Mimetype}=require(_0x5a4504(0x1dc)),fs=require('fs'),axios=require('axios'),request=require('request'),got=require(_0x5a4504(0x1d7)),Config=require(_0x5a4504(0x1ed)),Language=require(_0x5a4504(0x1ee)),Lang=Language[_0x5a4504(0x1f1)](_0x5a4504(0x1dd)),toxicdevil=Config[_0x5a4504(0x1ef)]=='public'?![]:!![];Garfield[_0x5a4504(0x1ec)]({'pattern':'spdf\x20?(.*)','fromMe':toxicdevil,'desc':_0x5a4504(0x1db)},async(_0xa64745,_0x43b13b)=>{const _0x344e24=_0x5a4504;if(_0x43b13b[0x1]==='')return await _0xa64745[_0x344e24(0x1df)][_0x344e24(0x1d8)](_0xa64745[_0x344e24(0x1f7)],_0x344e24(0x1f0),MessageType['text']);var _0x5a40d2=await axios['get'](_0x344e24(0x1f3)+_0x43b13b[0x1]+_0x344e24(0x1ea),{'responseType':_0x344e24(0x1da)});await _0xa64745[_0x344e24(0x1df)]['sendMessage'](_0xa64745[_0x344e24(0x1f7)],_0x344e24(0x1d9),MessageType['text']),await _0xa64745[_0x344e24(0x1d8)](Buffer['from'](_0x5a40d2['data']),MessageType[_0x344e24(0x1e5)],{'mimetype':Mimetype[_0x344e24(0x1e0)],'filename':_0x344e24(0x1f2)});});
+const Garfield = require('../events');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+const fs = require('fs');
+const axios = require('axios');
+const request = require('request');
+const got = require("got");
+const Config = require('../config');
+const Language = require('../language');
+const Lang = Language.getString('unvoice');
+const toxicdevil = Config.WORKTYPE == 'public' ? false : true
+
+   Garfield.addXnodes({pattern: 'spdf ?(.*)', fromMe: toxicdevil, desc: 'Converts Site to PDF.' }, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid, '*You must enter a link!*', MessageType.text);
+
+    var webimage = await axios.get(`https://api.html2pdf.app/v1/generate?url=${match[1]}&apiKey=begC4dFAup1b8LyRXxAfjetfqDg2uYx8PWmh9YJ59tTZXiUyh2Vs72HdYQB68vyc`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid, '```Garfield Converting Site to PDF```', MessageType.text);
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf, filename: 'GARFIELD-6.0.pdf'});
+
+    }));    

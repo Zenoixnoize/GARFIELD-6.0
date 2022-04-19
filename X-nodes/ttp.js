@@ -1,2 +1,345 @@
 /*COPYRIGHT (C) 2022 CODED BY NOIZE */
-var _0x3235e3=_0x5604;(function(_0x55a497,_0x9c45da){var _0x44de78=_0x5604,_0x5ecbb5=_0x55a497();while(!![]){try{var _0x12f8a9=-parseInt(_0x44de78(0xdd))/0x1*(-parseInt(_0x44de78(0xf9))/0x2)+-parseInt(_0x44de78(0xcb))/0x3+parseInt(_0x44de78(0x121))/0x4*(parseInt(_0x44de78(0x134))/0x5)+-parseInt(_0x44de78(0x11d))/0x6+-parseInt(_0x44de78(0x126))/0x7+parseInt(_0x44de78(0x130))/0x8+-parseInt(_0x44de78(0x104))/0x9;if(_0x12f8a9===_0x9c45da)break;else _0x5ecbb5['push'](_0x5ecbb5['shift']());}catch(_0x9b8fbe){_0x5ecbb5['push'](_0x5ecbb5['shift']());}}}(_0x4410,0xa730d));function _0x5604(_0x385047,_0x2ffb36){var _0x4410d0=_0x4410();return _0x5604=function(_0x560458,_0xc4583c){_0x560458=_0x560458-0xbc;var _0xdd3cb7=_0x4410d0[_0x560458];return _0xdd3cb7;},_0x5604(_0x385047,_0x2ffb36);}const Garfield=require(_0x3235e3(0xeb)),{MessageType,MessageOptions,Mimetype}=require(_0x3235e3(0xf4)),fs=require('fs'),axios=require(_0x3235e3(0xca)),Config=require(_0x3235e3(0x117)),ffmpeg=require(_0x3235e3(0x110)),{execFile}=require(_0x3235e3(0x106)),cwebp=require(_0x3235e3(0x12c));let wk=Config['WORKTYPE']=='public'?![]:!![];const AuroraX=require('aurora-npm'),request=require(_0x3235e3(0x128)),Language=require(_0x3235e3(0xc9)),Lang=Language[_0x3235e3(0x12a)](_0x3235e3(0xef));var description='',cmd='',cmd_desc='';if(Config['LANG']=='TR')description='Tüm\x20ttp\x20komutlarını\x20gösterir.',cmd='*Komut:*\x20',cmd_desc=_0x3235e3(0xbe);if(Config[_0x3235e3(0x105)]=='AZ')description=_0x3235e3(0xd8),cmd=_0x3235e3(0x131),cmd_desc=_0x3235e3(0x108);if(Config[_0x3235e3(0x105)]=='EN')description=_0x3235e3(0x114),cmd='*Command:*\x20',cmd_desc=_0x3235e3(0xc1);if(Config['LANG']=='RU')description=_0x3235e3(0x11b),cmd='*Команда:*\x20',cmd_desc='*Объяснение:*\x20';if(Config[_0x3235e3(0x105)]=='ES')description=_0x3235e3(0x132),cmd=_0x3235e3(0xd6),cmd_desc=_0x3235e3(0xdc);function _0x4410(){var _0x3d1b3d=['get','-lossless\x201','/root/GARFIELD-6.0/ettp.png','af.gif','-vcodec\x20libwebp','Converts\x20text\x20to\x20blackbird-themed\x20sticker.','https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=','Yazıyı\x20el\x20yazısıyla\x20sticker\x27e\x20çevirir.','Converts\x20text\x20to\x20transition\x20animated\x20sticker.','*Mando:*\x20','*Penjelasan:*\x20','Bütün\x20ttp\x20əmrlərini\x20göstərir.','/root/GARFIELD-6.0/bttp.png','https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=','Converts\x20text\x20to\x20hand\x20writing\x20sticker.','*Explicación:*\x20','7cHrzaU','https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=','jid','Yazıyı\x20şirinler\x20temalı\x20sticker\x27e\x20çevirir.','*വിശദീകരണം:*\x20','text','https://api.flamingtext.com/logo/Design-Water?_variations=true&text=','सभी\x20ttp\x20कमांड\x20दिखाता\x20है।','എല്ലാ\x20ttp\x20കമാൻഡുകളും\x20കാണിക്കുന്നു.','-qscale\x201','ettp\x20?(.*)','reply_message','-vsync\x200','*आदेश:*\x20','../events','https://api.xteam.xyz/attp?file&text=','addXnodes','&_loc=catdynamic','ttp','st.webp','.pttp','/root/GARFIELD-6.0/af.gif','close','@adiwajshing/baileys','sticker','chromakey=#FFFFFF:similarity=0.01','/root/GARFIELD-6.0/gttp.png','.ettp','246458OncmjW','allttp$','readFileSync','ahttp\x20?(.*)','*Memerintah:*\x20','bttp\x20?(.*)','/root/GARFIELD-6.0/af.png','png','data','.wttp','videoFilters','1368135htEQyU','LANG','child_process','outputOptions','*İzahat:*\x20','gttp\x20?(.*)','*Menampilkan\x20semua\x20perintah\x20ttp.','/root/GARFIELD-6.0/http.png','af.png','createWriteStream','attp\x20?(.*)','https://api.xteam.xyz/ttp?file&text=','fluent-ffmpeg','Converts\x20text\x20to\x20electric-themed\x20sticker.','/root/GARFIELD-6.0/wttp.png','NEED_WORD','Shows\x20all\x20ttp\x20commands.','chromakey=white','arraybuffer','../config','https://api.flamingtext.com/logo/Design-Style?_variations=true&text=','https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=','scale=600:600:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=600:600:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1','Показывает\x20все\x20команды\x20ttp.','head','2978484hLknHP','save','.http','scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1','4RFyizz','/root/GARFIELD-6.0/pttp.gif','end','Yazıyı\x20blackbird\x20temalı\x20sticker\x27e\x20çevirir.','.ttp','2938124SxlQXW','TTP_DESC','request','-s\x20600x600','getString','-preset\x20default','cwebp-bin','-loop\x200','sendMessage','/root/GARFIELD-6.0/sttp.png','7913184NjXder','*Əmr:*\x20','Muestra\x20todos\x20los\x20comandos\x20ttp.','/root/GARFIELD-6.0/ahttp.gif','3959495NkQZeY','\x20\x20```Follow\x20Us\x20Facebook\x20-\x20https://www.facebook.com/garfieldbots/```\x20\x20','*Comando:*\x20','.attp','sticker.webp','Yazıyı\x20geçiş\x20animasyonlu\x20sticker\x27e\x20çevirir.','image','client','*കമാൻഡ്:*\x20','*Açıklama:*\x20','Yazıyı\x20vurgulayan\x20animasyonlu\x20sticker\x27e\x20çevirir.','wttp\x20?(.*)','*Description:*\x20','https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=','from','-an','pipe','https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=','*Explicação:*\x20','chromakey=black','../language','axios','2672028avQjHs','ATTP_DESC'];_0x4410=function(){return _0x3d1b3d;};return _0x4410();}if(Config['LANG']=='HI')description=_0x3235e3(0xe4),cmd=_0x3235e3(0xea),cmd_desc='*व्याख्या:*\x20';if(Config[_0x3235e3(0x105)]=='ML')description=_0x3235e3(0xe5),cmd=_0x3235e3(0xbd),cmd_desc=_0x3235e3(0xe1);if(Config[_0x3235e3(0x105)]=='PT')description='Mostra\x20todos\x20os\x20comandos\x20ttp.',cmd=_0x3235e3(0x136),cmd_desc=_0x3235e3(0xc7);if(Config[_0x3235e3(0x105)]=='ID')description=_0x3235e3(0x10a),cmd=_0x3235e3(0xfd),cmd_desc=_0x3235e3(0xd7);Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0xfa),'fromMe':wk,'desc':description},async(_0xe51569,_0x17a1af)=>{var _0x4767dc=_0x3235e3,_0x551324=Lang[_0x4767dc(0x127)],_0x49ea07=Lang[_0x4767dc(0xcc)],_0x58f235=Config[_0x4767dc(0x105)]=='TR'||Config['LANG']=='AZ'?'Yazıyı\x20su\x20temalı\x20sticker\x27e\x20çevirir.':'Converts\x20text\x20to\x20water-themed\x20sticker.',_0x2ffa87=Config[_0x4767dc(0x105)]=='TR'||Config['LANG']=='AZ'?_0x4767dc(0xd4):_0x4767dc(0xdb),_0x1b14ed=Config[_0x4767dc(0x105)]=='TR'||Config[_0x4767dc(0x105)]=='AZ'?_0x4767dc(0x124):_0x4767dc(0xd2),_0x2be6ec=Config[_0x4767dc(0x105)]=='TR'||Config[_0x4767dc(0x105)]=='AZ'?'Yazıyı\x20sakız\x20temalı\x20sticker\x27e\x20çevirir.':'Converts\x20text\x20to\x20gum-themed\x20sticker.',_0x3e3d78=Config[_0x4767dc(0x105)]=='TR'||Config[_0x4767dc(0x105)]=='AZ'?_0x4767dc(0xe0):'Converts\x20text\x20to\x20smurfs-themed\x20sticker.',_0x441325=Config['LANG']=='TR'||Config[_0x4767dc(0x105)]=='AZ'?'Yazıyı\x20elektrik\x20temalı\x20sticker\x27e\x20çevirir.':_0x4767dc(0x111),_0xe8a0c9=Config[_0x4767dc(0x105)]=='TR'||Config[_0x4767dc(0x105)]=='AZ'?_0x4767dc(0xbf):'Converts\x20text\x20to\x20highlighted\x20animated\x20sticker.',_0x173f1d=Config[_0x4767dc(0x105)]=='TR'||Config[_0x4767dc(0x105)]=='AZ'?_0x4767dc(0x139):_0x4767dc(0xd5),_0x3cb1bb=cmd+_0x4767dc(0x125)+'\x0a'+cmd_desc+_0x551324+'\x0a\x0a'+cmd+_0x4767dc(0x137)+'\x0a'+cmd_desc+_0x49ea07+'\x0a\x0a'+cmd+_0x4767dc(0x102)+'\x0a'+cmd_desc+_0x58f235+'\x0a\x0a'+cmd+_0x4767dc(0x11f)+'\x0a'+cmd_desc+_0x2ffa87+'\x0a\x0a'+cmd+'.ahttp'+'\x0a'+cmd_desc+_0xe8a0c9+'\x0a\x0a'+cmd+'.bttp'+'\x0a'+cmd_desc+_0x1b14ed+'\x0a\x0a'+cmd+'.gttp'+'\x0a'+cmd_desc+_0x2be6ec+'\x0a\x0a'+cmd+'.sttp'+'\x0a'+cmd_desc+_0x3e3d78+'\x0a\x0a'+cmd+_0x4767dc(0xf8)+'\x0a'+cmd_desc+_0x441325+'\x0a\x0a'+cmd+_0x4767dc(0xf1)+'\x0a'+cmd_desc+_0x173f1d;await _0xe51569[_0x4767dc(0xbc)][_0x4767dc(0x12e)](_0xe51569[_0x4767dc(0xdf)],_0x3cb1bb,MessageType[_0x4767dc(0xe2)]);}),Garfield[_0x3235e3(0xed)]({'pattern':'ttp\x20?(.*)','fromMe':wk,'dontAddCommandList':!![]},async(_0x476380,_0x4ea32a)=>{var _0x4acae3=_0x3235e3;if(_0x476380['reply_message']){var _0x239e1d=_0x476380[_0x4acae3(0xe8)][_0x4acae3(0xe2)],_0x4dd67b=encodeURI(_0x239e1d),_0x1a60c5=await axios['get'](_0x4acae3(0x10f)+_0x4dd67b,{'responseType':_0x4acae3(0x116)});await _0x476380[_0x4acae3(0xbc)]['sendMessage'](_0x476380[_0x4acae3(0xdf)],Buffer[_0x4acae3(0xc3)](_0x1a60c5[_0x4acae3(0x101)]),MessageType[_0x4acae3(0x13a)],{'mimetype':Mimetype[_0x4acae3(0x100)],'caption':_0x4acae3(0x135)});}else{if(_0x4ea32a[0x1]==='')return await _0x476380[_0x4acae3(0xbc)][_0x4acae3(0x12e)](_0x476380[_0x4acae3(0xdf)],Lang['NEED_WORD'],MessageType[_0x4acae3(0xe2)]);var _0x4dd67b=encodeURI(_0x4ea32a[0x1]),_0x1a60c5=await axios[_0x4acae3(0xcd)](_0x4acae3(0x10f)+_0x4dd67b,{'responseType':'arraybuffer'});await _0x476380[_0x4acae3(0xbc)][_0x4acae3(0x12e)](_0x476380['jid'],Buffer[_0x4acae3(0xc3)](_0x1a60c5[_0x4acae3(0x101)]),MessageType[_0x4acae3(0x13a)],{'mimetype':Mimetype[_0x4acae3(0x100)],'caption':_0x4acae3(0x135)});}}),Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0x10e),'fromMe':wk,'dontAddCommandList':!![]},async(_0x57d4cc,_0xabb361)=>{var _0x1d7845=_0x3235e3;if(_0x57d4cc['reply_message']){var _0x1aebfd=_0x57d4cc['reply_message'][_0x1d7845(0xe2)],_0x23b3e8=encodeURI(_0x1aebfd),_0x48ec29=await axios[_0x1d7845(0xcd)](_0x1d7845(0xec)+_0x23b3e8,{'responseType':_0x1d7845(0x116)});await _0x57d4cc['client']['sendMessage'](_0x57d4cc['jid'],Buffer[_0x1d7845(0xc3)](_0x48ec29[_0x1d7845(0x101)]),MessageType['sticker'],{'mimetype':Mimetype['webp']});}else{if(_0xabb361[0x1]==='')return await _0x57d4cc[_0x1d7845(0xbc)][_0x1d7845(0x12e)](_0x57d4cc['jid'],Lang[_0x1d7845(0x113)],MessageType[_0x1d7845(0xe2)]);var _0x23b3e8=encodeURI(_0xabb361[0x1]),_0x48ec29=await axios['get'](_0x1d7845(0xec)+_0x23b3e8,{'responseType':'arraybuffer'});await _0x57d4cc[_0x1d7845(0xbc)]['sendMessage'](_0x57d4cc[_0x1d7845(0xdf)],Buffer[_0x1d7845(0xc3)](_0x48ec29[_0x1d7845(0x101)]),MessageType[_0x1d7845(0xf5)],{'mimetype':Mimetype['webp']});}}),Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0xc0),'fromMe':wk,'dontAddCommandList':!![]},async(_0x82f5af,_0x262e0c)=>{var _0x57286c=_0x3235e3;if(_0x82f5af[_0x57286c(0xe8)]){var _0x543f20=_0x82f5af[_0x57286c(0xe8)]['text'],_0x263526=await AuroraX[_0x57286c(0xef)](_0x543f20,'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=',_0x57286c(0xee)),_0x26fa5f=async(_0xb9d4f8,_0x3ec3cb,_0x4e36f4)=>{await request['head'](_0xb9d4f8,async(_0x586196,_0x3f95aa,_0x21dc7a)=>{var _0x3db6ef=_0x5604;await request(_0xb9d4f8)[_0x3db6ef(0xc5)](fs['createWriteStream'](_0x3ec3cb))['on'](_0x3db6ef(0xf3),_0x4e36f4);});};await _0x26fa5f(_0x263526[_0x57286c(0x13a)],_0x57286c(0x112),async()=>{var _0x1b9092=_0x57286c;ffmpeg(_0x1b9092(0x112))[_0x1b9092(0x103)](_0x1b9092(0x115))['save'](_0x1b9092(0x10c))['on']('end',async()=>{var _0x26e8e7=_0x1b9092;ffmpeg(_0x26e8e7(0xff))[_0x26e8e7(0x107)](['-y',_0x26e8e7(0xd1)])[_0x26e8e7(0x103)](_0x26e8e7(0x120))[_0x26e8e7(0x11e)](_0x26e8e7(0xf0))['on']('end',async()=>{var _0x2abf6a=_0x26e8e7;await _0x82f5af[_0x2abf6a(0x12e)](fs[_0x2abf6a(0xfb)](_0x2abf6a(0xf0)),MessageType[_0x2abf6a(0xf5)]);});});});}else{if(_0x262e0c[0x1]==='')return await _0x82f5af[_0x57286c(0xbc)][_0x57286c(0x12e)](_0x82f5af[_0x57286c(0xdf)],Lang[_0x57286c(0x113)],MessageType[_0x57286c(0xe2)]);var _0x263526=await AuroraX[_0x57286c(0xef)](_0x262e0c[0x1],_0x57286c(0xe3),_0x57286c(0xee)),_0x26fa5f=async(_0x1bf1c8,_0x343c72,_0x454257)=>{var _0x1ba12c=_0x57286c;await request[_0x1ba12c(0x11c)](_0x1bf1c8,async(_0x961ad5,_0xb4f125,_0x4ab071)=>{var _0x4f134a=_0x1ba12c;await request(_0x1bf1c8)['pipe'](fs['createWriteStream'](_0x343c72))['on'](_0x4f134a(0xf3),_0x454257);});};await _0x26fa5f(_0x263526[_0x57286c(0x13a)],'/root/GARFIELD-6.0/wttp.png',async()=>{var _0x17fdae=_0x57286c;ffmpeg('/root/GARFIELD-6.0/wttp.png')[_0x17fdae(0x103)](_0x17fdae(0x115))['save'](_0x17fdae(0x10c))['on'](_0x17fdae(0x123),async()=>{var _0x1b5daf=_0x17fdae;ffmpeg(_0x1b5daf(0xff))[_0x1b5daf(0x107)](['-y',_0x1b5daf(0xd1)])[_0x1b5daf(0x103)](_0x1b5daf(0x120))['save'](_0x1b5daf(0xf0))['on'](_0x1b5daf(0x123),async()=>{var _0x5345a3=_0x1b5daf;await _0x82f5af[_0x5345a3(0x12e)](fs[_0x5345a3(0xfb)](_0x5345a3(0xf0)),MessageType[_0x5345a3(0xf5)]);});});});}}),Garfield[_0x3235e3(0xed)]({'pattern':'http\x20?(.*)','fromMe':wk,'dontAddCommandList':!![]},async(_0x2d78a4,_0x45f120)=>{var _0x727676=_0x3235e3;if(_0x2d78a4[_0x727676(0xe8)]){var _0x9504b=_0x2d78a4[_0x727676(0xe8)][_0x727676(0xe2)],_0x44ec5a=await AuroraX[_0x727676(0xef)](_0x9504b,_0x727676(0x118),_0x727676(0xee)),_0x51791b=async(_0x38ecdc,_0x6fade,_0x5191ae)=>{await request['head'](_0x38ecdc,async(_0x6fea24,_0x16ca0a,_0x4e8cd8)=>{var _0x3b7117=_0x5604;await request(_0x38ecdc)['pipe'](fs['createWriteStream'](_0x6fade))['on'](_0x3b7117(0xf3),_0x5191ae);});};await _0x51791b(_0x44ec5a[_0x727676(0x13a)],_0x727676(0x10b),async()=>{var _0x4d091d=_0x727676;ffmpeg(_0x4d091d(0x10b))[_0x4d091d(0x103)](_0x4d091d(0x115))[_0x4d091d(0x11e)](_0x4d091d(0x10c))['on'](_0x4d091d(0x123),async()=>{var _0x3b9994=_0x4d091d;ffmpeg('/root/GARFIELD-6.0/af.png')['outputOptions'](['-y',_0x3b9994(0xd1)])[_0x3b9994(0x103)](_0x3b9994(0x120))[_0x3b9994(0x11e)]('st.webp')['on'](_0x3b9994(0x123),async()=>{var _0x2419b3=_0x3b9994;await _0x2d78a4['sendMessage'](fs[_0x2419b3(0xfb)](_0x2419b3(0xf0)),MessageType['sticker']);});});});}else{if(_0x45f120[0x1]==='')return await _0x2d78a4[_0x727676(0xbc)][_0x727676(0x12e)](_0x2d78a4[_0x727676(0xdf)],Lang[_0x727676(0x113)],MessageType[_0x727676(0xe2)]);var _0x44ec5a=await AuroraX['ttp'](_0x45f120[0x1],_0x727676(0x118),_0x727676(0xee)),_0x51791b=async(_0x462c6f,_0x50a28b,_0x57e703)=>{var _0x232492=_0x727676;await request[_0x232492(0x11c)](_0x462c6f,async(_0x5e2db0,_0x5bdbad,_0xef7b1)=>{var _0x3f6a32=_0x232492;await request(_0x462c6f)[_0x3f6a32(0xc5)](fs[_0x3f6a32(0x10d)](_0x50a28b))['on']('close',_0x57e703);});};await _0x51791b(_0x44ec5a[_0x727676(0x13a)],_0x727676(0x10b),async()=>{var _0x11e0d8=_0x727676;ffmpeg(_0x11e0d8(0x10b))[_0x11e0d8(0x103)](_0x11e0d8(0x115))['save']('af.png')['on'](_0x11e0d8(0x123),async()=>{var _0xd324f9=_0x11e0d8;ffmpeg('/root/GARFIELD-6.0/af.png')[_0xd324f9(0x107)](['-y',_0xd324f9(0xd1)])[_0xd324f9(0x103)](_0xd324f9(0x120))[_0xd324f9(0x11e)]('st.webp')['on']('end',async()=>{var _0x3cdf73=_0xd324f9;await _0x2d78a4[_0x3cdf73(0x12e)](fs[_0x3cdf73(0xfb)](_0x3cdf73(0xf0)),MessageType[_0x3cdf73(0xf5)]);});});});}}),Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0xfe),'fromMe':wk,'dontAddCommandList':!![]},async(_0x492805,_0x10b2e4)=>{var _0xc4443c=_0x3235e3;if(_0x492805[_0xc4443c(0xe8)]){var _0x418607=_0x492805[_0xc4443c(0xe8)]['text'],_0x3fb067=await AuroraX[_0xc4443c(0xef)](_0x418607,_0xc4443c(0xde),_0xc4443c(0xee)),_0x1ca22a=async(_0x1b496f,_0x271c4a,_0x2705a3)=>{var _0xb64164=_0xc4443c;await request[_0xb64164(0x11c)](_0x1b496f,async(_0x25e16e,_0x200229,_0x3077b2)=>{var _0x15ddb8=_0xb64164;await request(_0x1b496f)[_0x15ddb8(0xc5)](fs[_0x15ddb8(0x10d)](_0x271c4a))['on']('close',_0x2705a3);});};await _0x1ca22a(_0x3fb067[_0xc4443c(0x13a)],_0xc4443c(0xd9),async()=>{var _0x427a8d=_0xc4443c;ffmpeg(_0x427a8d(0xd9))[_0x427a8d(0x103)](_0x427a8d(0x115))[_0x427a8d(0x11e)](_0x427a8d(0x10c))['on'](_0x427a8d(0x123),async()=>{var _0x3fa5da=_0x427a8d;ffmpeg(_0x3fa5da(0xff))[_0x3fa5da(0x107)](['-y',_0x3fa5da(0xd1)])[_0x3fa5da(0x103)]('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1')[_0x3fa5da(0x11e)](_0x3fa5da(0xf0))['on']('end',async()=>{var _0x264371=_0x3fa5da;await _0x492805[_0x264371(0x12e)](fs['readFileSync']('st.webp'),MessageType[_0x264371(0xf5)]);});});});}else{if(_0x10b2e4[0x1]==='')return await _0x492805['client']['sendMessage'](_0x492805[_0xc4443c(0xdf)],Lang[_0xc4443c(0x113)],MessageType[_0xc4443c(0xe2)]);var _0x3fb067=await AuroraX[_0xc4443c(0xef)](_0x10b2e4[0x1],_0xc4443c(0xde),_0xc4443c(0xee)),_0x1ca22a=async(_0x1cb612,_0x22f055,_0x3ab67a)=>{var _0x24f028=_0xc4443c;await request[_0x24f028(0x11c)](_0x1cb612,async(_0x5ae60a,_0x5b64c6,_0x17b870)=>{var _0x488b8d=_0x24f028;await request(_0x1cb612)['pipe'](fs[_0x488b8d(0x10d)](_0x22f055))['on']('close',_0x3ab67a);});};await _0x1ca22a(_0x3fb067[_0xc4443c(0x13a)],'/root/GARFIELD-6.0/bttp.png',async()=>{var _0x3bc4a2=_0xc4443c;ffmpeg(_0x3bc4a2(0xd9))['videoFilters'](_0x3bc4a2(0x115))['save'](_0x3bc4a2(0x10c))['on'](_0x3bc4a2(0x123),async()=>{var _0x3969c6=_0x3bc4a2;ffmpeg(_0x3969c6(0xff))[_0x3969c6(0x107)](['-y',_0x3969c6(0xd1)])[_0x3969c6(0x103)]('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1')[_0x3969c6(0x11e)](_0x3969c6(0xf0))['on']('end',async()=>{var _0x2435ba=_0x3969c6;await _0x492805[_0x2435ba(0x12e)](fs[_0x2435ba(0xfb)](_0x2435ba(0xf0)),MessageType[_0x2435ba(0xf5)]);});});});}}),Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0x109),'fromMe':wk,'dontAddCommandList':!![]},async(_0x4f0621,_0x462206)=>{var _0x588969=_0x3235e3;if(_0x4f0621[_0x588969(0xe8)]){var _0x29acfc=_0x4f0621[_0x588969(0xe8)][_0x588969(0xe2)],_0x397e92=await AuroraX['ttp'](_0x29acfc,_0x588969(0xc6),_0x588969(0xee)),_0x4e3b71=async(_0x7b932b,_0x387b1e,_0x104f67)=>{var _0x41fd91=_0x588969;await request[_0x41fd91(0x11c)](_0x7b932b,async(_0x3141cb,_0x3247b4,_0x479705)=>{var _0x5b20e3=_0x41fd91;await request(_0x7b932b)[_0x5b20e3(0xc5)](fs[_0x5b20e3(0x10d)](_0x387b1e))['on'](_0x5b20e3(0xf3),_0x104f67);});};await _0x4e3b71(_0x397e92['image'],_0x588969(0xf7),async()=>{var _0x1880d0=_0x588969;ffmpeg(_0x1880d0(0xf7))[_0x1880d0(0x103)](_0x1880d0(0x115))[_0x1880d0(0x11e)](_0x1880d0(0x10c))['on']('end',async()=>{var _0xc0c7f6=_0x1880d0;ffmpeg(_0xc0c7f6(0xff))[_0xc0c7f6(0x107)](['-y','-vcodec\x20libwebp'])[_0xc0c7f6(0x103)](_0xc0c7f6(0x120))[_0xc0c7f6(0x11e)](_0xc0c7f6(0xf0))['on']('end',async()=>{var _0x16a3f9=_0xc0c7f6;await _0x4f0621[_0x16a3f9(0x12e)](fs[_0x16a3f9(0xfb)](_0x16a3f9(0xf0)),MessageType[_0x16a3f9(0xf5)]);});});});}else{if(_0x462206[0x1]==='')return await _0x4f0621['client']['sendMessage'](_0x4f0621[_0x588969(0xdf)],Lang[_0x588969(0x113)],MessageType[_0x588969(0xe2)]);var _0x397e92=await AuroraX[_0x588969(0xef)](_0x462206[0x1],_0x588969(0xc6),_0x588969(0xee)),_0x4e3b71=async(_0x135503,_0x472ec5,_0x31a395)=>{var _0x1c3063=_0x588969;await request[_0x1c3063(0x11c)](_0x135503,async(_0x2be480,_0x940036,_0x578a18)=>{var _0x1acd65=_0x1c3063;await request(_0x135503)[_0x1acd65(0xc5)](fs[_0x1acd65(0x10d)](_0x472ec5))['on'](_0x1acd65(0xf3),_0x31a395);});};await _0x4e3b71(_0x397e92[_0x588969(0x13a)],_0x588969(0xf7),async()=>{var _0x5365f1=_0x588969;ffmpeg(_0x5365f1(0xf7))[_0x5365f1(0x103)](_0x5365f1(0x115))[_0x5365f1(0x11e)]('af.png')['on'](_0x5365f1(0x123),async()=>{var _0x4c3346=_0x5365f1;ffmpeg(_0x4c3346(0xff))[_0x4c3346(0x107)](['-y','-vcodec\x20libwebp'])[_0x4c3346(0x103)](_0x4c3346(0x120))[_0x4c3346(0x11e)](_0x4c3346(0xf0))['on'](_0x4c3346(0x123),async()=>{var _0x4f150a=_0x4c3346;await _0x4f0621['sendMessage'](fs[_0x4f150a(0xfb)]('st.webp'),MessageType[_0x4f150a(0xf5)]);});});});}}),Garfield['addXnodes']({'pattern':'sttp\x20?(.*)','fromMe':wk,'dontAddCommandList':!![]},async(_0x2e6966,_0xd246b7)=>{var _0x22b98b=_0x3235e3;if(_0x2e6966[_0x22b98b(0xe8)]){var _0x26b5f3=_0x2e6966['reply_message'][_0x22b98b(0xe2)],_0x10a336=await AuroraX[_0x22b98b(0xef)](_0x26b5f3,_0x22b98b(0xda),_0x22b98b(0xee)),_0x253664=async(_0x5d550a,_0x229f64,_0x445f11)=>{var _0x48c089=_0x22b98b;await request[_0x48c089(0x11c)](_0x5d550a,async(_0x3d67a6,_0x316f0f,_0x3e8a44)=>{var _0x23a189=_0x48c089;await request(_0x5d550a)[_0x23a189(0xc5)](fs[_0x23a189(0x10d)](_0x229f64))['on'](_0x23a189(0xf3),_0x445f11);});};await _0x253664(_0x10a336[_0x22b98b(0x13a)],_0x22b98b(0x12f),async()=>{var _0x53957b=_0x22b98b;ffmpeg(_0x53957b(0x12f))[_0x53957b(0x103)](_0x53957b(0x115))[_0x53957b(0x11e)](_0x53957b(0x10c))['on'](_0x53957b(0x123),async()=>{var _0x373b42=_0x53957b;ffmpeg('/root/GARFIELD-6.0/af.png')[_0x373b42(0x107)](['-y','-vcodec\x20libwebp'])[_0x373b42(0x103)]('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1')['save'](_0x373b42(0xf0))['on'](_0x373b42(0x123),async()=>{var _0x6c33de=_0x373b42;await _0x2e6966[_0x6c33de(0x12e)](fs[_0x6c33de(0xfb)]('st.webp'),MessageType[_0x6c33de(0xf5)]);});});});}else{if(_0xd246b7[0x1]==='')return await _0x2e6966[_0x22b98b(0xbc)][_0x22b98b(0x12e)](_0x2e6966['jid'],Lang['NEED_WORD'],MessageType['text']);var _0x10a336=await AuroraX[_0x22b98b(0xef)](_0xd246b7[0x1],_0x22b98b(0xda),_0x22b98b(0xee)),_0x253664=async(_0x2757ab,_0x574ac3,_0x26298c)=>{var _0x49d935=_0x22b98b;await request[_0x49d935(0x11c)](_0x2757ab,async(_0x34ad74,_0x2373e0,_0x29a752)=>{var _0x318ae2=_0x49d935;await request(_0x2757ab)['pipe'](fs[_0x318ae2(0x10d)](_0x574ac3))['on'](_0x318ae2(0xf3),_0x26298c);});};await _0x253664(_0x10a336[_0x22b98b(0x13a)],_0x22b98b(0x12f),async()=>{var _0x2c113c=_0x22b98b;ffmpeg(_0x2c113c(0x12f))[_0x2c113c(0x103)](_0x2c113c(0x115))[_0x2c113c(0x11e)]('af.png')['on'](_0x2c113c(0x123),async()=>{var _0x3cc4b0=_0x2c113c;ffmpeg(_0x3cc4b0(0xff))[_0x3cc4b0(0x107)](['-y',_0x3cc4b0(0xd1)])[_0x3cc4b0(0x103)]('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1')[_0x3cc4b0(0x11e)](_0x3cc4b0(0xf0))['on'](_0x3cc4b0(0x123),async()=>{var _0x27ec5d=_0x3cc4b0;await _0x2e6966[_0x27ec5d(0x12e)](fs[_0x27ec5d(0xfb)](_0x27ec5d(0xf0)),MessageType[_0x27ec5d(0xf5)]);});});});}}),Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0xe7),'fromMe':wk,'dontAddCommandList':!![]},async(_0x1269ae,_0x4b434e)=>{var _0x120194=_0x3235e3;if(_0x1269ae[_0x120194(0xe8)]){var _0x471a8a=_0x1269ae[_0x120194(0xe8)][_0x120194(0xe2)],_0x4e631b=await AuroraX['ttp'](_0x471a8a,_0x120194(0x119),_0x120194(0xee)),_0x47ec09=async(_0x257e08,_0xafaaa,_0x4eabf7)=>{await request['head'](_0x257e08,async(_0x1b8320,_0x1ede2a,_0x4b6910)=>{var _0x347057=_0x5604;await request(_0x257e08)[_0x347057(0xc5)](fs['createWriteStream'](_0xafaaa))['on']('close',_0x4eabf7);});};await _0x47ec09(_0x4e631b['image'],'/root/GARFIELD-6.0/ettp.png',async()=>{var _0x194916=_0x120194;ffmpeg(_0x194916(0xcf))[_0x194916(0x103)](_0x194916(0xf6))[_0x194916(0x11e)]('af.png')['on'](_0x194916(0x123),async()=>{var _0x36b543=_0x194916;ffmpeg(_0x36b543(0xff))[_0x36b543(0x107)](['-y',_0x36b543(0xd1)])[_0x36b543(0x103)](_0x36b543(0x120))[_0x36b543(0x11e)](_0x36b543(0xf0))['on'](_0x36b543(0x123),async()=>{var _0xbb9919=_0x36b543;await _0x1269ae[_0xbb9919(0x12e)](fs[_0xbb9919(0xfb)](_0xbb9919(0xf0)),MessageType[_0xbb9919(0xf5)]);});});});}else{if(_0x4b434e[0x1]==='')return await _0x1269ae[_0x120194(0xbc)][_0x120194(0x12e)](_0x1269ae['jid'],Lang[_0x120194(0x113)],MessageType[_0x120194(0xe2)]);var _0x4e631b=await AuroraX['ttp'](_0x4b434e[0x1],_0x120194(0x119),_0x120194(0xee)),_0x47ec09=async(_0x5bfdd5,_0x30f9d2,_0x23c8d9)=>{await request['head'](_0x5bfdd5,async(_0x3d73dd,_0x24a063,_0x12d45a)=>{var _0x3893b1=_0x5604;await request(_0x5bfdd5)[_0x3893b1(0xc5)](fs[_0x3893b1(0x10d)](_0x30f9d2))['on'](_0x3893b1(0xf3),_0x23c8d9);});};await _0x47ec09(_0x4e631b[_0x120194(0x13a)],_0x120194(0xcf),async()=>{var _0x30bb9c=_0x120194;ffmpeg('/root/GARFIELD-6.0/ettp.png')[_0x30bb9c(0x103)](_0x30bb9c(0xf6))[_0x30bb9c(0x11e)](_0x30bb9c(0x10c))['on'](_0x30bb9c(0x123),async()=>{var _0x4ce66d=_0x30bb9c;ffmpeg('/root/GARFIELD-6.0/af.png')[_0x4ce66d(0x107)](['-y',_0x4ce66d(0xd1)])[_0x4ce66d(0x103)](_0x4ce66d(0x120))[_0x4ce66d(0x11e)](_0x4ce66d(0xf0))['on']('end',async()=>{var _0x5889a7=_0x4ce66d;await _0x1269ae['sendMessage'](fs[_0x5889a7(0xfb)](_0x5889a7(0xf0)),MessageType['sticker']);});});});}}),Garfield[_0x3235e3(0xed)]({'pattern':_0x3235e3(0xfc),'fromMe':wk,'dontAddCommandList':!![]},async(_0x5b1188,_0x5a5655)=>{var _0xf8b460=_0x3235e3;if(_0x5b1188[_0xf8b460(0xe8)]){var _0x26afbe=_0x5b1188['reply_message'][_0xf8b460(0xe2)],_0x247b55=await AuroraX[_0xf8b460(0xef)](_0x26afbe,_0xf8b460(0xc2),_0xf8b460(0xee)),_0x265a10=async(_0x4a050f,_0x11d8d9,_0x1a9a28)=>{var _0x450f88=_0xf8b460;await request[_0x450f88(0x11c)](_0x4a050f,async(_0x147d78,_0x5520e9,_0x2c50e1)=>{var _0x13909e=_0x450f88;await request(_0x4a050f)[_0x13909e(0xc5)](fs[_0x13909e(0x10d)](_0x11d8d9))['on']('close',_0x1a9a28);});};await _0x265a10(_0x247b55[_0xf8b460(0x13a)],_0xf8b460(0x133),async()=>{var _0x6164fa=_0xf8b460;ffmpeg(_0x6164fa(0x133))[_0x6164fa(0x103)](_0x6164fa(0xc8))[_0x6164fa(0x11e)](_0x6164fa(0xd0))['on'](_0x6164fa(0x123),async()=>{var _0x2536aa=_0x6164fa;ffmpeg('/root/GARFIELD-6.0/af.gif')['outputOptions'](['-y','-vcodec\x20libwebp',_0x2536aa(0xce),'-qscale\x201',_0x2536aa(0x12b),_0x2536aa(0x12d),_0x2536aa(0xc4),_0x2536aa(0xe9),_0x2536aa(0x129)])[_0x2536aa(0x103)](_0x2536aa(0x11a))[_0x2536aa(0x11e)]('sticker.webp')['on'](_0x2536aa(0x123),async()=>{var _0x52ebd4=_0x2536aa;await _0x5b1188[_0x52ebd4(0x12e)](fs[_0x52ebd4(0xfb)](_0x52ebd4(0x138)),MessageType[_0x52ebd4(0xf5)]);});});});}else{if(_0x5a5655[0x1]==='')return await _0x5b1188['client']['sendMessage'](_0x5b1188[_0xf8b460(0xdf)],Lang[_0xf8b460(0x113)],MessageType['text']);var _0x247b55=await AuroraX[_0xf8b460(0xef)](_0x5a5655[0x1],'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=',_0xf8b460(0xee)),_0x265a10=async(_0x149db3,_0x4e670c,_0x2a9dfd)=>{var _0x6194c2=_0xf8b460;await request[_0x6194c2(0x11c)](_0x149db3,async(_0x4bb530,_0x1f4dcc,_0x4deb6f)=>{var _0x326d2e=_0x6194c2;await request(_0x149db3)['pipe'](fs[_0x326d2e(0x10d)](_0x4e670c))['on'](_0x326d2e(0xf3),_0x2a9dfd);});};await _0x265a10(_0x247b55[_0xf8b460(0x13a)],'/root/GARFIELD-6.0/ahttp.gif',async()=>{var _0xb73d4f=_0xf8b460;ffmpeg(_0xb73d4f(0x133))[_0xb73d4f(0x103)]('chromakey=black')['save']('af.gif')['on']('end',async()=>{var _0x42f6d1=_0xb73d4f;ffmpeg(_0x42f6d1(0xf2))['outputOptions'](['-y',_0x42f6d1(0xd1),_0x42f6d1(0xce),'-qscale\x201',_0x42f6d1(0x12b),_0x42f6d1(0x12d),'-an',_0x42f6d1(0xe9),_0x42f6d1(0x129)])[_0x42f6d1(0x103)](_0x42f6d1(0x11a))[_0x42f6d1(0x11e)](_0x42f6d1(0x138))['on'](_0x42f6d1(0x123),async()=>{var _0xd7363e=_0x42f6d1;await _0x5b1188[_0xd7363e(0x12e)](fs[_0xd7363e(0xfb)](_0xd7363e(0x138)),MessageType['sticker']);});});});}}),Garfield[_0x3235e3(0xed)]({'pattern':'pttp\x20?(.*)','fromMe':wk,'dontAddCommandList':!![]},async(_0x24c85b,_0x2e14b5)=>{var _0x3f4d0e=_0x3235e3;if(_0x24c85b['reply_message']){var _0x4964dd=_0x24c85b['reply_message'][_0x3f4d0e(0xe2)],_0x305ff1=await AuroraX[_0x3f4d0e(0xef)](_0x4964dd,'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=',_0x3f4d0e(0xee)),_0x3db00e=async(_0x549c40,_0x13e090,_0x5ce256)=>{var _0x864cd1=_0x3f4d0e;await request[_0x864cd1(0x11c)](_0x549c40,async(_0x635f67,_0x4d9a14,_0x274da7)=>{var _0x35dbd8=_0x864cd1;await request(_0x549c40)[_0x35dbd8(0xc5)](fs['createWriteStream'](_0x13e090))['on'](_0x35dbd8(0xf3),_0x5ce256);});};await _0x3db00e(_0x305ff1[_0x3f4d0e(0x13a)],_0x3f4d0e(0x122),async()=>{var _0x2ddc30=_0x3f4d0e;ffmpeg('/root/GARFIELD-6.0/pttp.gif')['videoFilters'](_0x2ddc30(0x115))[_0x2ddc30(0x11e)](_0x2ddc30(0xd0))['on']('end',async()=>{var _0x4ffba2=_0x2ddc30;ffmpeg(_0x4ffba2(0xf2))['outputOptions'](['-y',_0x4ffba2(0xd1),_0x4ffba2(0xce),_0x4ffba2(0xe6),_0x4ffba2(0x12b),'-loop\x200',_0x4ffba2(0xc4),_0x4ffba2(0xe9),'-s\x20600x600'])[_0x4ffba2(0x103)]('scale=600:600:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=600:600:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1')['save']('sticker.webp')['on'](_0x4ffba2(0x123),async()=>{var _0x52a593=_0x4ffba2;await _0x24c85b[_0x52a593(0x12e)](fs[_0x52a593(0xfb)](_0x52a593(0x138)),MessageType['sticker']);});});});}else{if(_0x2e14b5[0x1]==='')return await _0x24c85b[_0x3f4d0e(0xbc)][_0x3f4d0e(0x12e)](_0x24c85b['jid'],Lang[_0x3f4d0e(0x113)],MessageType[_0x3f4d0e(0xe2)]);var _0x305ff1=await AuroraX[_0x3f4d0e(0xef)](_0x2e14b5[0x1],_0x3f4d0e(0xd3),_0x3f4d0e(0xee)),_0x3db00e=async(_0x561995,_0x2becdb,_0x5b3da3)=>{await request['head'](_0x561995,async(_0x5677a3,_0x18f113,_0x49d1ea)=>{var _0x22921c=_0x5604;await request(_0x561995)[_0x22921c(0xc5)](fs['createWriteStream'](_0x2becdb))['on'](_0x22921c(0xf3),_0x5b3da3);});};await _0x3db00e(_0x305ff1[_0x3f4d0e(0x13a)],_0x3f4d0e(0x122),async()=>{var _0x165287=_0x3f4d0e;ffmpeg(_0x165287(0x122))['videoFilters']('chromakey=white')[_0x165287(0x11e)]('af.gif')['on'](_0x165287(0x123),async()=>{var _0x3e624f=_0x165287;ffmpeg('/root/GARFIELD-6.0/af.gif')[_0x3e624f(0x107)](['-y',_0x3e624f(0xd1),_0x3e624f(0xce),'-qscale\x201','-preset\x20default',_0x3e624f(0x12d),'-an','-vsync\x200',_0x3e624f(0x129)])['videoFilters'](_0x3e624f(0x11a))[_0x3e624f(0x11e)](_0x3e624f(0x138))['on'](_0x3e624f(0x123),async()=>{var _0xe8c28c=_0x3e624f;await _0x24c85b[_0xe8c28c(0x12e)](fs[_0xe8c28c(0xfb)]('sticker.webp'),MessageType[_0xe8c28c(0xf5)]);});});});}});
+
+const Garfield = require('../events');
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
+const fs = require('fs');
+const axios = require('axios');
+const Config = require('../config');
+const ffmpeg = require('fluent-ffmpeg');
+const {execFile} = require('child_process');
+const cwebp = require('cwebp-bin');
+let wk = Config.WORKTYPE == 'public' ? false : true
+const AuroraX = require('aurora-npm')
+const request = require('request');
+
+const Language = require('../language');
+const Lang = Language.getString('ttp');
+
+var description = ''
+var cmd = ''
+var cmd_desc = ''
+if (Config.LANG == 'TR') description = 'Tüm ttp komutlarını gösterir.', cmd = '*Komut:* ', cmd_desc = '*Açıklama:* '
+if (Config.LANG == 'AZ') description = 'Bütün ttp əmrlərini göstərir.', cmd = '*Əmr:* ', cmd_desc = '*İzahat:* '
+if (Config.LANG == 'EN') description = 'Shows all ttp commands.', cmd = '*Command:* ', cmd_desc = '*Description:* '
+if (Config.LANG == 'RU') description = 'Показывает все команды ttp.', cmd = '*Команда:* ', cmd_desc = '*Объяснение:* '
+if (Config.LANG == 'ES') description = 'Muestra todos los comandos ttp.', cmd = '*Mando:* ', cmd_desc = '*Explicación:* '
+if (Config.LANG == 'HI') description = 'सभी ttp कमांड दिखाता है।', cmd = '*आदेश:* ', cmd_desc = '*व्याख्या:* '
+if (Config.LANG == 'ML') description = 'എല്ലാ ttp കമാൻഡുകളും കാണിക്കുന്നു.', cmd = '*കമാൻഡ്:* ', cmd_desc = '*വിശദീകരണം:* '
+if (Config.LANG == 'PT') description = 'Mostra todos os comandos ttp.', cmd = '*Comando:* ', cmd_desc = '*Explicação:* '
+if (Config.LANG == 'ID') description = '*Menampilkan semua perintah ttp.', cmd = '*Memerintah:* ', cmd_desc = '*Penjelasan:* '
+
+Garfield.addXnodes({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (message, match) => {
+  var t1 = Lang.TTP_DESC
+  var t2 = Lang.ATTP_DESC
+  var t3 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı su temalı sticker'e çevirir." : "Converts text to water-themed sticker."
+  var t4 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı el yazısıyla sticker'e çevirir." : "Converts text to hand writing sticker."
+  var t5 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı blackbird temalı sticker'e çevirir." : "Converts text to blackbird-themed sticker."
+  var t6 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı sakız temalı sticker'e çevirir." : "Converts text to gum-themed sticker."
+  var t7 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı şirinler temalı sticker'e çevirir." : "Converts text to smurfs-themed sticker."
+  var t8 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı elektrik temalı sticker'e çevirir." : "Converts text to electric-themed sticker."
+  var t9 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı vurgulayan animasyonlu sticker'e çevirir." : "Converts text to highlighted animated sticker."
+  var t10 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Yazıyı geçiş animasyonlu sticker'e çevirir." : "Converts text to transition animated sticker."
+  
+  var payload = cmd + '.ttp' + '\n' + cmd_desc + t1 + '\n\n' +
+    cmd + '.attp' + '\n' + cmd_desc + t2 + '\n\n' +
+    cmd + '.wttp' + '\n' + cmd_desc + t3 + '\n\n' +
+    cmd + '.http' + '\n' + cmd_desc + t4 + '\n\n' +
+    cmd + '.ahttp' + '\n' + cmd_desc + t9 + '\n\n' +
+    cmd + '.bttp' + '\n' + cmd_desc + t5 + '\n\n' +
+    cmd + '.gttp' + '\n' + cmd_desc + t6 + '\n\n' +
+    cmd + '.sttp' + '\n' + cmd_desc + t7 + '\n\n' +
+    cmd + '.ettp' + '\n' + cmd_desc + t8 + '\n\n' +
+    cmd + '.pttp' + '\n' + cmd_desc + t10
+    
+  await message.client.sendMessage(message.jid,payload, MessageType.text)
+}));
+Garfield.addXnodes({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var uri = encodeURI(text)
+    var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
+    await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.png, caption:'  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/```  ' })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var uri = encodeURI(match[1])
+    var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
+    await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.png, caption:'  ```Follow Us Facebook - https://www.facebook.com/garfieldbots/```  ' })
+  }
+}));
+Garfield.addXnodes({ pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var uri = encodeURI(text)
+    var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
+    await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var uri = encodeURI(match[1])
+    var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
+    await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
+  }
+}));
+Garfield.addXnodes({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/wttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/wttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/wttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/wttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/http.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/http.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/http.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/http.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/bttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/bttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/bttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/bttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/gttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/gttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/gttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/gttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/sttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/sttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/sttp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/sttp.png').videoFilters('chromakey=white').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/ettp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/ettp.png').videoFilters('chromakey=#FFFFFF:similarity=0.01').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/ettp.png', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/ettp.png').videoFilters('chromakey=#FFFFFF:similarity=0.01').save('af.png').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.png').outputOptions(["-y", "-vcodec libwebp"]).videoFilters('scale=2000:2000:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=2000:2000:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('st.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/ahttp.gif', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/ahttp.gif').videoFilters('chromakey=black').save('af.gif').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.gif').outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 600x600"]).videoFilters('scale=600:600:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=600:600:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('sticker.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/ahttp.gif', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/ahttp.gif').videoFilters('chromakey=black').save('af.gif').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.gif').outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 600x600"]).videoFilters('scale=600:600:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=600:600:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('sticker.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));
+Garfield.addXnodes({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
+  if (message.reply_message) {
+    var text = message.reply_message.text
+    var ttinullimage = await AuroraX.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/pttp.gif', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/pttp.gif').videoFilters('chromakey=white').save('af.gif').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.gif').outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 600x600"]).videoFilters('scale=600:600:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=600:600:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('sticker.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+        })
+      })
+    })
+  } else {
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+    var ttinullimage = await AuroraX.ttp(match[1], 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(ttinullimage.image, '/root/GARFIELD-6.0/pttp.gif', async() => { 
+      ffmpeg('/root/GARFIELD-6.0/pttp.gif').videoFilters('chromakey=white').save('af.gif').on('end', async () => {
+        ffmpeg('/root/GARFIELD-6.0/af.gif').outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 600x600"]).videoFilters('scale=600:600:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=600:600:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1').save('sticker.webp').on('end', async () => {
+          await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+        })
+      })
+    })
+  }
+}));

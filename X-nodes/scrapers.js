@@ -1,2 +1,1269 @@
 /*COPYRIGHT (C) 2022 CODED BY NOIZE */
-const _0x3728b6=_0x486b;(function(_0x3e410d,_0x532f32){const _0x28e234=_0x486b,_0x2d17db=_0x3e410d();while(!![]){try{const _0x2c822a=parseInt(_0x28e234(0x209))/0x1*(-parseInt(_0x28e234(0x23e))/0x2)+parseInt(_0x28e234(0x240))/0x3+-parseInt(_0x28e234(0x1c1))/0x4*(parseInt(_0x28e234(0xe5))/0x5)+-parseInt(_0x28e234(0x16a))/0x6*(parseInt(_0x28e234(0x102))/0x7)+-parseInt(_0x28e234(0x120))/0x8*(-parseInt(_0x28e234(0xc6))/0x9)+-parseInt(_0x28e234(0xc4))/0xa+-parseInt(_0x28e234(0x112))/0xb*(-parseInt(_0x28e234(0x18c))/0xc);if(_0x2c822a===_0x532f32)break;else _0x2d17db['push'](_0x2d17db['shift']());}catch(_0xa550a7){_0x2d17db['push'](_0x2d17db['shift']());}}}(_0x414f,0xc69be));const Garfield=require(_0x3728b6(0x15d)),{MessageType,Mimetype}=require(_0x3728b6(0x219)),translatte=require(_0x3728b6(0x14e)),config=require(_0x3728b6(0x225)),xv364=require(_0x3728b6(0xca)),LanguageDetect=require(_0x3728b6(0xd3)),lngDetector=new LanguageDetect(),Heroku=require(_0x3728b6(0x107)),heroku=new Heroku({'token':config[_0x3728b6(0x138)][_0x3728b6(0x201)]});let baseURI='/apps/'+config[_0x3728b6(0x138)]['APP_NAME'];const axios=require(_0x3728b6(0x232)),{requestLyricsFor,requestAuthorFor,requestTitleFor,requestIconFor}=require(_0x3728b6(0x23b)),solenolyrics=require('solenolyrics'),{exchangeRates}=require(_0x3728b6(0xb5)),ExchangeRatesError=require(_0x3728b6(0x20e)),fs=require('fs'),https=require('https'),googleTTS=require(_0x3728b6(0x1d4)),ytdl=require('ytdl-core'),ffmpeg=require('fluent-ffmpeg'),yts=require(_0x3728b6(0x160)),got=require(_0x3728b6(0x249)),ID3Writer=require(_0x3728b6(0x1c6)),SpotifyWebApi=require(_0x3728b6(0x15c)),spotifyApi=new SpotifyWebApi({'clientId':_0x3728b6(0x1e9),'clientSecret':_0x3728b6(0x117)}),Language=require(_0x3728b6(0x144)),Lang=Language[_0x3728b6(0x1ab)](_0x3728b6(0x1fc)),Glang=Language[_0x3728b6(0x1ab)](_0x3728b6(0x213)),Slang=Language[_0x3728b6(0x1ab)](_0x3728b6(0x157)),Clang=Language[_0x3728b6(0x1ab)]('covid'),wiki=require('wikijs')[_0x3728b6(0xae)];var gis=require(_0x3728b6(0xcb)),dlang_dsc='',closer_res='',dlang_lang='',dlang_similarity='',dlang_other='',dlang_input='';config['LANG']=='TR'&&(dlang_dsc=_0x3728b6(0x103),closer_res='En\x20Yakın\x20Sonuç:',dlang_lang='Dil:',dlang_similarity='Benzerlik:',dlang_other=_0x3728b6(0x220),dlang_input='İşlenen\x20Metin:');config[_0x3728b6(0x1ef)]=='EN'&&(dlang_dsc=_0x3728b6(0x242),closer_res=_0x3728b6(0x1bb),dlang_lang=_0x3728b6(0x1bc),dlang_similarity=_0x3728b6(0xbd),dlang_other=_0x3728b6(0x18b),dlang_input=_0x3728b6(0x163));config[_0x3728b6(0x1ef)]=='AZ'&&(dlang_dsc=_0x3728b6(0x1c7),closer_res=_0x3728b6(0xd7),dlang_lang=_0x3728b6(0x14f),dlang_similarity=_0x3728b6(0x24a),dlang_other=_0x3728b6(0x21f),dlang_input=_0x3728b6(0x1c5));config['LANG']=='ML'&&(dlang_dsc='മറുപടി\x20നൽകിയ\x20സന്ദേശത്തിന്റെ\x20ഭാഷ\x20ess\x20ഹിക്കുക.',closer_res=_0x3728b6(0x15b),dlang_lang=_0x3728b6(0x1ad),dlang_similarity=_0x3728b6(0x245),dlang_other='മറ്റ്\x20ഭാഷകൾ',dlang_input=_0x3728b6(0x1a3));config[_0x3728b6(0x1ef)]=='HI'&&(dlang_dsc='उत्तर\x20दिए\x20गए\x20संदेश\x20की\x20भाषा\x20का\x20अनुमान\x20लगाएं',closer_res=_0x3728b6(0x1f0),dlang_lang=_0x3728b6(0x1e0),dlang_similarity=_0x3728b6(0x13f),dlang_other=_0x3728b6(0x16c),dlang_input=_0x3728b6(0x179));config[_0x3728b6(0x1ef)]=='ES'&&(dlang_dsc=_0x3728b6(0xa6),closer_res=_0x3728b6(0x181),dlang_lang=_0x3728b6(0x1e5),dlang_similarity=_0x3728b6(0x14c),dlang_other=_0x3728b6(0x139),dlang_input=_0x3728b6(0x1b3));config[_0x3728b6(0x1ef)]=='PT'&&(dlang_dsc='Adivinhe\x20o\x20idioma\x20da\x20mensagem\x20respondida.',closer_res=_0x3728b6(0x116),dlang_lang=_0x3728b6(0x241),dlang_similarity='Similaridade:',dlang_other='Outras\x20línguas',dlang_input=_0x3728b6(0x222));config[_0x3728b6(0x1ef)]=='ID'&&(dlang_dsc='Tebak\x20bahasa\x20pesan\x20yang\x20dibalas.',closer_res=_0x3728b6(0x1fe),dlang_lang='Lidah:',dlang_similarity=_0x3728b6(0x198),dlang_other=_0x3728b6(0xf1),dlang_input=_0x3728b6(0x9f));config[_0x3728b6(0x1ef)]=='RU'&&(dlang_dsc=_0x3728b6(0x204),closer_res='Ближайший\x20результат:',dlang_lang=_0x3728b6(0x191),dlang_similarity=_0x3728b6(0xb0),dlang_other=_0x3728b6(0x1a8),dlang_input=_0x3728b6(0xac));function _0x414f(){const _0x3ce30a=['map','GİST','base','length','12652720wTGkqS','getURLVideoID','27NjKjqV','false',':*\x20```','Autobio\x20Başarıyla\x20Kapatıldı!','../X-364','g-i-s','LOCATİON','905524317852-1612300121@g.us','_\x20\x0a\x0a','#4\x20*','NOT_FOUND','stream','.wikipedia.org/w/api.php','languagedetect','America','DOWNLOADING_VIDEO','video\x20?(.*)','Ən\x20yaxın\x20nəticə:','\x0a😷\x20*Active\x20Cases:*\x20','.autobio\x20on\x20/\x20off','\x0a⚰️\x20*Totale\x20Todesfälle:*\x20','watch?v=','NOT','https://coronavirus-19-api.herokuapp.com/countries/Germany','United','india','format','get','türkiye','```','sing\x20?(.*)','895rVzGpR','🇰🇿\x20*Datas\x20for\x20Kazakhstan:*\x0a😷\x20*Total\x20Cases:*\x20','mp4','.mp3','\x0a🧪\x20*Total\x20Test:*\x20','🇯🇵\x20*Datas\x20for\x20Japan:*\x0a😷\x20*Total\x20Cases:*\x20','usa','addTag','match','\x20\x0a*','indian','\x0a🏥\x20*Günlük\x20Xəstə:*\x20','Bahasa\x20Lainnya','Garfield','Adicione\x20um\x20relógio\x20ao\x20vivo\x20à\x20sua\x20biografia!','cases','*◀️\x20','public','Autobio\x20വിജയകരമായി\x20തുറന്നു!','\x0a⚰️\x20*Ümumi\x20Ölüm:*\x20','contact','```please\x20decrease\x20the\x20number\x20of\x20images```','Auroraxc','*\x0a```Wait\x20Uploading```','wiki\x20?(.*)','\x0a🧪\x20*Gesamttests:*\x20','\x0a☠️\x20*Günlük\x20Ölü:*\x20','russia','144p','7EmfdFt','Yanıtlanan\x20mesajın\x20dilini\x20tahmin\x20eder.','img\x20?(.*)','BİO','/config-vars','heroku-client','githxjdjub\x20?(.*)','\x0a🆘\x20*Ağır\x20Xəstə\x20Sayı:*\x20','pipe','buffer','https://coronavirus-19-api.herokuapp.com/countries/Azerbaijan','data','https://coronavirus-19-api.herokuapp.com/all','arrayBuffer','deutschland','TIT2','226589hPuezW','https://coronavirus-19-api.herokuapp.com/countries/China','\x0a💊\x20*Toplam\x20İyileşen:*\x20','TRANSLATE_USAGE','Resultado\x20mais\x20próximo:','0e8439a1280a43aba9a5bc0a16f3f009','NEED','END:VCARD','\x0a🏥\x20*Daily\x20Cases:*\x20','türk','MAİL','Autobio\x20सफलतापूर्वक\x20बंद!','*🔎\x20','720p','3800872mqtmiu','PHONE','AUTO_BİO','\x0a⚕️\x20*Total\x20Recovered:*\x20','UNKNOWN_ERROR','germany','\x0a🆘\x20*Kritische\x20Fälle:*\x20','toUpperCase','Autobio\x20Uğurla\x20Bağlandı!','🇫🇷\x20*Datas\x20for\x20France:*\x0a😷\x20*Total\x20Cases:*\x20','SLY','readFileSync','Autobio\x20Berhasil\x20Dibuka!','#2\x20*','arraybuffer','FN:','\x0a😷\x20*Aktiv\x20Xəstə\x20Sayı:*\x20','\x20]```\x0a\x0a','https://coronavirus-19-api.herokuapp.com/countries/Russia','play\x20?(.*)','container','mp4Audio','\x0a💊\x20*Ümumi\x20Sağalma:*\x20','reply_message','HEROKU','Otros\x20idiomas:','\x0a🧪\x20*Ümumi\x20Test:*\x20','Добавьте\x20живые\x20часы\x20в\x20свою\x20биографию!','REPO','🇷🇺\x20*Datas\x20for\x20Russia:*\x0a😷\x20*Total\x20Cases:*\x20','image','समानता:','jid','Autobio\x20पहले\x20से\x20ही\x20खुला\x20है!','turkiye','Autobio\x20നിലവിൽ\x20അടച്ചിരിക്കുന്നു!','../language','DOWNLOADING_SONG','end','auto','#3\x20*','480p','off','Autobio\x20fechado\x20com\x20sucesso!','Semejanza:','\x20&\x20','translatte','Dil:','recovered','_\x20\x0a','BUL','totalTests','isong\x20?(.*)','Autobio\x20വിജയകരമായി\x20അടച്ചു!','Autobio\x20halihazırda\x20açık!','lyrics','Error\x20:\x0a','split','https://coronavirus-19-api.herokuapp.com/countries/Pakistan','ഏറ്റവും\x20അടുത്ത\x20ഫലം:','spotify-web-api-node','../events','NO_RESULT','\x0a😷\x20*Aktif\x20Vaka:*\x20','yt-search','Bio-ya\x20canlı\x20saat\x20əlavə\x20et!','TRANSLATE_ERROR','Processed\x20Text:','\x0a🏥\x20*दैनिक\x20मामले:*\x20','🌍\x20*World-Wide\x20Results:*\x0a🌐\x20*Total\x20Cases:*\x20','NEED_WORDS','IMG_DESC','highestaudio','\x0a☠️\x20*रोज\x20की\x20मौत:*\x20','2737278NrEqAy','IMG','अन्य\x20भाषाएँ','https://coronavirus-19-api.herokuapp.com/countries/USA','REPLY','\x0a💊\x20*कुल\x20बरामद:*\x20','AUTOBİO','symbols','detectlang$','toLowerCase','Autobio\x20успешно\x20закрыт!','charAt','china','\x0a💊\x20*Insgesamt\x20Wiederhergestellt:*\x20','then','संसाधित\x20पाठ:','\x20=\x20','result','latest','OFF','CURRENCY_ERROR','\x0a😷\x20*Aktuelle\x20Fälle:*\x20','message','Resultado\x20más\x20cercano:','NUMBER','\x5c{([a-z]{2})\x5c}','videoId','Autobio\x20halihazırda\x20kapalı!','rawContent','https://coronavirus-19-api.herokuapp.com/countries/Japan','\x0a😷\x20*एक्टिव\x20केस:*\x20','\x0a☠️\x20*Daily\x20Deaths:*\x20','TEL;type=CELL;type=VOICE;waid=','Other\x20Languages','996IaMjxj','```[\x20','https://coronavirus-19-api.herokuapp.com/countries/Sri%20Lanka','COMPANY','trt(?:\x20|$)(\x5cS*)\x20?(\x5cS*)','Язык:','Autobio\x20saat\x20ini\x20ditutup!','FROM','APIC','https://coronavirus-19-api.herokuapp.com/countries/Indonesia','all','🇹🇷\x20*Türkiye\x20İçin\x20Sonuçlar:*\x0a😷\x20*Toplam\x20Vaka:*\x20','Kesamaan:','Autobio\x20Başarıyla\x20Açıldı!','Garfield\x20v6.0','🇵🇰\x20*Datas\x20for\x20Pakistan:*\x0a😷\x20*Total\x20Cases:*\x20','Autobio\x20сейчас\x20закрыт!','todayDeaths','\x0a☠️\x20*Total\x20Deaths:*\x20','TTS_DESC','OA_NAME','AUT','\x0a☠️\x20*Tägliche\x20Todesfälle:*\x20','പ്രോസസ്സ്\x20ചെയ്ത\x20വാചകം:','todayCases','INVALID_CURRENCY','autobio\x20?(.*)','toString','Другие\x20языки','നിങ്ങളുടെ\x20ബയോയിലേക്ക്\x20തത്സമയ\x20ക്ലോക്ക്\x20ചേർക്കുക!','patch','getString','Autobio\x20hazırda\x20açıqdır!','നാവ്:','\x0a💊\x20*Total\x20Recovered:*\x20','TRANSLATE_DESC','name','🇮🇳\x20*भारत\x20के\x20लिए\x20डेटा:*\x0a😷\x20*कुल\x20मामले:*\x20','FOLLOWİNG','Texto\x20procesado:','HİRE_FALSE','tts\x20(.*)','document','*:\x20```','addXnodes','reply','delete','Closest\x20Result:','Language:','https://coronavirus-19-api.herokuapp.com/countries/UK','NAME','critical','lyxjxjric\x20?(.*)','30008uCwesi','ARAT','log','https://coronavirus-19-api.herokuapp.com/countries/Netherlands','İşlənmiş\x20Mətn:','browser-id3-writer','Cavablanan\x20mesajın\x20dilini\x20təxmin\x20edin.','¡Autobio\x20se\x20abrió\x20con\x20éxito!','\x5c{([0].[0-9]+)\x5c}','title','detect','Germany','Error\x20:\x20\x0a','includes','Autobio\x20aberto\x20com\x20sucesso!','currency(?:\x20([0-9.]+)\x20([a-zA-Z]+)\x20([a-zA-Z]+)|$|(.*))','ındonesia','ORG:Coded\x20by\x20Tharindu\x20Liyanage;\x0a','GİTHUB_DESC','google-translate-tts','\x0a🏥\x20*Tägliche\x20Fälle:*\x20','GETTING_VIDEOS','https://coronavirus-19-api.herokuapp.com/countries/Turkey','COV_DESC','song\x20?(.*)','description','url','Autobio\x20cerrado\x20correctamente!','america','\x0a🆘\x20*Critical\x20Cases:*\x20','🇬🇷\x20*Datas\x20for\x20Greece:*\x0a😷\x20*Total\x20Cases:*\x20','जुबान:','https://coronavirus-19-api.herokuapp.com/countries/France','*\x0a\x0a','body','🇨🇳\x20*Datas\x20for\x20China:*\x0a😷\x20*Total\x20Cases:*\x20','Lengua:','*▶️\x20','अपने\x20बायो\x20में\x20लाइव\x20घड़ी\x20जोड़ें!','requestTitleFor','acc6302297e040aeb6e4ac1fbdfd62c3','¡Autobio\x20ya\x20está\x20abierto!','\x0a☠️\x20*Günlük\x20Ölüm:*\x20','covid\x20?(.*)','client','audioBitrate','LANG','निकटतम\x20परिणाम:','🇮🇩\x20*Datas\x20for\x20Indonesia:*\x0a😷\x20*Total\x20Cases:*\x20','.mp4','UPDATE','WORKTYPE','\x0a⚰️\x20*Toplam\x20Ölü:*\x20','slice','JOİN','🇺🇲\x20*Datas\x20for\x20USA:*\x0a😷\x20*Total\x20Cases:*\x20','replace','catch','¡Autobio\x20está\x20cerrado\x20actualmente!','scrapers','\x0a⚰️\x20*Total\x20Deaths:*\x20','Hasil\x20Terdekat:','yt\x20?(.*)','India','API_KEY','lyric\x20?(.*)','USERNAME','Угадай\x20язык\x20ответного\x20сообщения.','*\x20-\x20','YT_DESC','synthesize','kingdom','63429VYYmjN','requestIconFor','🇦🇿\x20*Azərbaycan\x20üçün\x20məlumatlar:*\x0a😷\x20*Ümumi\x20Baş\x20Tutan\x20Hadisə:*\x20','240p','true','exchange-rates-api/src/exchange-rates-error.js','france','FOLLOWERS','\x20🐼*\x0a\x0a','audio/mpeg','github','lowestaudio','active','\x0a*Song\x20Name\x20-*\x0a*','UPLOADING_SONG','japan','@adiwajshing/baileys','createWriteStream','from','\x0a⚰️\x20*कुल\x20मौतें:*\x20','video','requestAuthorFor','Başqa\x20Dillər','Diğer\x20Diller','_\x0a*','Texto\x20Processado:','360p','🇱🇰\x20*Datas\x20for\x20Sri\x20Lanka:*\x0a😷\x20*Total\x20Cases:*\x20','../config','Autobio\x20Opened\x20Successfully!','save','github\x20?(.*)','\x0a🧪\x20*Toplam\x20Test:*\x20','setFrame','HİRE','\x0a🆘\x20*गंभीर\x20मामले:*\x20','.jpg','audio','private','deaths','LY_DESC','axios','parse','VERSION:6.0\x0a','UPLOADING_VIDEO','Biyografinize\x20canlı\x20saat\x20ekleyin!','amount','HİRE_TRUE','🇳🇱\x20*Datas\x20for\x20Netherlands:*\x0a😷\x20*Total\x20Cases:*\x20','\x0a🏥\x20*Günlük\x20Hasta:*\x20','solenolyrics','sendMessage','USA','18LZVikV','VIDEO_DESC','3940986nFqdEB','Língua:','Guess\x20the\x20language\x20of\x20the\x20replied\x20message.','Autobio\x20सफलतापूर्वक\x20खोला\x20गया!','number','സമാനത:','BEGIN:VCARD\x0a','azeri','Autobio\x20is\x20already\x20open!','got','Bənzərlik:','azerbaycan','Bir\x20Hata\x20Oluştu,\x20İşte\x20Hata\x20:\x20\x0a','https://videfikri.com/api/github/?username=','NEED_REPLY','Teks\x20yang\x20Diproses:','watch','SEARCHING','Usa','SONG_DESC','https://coronavirus-19-api.herokuapp.com/countries/Greece','¡Agrega\x20un\x20reloj\x20en\x20vivo\x20a\x20tu\x20biografía!','Adivina\x20el\x20idioma\x20del\x20mensaje\x20respondido.','🇬🇧\x20*Datas\x20for\x20UK:*\x0a😷\x20*Total\x20Cases:*\x20','\x0a🧪\x20*कुल\x20टेस्ट:*\x20','Add\x20live\x20clock\x20to\x20your\x20bio!','\x0a```Title\x20-```\x0a*','WIKI_DESC','Обработанный\x20текст:','pakistan','default','https://','Сходствo:','page','Autobio\x20is\x20currently\x20closed!','NEED_TEXT_SONG','\x0a🆘\x20*Ağır\x20Hasta:*\x20','exchange-rates-api','Autobio\x20sudah\x20terbuka!','author','https://coronavirus-19-api.herokuapp.com/countries/Kazakhstan','TPE1','🇩🇪\x20*Daten\x20für\x20Deutschland:*\x0a😷\x20*Fälle\x20İnsgesamt:*\x20','text','toFixed','Similarity:','```\x0a','fetch'];_0x414f=function(){return _0x3ce30a;};return _0x414f();}function _0x486b(_0x297849,_0x314ca4){const _0x414f76=_0x414f();return _0x486b=function(_0x486bae,_0x95bf6c){_0x486bae=_0x486bae-0x9d;let _0x2688e3=_0x414f76[_0x486bae];return _0x2688e3;},_0x486b(_0x297849,_0x314ca4);}if(config[_0x3728b6(0xfb)]==_0x3728b6(0x14a)||config['Auroraxc']==_0x3728b6(0x17d)){if(config[_0x3728b6(0x1f4)]==_0x3728b6(0x22f)){Garfield['addXnodes']({'pattern':_0x3728b6(0x190),'desc':Lang[_0x3728b6(0x1af)],'usage':Lang[_0x3728b6(0x115)],'fromMe':!![]},async(_0x573a66,_0x36f25b)=>{const _0x37bc1e=_0x3728b6;if(!_0x573a66[_0x37bc1e(0x137)])return await _0x573a66[_0x37bc1e(0x1ed)]['sendMessage'](_0x573a66[_0x37bc1e(0x140)],Lang[_0x37bc1e(0x9e)],MessageType['text']);return ceviri=await translatte(_0x573a66[_0x37bc1e(0x137)][_0x37bc1e(0x180)],{'from':_0x36f25b[0x1]===''?_0x37bc1e(0x147):_0x36f25b[0x1],'to':_0x36f25b[0x2]===''?config['LANG']:_0x36f25b[0x2]}),_0x37bc1e(0xbb)in ceviri?await _0x573a66[_0x37bc1e(0x1b9)](_0x37bc1e(0x1e6)+Lang[_0x37bc1e(0x1ef)]+':*\x20```'+(_0x36f25b[0x1]===''?'auto':_0x36f25b[0x1])+_0x37bc1e(0xbe)+'*◀️\x20'+Lang[_0x37bc1e(0x193)]+'*:\x20```'+(_0x36f25b[0x2]===''?config[_0x37bc1e(0x1ef)]:_0x36f25b[0x2])+'```\x0a'+_0x37bc1e(0x11e)+Lang['RESULT']+_0x37bc1e(0xc8)+ceviri[_0x37bc1e(0xbb)]+_0x37bc1e(0xe3)):await _0x573a66['client'][_0x37bc1e(0x23c)](_0x573a66['jid'],Lang[_0x37bc1e(0x162)],MessageType[_0x37bc1e(0xbb)]);});var auto_dsc='',alr_on_bio='',alr_off_bio='',succ_on_bio='',succ_off_bio='';config[_0x3728b6(0x1ef)]=='TR'&&(auto_dsc=_0x3728b6(0x236),alr_on_bio=_0x3728b6(0x156),alr_off_bio=_0x3728b6(0x185),succ_on_bio=_0x3728b6(0x199),succ_off_bio=_0x3728b6(0xc9)),config[_0x3728b6(0x1ef)]=='EN'&&(auto_dsc=_0x3728b6(0xa9),alr_on_bio=_0x3728b6(0x248),alr_off_bio=_0x3728b6(0xb2),succ_on_bio=_0x3728b6(0x226),succ_off_bio='Autobio\x20Closed\x20Successfully!'),config['LANG']=='AZ'&&(auto_dsc=_0x3728b6(0x161),alr_on_bio=_0x3728b6(0x1ac),alr_off_bio='Autobio\x20hazırda\x20bağlıdır!',succ_on_bio='Autobio\x20Uğurla\x20Açıldı!',succ_off_bio=_0x3728b6(0x128)),config['LANG']=='HI'&&(auto_dsc=_0x3728b6(0x1e7),alr_on_bio=_0x3728b6(0x141),alr_off_bio='Autobio\x20वर्तमान\x20में\x20बंद\x20है!',succ_on_bio=_0x3728b6(0x243),succ_off_bio=_0x3728b6(0x11d)),config['LANG']=='ML'&&(auto_dsc=_0x3728b6(0x1a9),alr_on_bio='Autobio\x20ഇതിനകം\x20തുറന്നു!',alr_off_bio=_0x3728b6(0x143),succ_on_bio=_0x3728b6(0xf7),succ_off_bio=_0x3728b6(0x155)),config['LANG']=='PT'&&(auto_dsc=_0x3728b6(0xf3),alr_on_bio='O\x20Autobio\x20já\x20está\x20aberto!',alr_off_bio='Autobio\x20está\x20fechado\x20no\x20momento!',succ_on_bio=_0x3728b6(0x1cf),succ_off_bio=_0x3728b6(0x14b)),config['LANG']=='RU'&&(auto_dsc=_0x3728b6(0x13b),alr_on_bio='Autobio\x20уже\x20открыт!',alr_off_bio=_0x3728b6(0x19c),succ_on_bio='Autobio\x20успешно\x20открыт!',succ_off_bio=_0x3728b6(0x174)),config[_0x3728b6(0x1ef)]=='ES'&&(auto_dsc=_0x3728b6(0xa5),alr_on_bio=_0x3728b6(0x1ea),alr_off_bio=_0x3728b6(0x1fb),succ_on_bio=_0x3728b6(0x1c8),succ_off_bio=_0x3728b6(0x1dc)),config[_0x3728b6(0x1ef)]=='ID'&&(auto_dsc='Tambahkan\x20jam\x20langsung\x20ke\x20bio\x20Anda!',alr_on_bio=_0x3728b6(0xb6),alr_off_bio=_0x3728b6(0x192),succ_on_bio=_0x3728b6(0x12c),succ_off_bio='Autobio\x20Berhasil\x20Ditutup!'),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1a6),'fromMe':!![],'desc':auto_dsc,'usage':_0x3728b6(0xd9)},async(_0x16c47,_0x26b90e)=>{const _0x257c1a=_0x3728b6,_0x4a8df3=''+config[_0x257c1a(0x170)];if(_0x26b90e[0x1]=='on'){if(_0x4a8df3==_0x257c1a(0x20d))return await _0x16c47[_0x257c1a(0x1ed)]['sendMessage'](_0x16c47[_0x257c1a(0x140)],'*'+alr_on_bio+'*',MessageType[_0x257c1a(0xbb)]);else await heroku[_0x257c1a(0x1aa)](baseURI+'/config-vars',{'body':{['AUTO_BİO']:'true'}}),await _0x16c47[_0x257c1a(0x1ed)][_0x257c1a(0x23c)](_0x16c47[_0x257c1a(0x140)],'*'+succ_on_bio+'*',MessageType[_0x257c1a(0xbb)]);}else{if(_0x26b90e[0x1]==_0x257c1a(0x14a)){if(_0x4a8df3!=='true')return await _0x16c47[_0x257c1a(0x1ed)][_0x257c1a(0x23c)](_0x16c47[_0x257c1a(0x140)],'*'+alr_off_bio+'*',MessageType[_0x257c1a(0xbb)]);else await heroku['patch'](baseURI+_0x257c1a(0x106),{'body':{[_0x257c1a(0x122)]:_0x257c1a(0xc7)}}),await _0x16c47[_0x257c1a(0x1ed)][_0x257c1a(0x23c)](_0x16c47[_0x257c1a(0x140)],'*'+succ_off_bio+'*',MessageType['text']);}}}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x172),'fromMe':!![],'desc':dlang_dsc},async(_0x553d5a,_0x342f2e)=>{const _0x4fd32b=_0x3728b6;if(!_0x553d5a[_0x4fd32b(0x137)])return await _0x553d5a['client'][_0x4fd32b(0x23c)](_0x553d5a[_0x4fd32b(0x140)],Lang['NEED_REPLY'],MessageType[_0x4fd32b(0xbb)]);const _0xb5535b=_0x553d5a[_0x4fd32b(0x137)][_0x4fd32b(0xbb)];var _0x3790eb=lngDetector[_0x4fd32b(0x1cb)](_0xb5535b);async function _0x449d9c(_0x17c3cd){const _0x4468f5=_0x4fd32b;return _0x17c3cd[_0x4468f5(0x175)](0x0)[_0x4468f5(0x127)]()+_0x17c3cd[_0x4468f5(0x1f6)](0x1)[_0x4468f5(0x173)]();}var _0x328b53=await _0x449d9c(_0x3790eb[0x0][0x0]),_0x3ae236=_0x3790eb[0x0][0x1][_0x4fd32b(0x1a7)](),_0x4c2641=await _0x449d9c(_0x3790eb[0x1][0x0]),_0x1eed6a=_0x3790eb[0x1][0x1][_0x4fd32b(0x1a7)](),_0x4b644b=await _0x449d9c(_0x3790eb[0x2][0x0]),_0x309e3a=_0x3790eb[0x2][0x1][_0x4fd32b(0x1a7)](),_0x3cc3fa=await _0x449d9c(_0x3790eb[0x3][0x0]),_0x1585fd=_0x3790eb[0x3][0x1][_0x4fd32b(0x1a7)]();const _0x4dd61a='*'+dlang_input+'*\x20'+'_'+_0xb5535b+_0x4fd32b(0x151),_0x5e56a0='*'+closer_res+'*\x20'+'_'+_0x328b53+'_\x0a*'+dlang_similarity+'*\x20'+'_'+_0x3ae236+_0x4fd32b(0xce),_0x13f9e8='```[\x20'+dlang_other+'\x20]```\x0a\x0a',_0x3c3c5e=_0x4fd32b(0x12d)+dlang_lang+'*\x20'+'_'+_0x4c2641+_0x4fd32b(0x221)+dlang_similarity+'*\x20'+'_'+_0x1eed6a+'_\x20\x0a',_0x449c4c=_0x4fd32b(0x148)+dlang_lang+'*\x20'+'_'+_0x4b644b+'_\x0a*'+dlang_similarity+'*\x20'+'_'+_0x309e3a+_0x4fd32b(0x151),_0x6aa6c5=_0x4fd32b(0xcf)+dlang_lang+'*\x20'+'_'+_0x3cc3fa+_0x4fd32b(0x221)+dlang_similarity+'*\x20'+'_'+_0x1585fd+'_',_0x38d70c=_0x4dd61a+_0x5e56a0+_0x13f9e8+_0x3c3c5e+_0x449c4c+_0x6aa6c5;await _0x553d5a[_0x4fd32b(0x1ed)][_0x4fd32b(0x23c)](_0x553d5a[_0x4fd32b(0x140)],_0x38d70c,MessageType[_0x4fd32b(0xbb)]);}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1d0),'fromMe':!![]},async(_0x1c1648,_0x319ee0)=>{const _0x3be4d4=_0x3728b6;if(_0x319ee0[0x1]===undefined||_0x319ee0[0x2]==undefined||_0x319ee0[0x3]==undefined)return await _0x1c1648[_0x3be4d4(0x1ed)][_0x3be4d4(0x23c)](_0x1c1648['jid'],Lang[_0x3be4d4(0x17e)],MessageType['text']);let _0x3437e5={'amount':parseFloat(_0x319ee0[0x1])[_0x3be4d4(0xbc)](0x2)['replace'](/\.0+$/,''),'from':_0x319ee0[0x2]['toUpperCase'](),'to':_0x319ee0[0x3]['toUpperCase']()};try{result=await exchangeRates()[_0x3be4d4(0x17c)]()['symbols']([_0x3437e5['to']])['base'](_0x3437e5[_0x3be4d4(0x21b)])['fetch'](),result=parseFloat(result)['toFixed'](0x2)[_0x3be4d4(0x1f9)](/\.0+$/,''),await _0x1c1648['reply']('```'+_0x3437e5[_0x3be4d4(0x237)]+'\x20'+_0x3437e5[_0x3be4d4(0x21b)]+'\x20=\x20'+result+'\x20'+_0x3437e5['to']+_0x3be4d4(0xe3));}catch(_0x3232eb){if(_0x3232eb instanceof ExchangeRatesError)await _0x1c1648[_0x3be4d4(0x1ed)]['sendMessage'](_0x1c1648['jid'],Lang[_0x3be4d4(0x1a5)],MessageType[_0x3be4d4(0xbb)]);else await _0x1c1648[_0x3be4d4(0x1ed)][_0x3be4d4(0x23c)](_0x1c1648[_0x3be4d4(0x140)],Lang[_0x3be4d4(0x124)],MessageType[_0x3be4d4(0xbb)]),console[_0x3be4d4(0x1c3)](_0x3232eb);}}),config['LANG']=='TR'||config['LANG']=='AZ'?Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1b5),'fromMe':!![],'desc':Lang[_0x3728b6(0x19f)]},async(_0x3cf8e9,_0x1a6d48)=>{const _0x484d75=_0x3728b6;if(_0x1a6d48[0x1]===undefined||_0x1a6d48[0x1]=='')return;let _0x4eb481='si',_0x19c201=_0x1a6d48[0x1],_0x2dc31a=0x1;(langMatch=_0x1a6d48[0x1][_0x484d75(0xed)](_0x484d75(0x183)))&&(_0x4eb481=langMatch[0x1],_0x19c201=_0x19c201[_0x484d75(0x1f9)](langMatch[0x0],''));(speedMatch=_0x1a6d48[0x1][_0x484d75(0xed)](_0x484d75(0x1c9)))&&(_0x2dc31a=parseFloat(speedMatch[0x1]),_0x19c201=_0x19c201['replace'](speedMatch[0x0],''));var _0x15d5b5=await googleTTS[_0x484d75(0x207)]({'text':_0x19c201,'voice':_0x4eb481});await _0x3cf8e9['client'][_0x484d75(0x23c)](_0x3cf8e9[_0x484d75(0x140)],_0x15d5b5,MessageType[_0x484d75(0x22e)],{'mimetype':Mimetype[_0x484d75(0x135)],'ptt':!![]});}):Garfield['addXnodes']({'pattern':_0x3728b6(0x1b5),'fromMe':!![],'desc':Lang[_0x3728b6(0x19f)]},async(_0x3d7047,_0x1c37ec)=>{const _0x4e3156=_0x3728b6;if(_0x1c37ec[0x1]===undefined||_0x1c37ec[0x1]=='')return;let _0x310a6f='si',_0x5ac6b4=_0x1c37ec[0x1],_0x4ddc51=0x1;(langMatch=_0x1c37ec[0x1][_0x4e3156(0xed)](_0x4e3156(0x183)))&&(_0x310a6f=langMatch[0x1],_0x5ac6b4=_0x5ac6b4['replace'](langMatch[0x0],''));(speedMatch=_0x1c37ec[0x1]['match'](_0x4e3156(0x1c9)))&&(_0x4ddc51=parseFloat(speedMatch[0x1]),_0x5ac6b4=_0x5ac6b4['replace'](speedMatch[0x0],''));var _0x2d3bb3=await googleTTS[_0x4e3156(0x207)]({'text':_0x5ac6b4,'voice':_0x310a6f});await _0x3d7047[_0x4e3156(0x1ed)][_0x4e3156(0x23c)](_0x3d7047[_0x4e3156(0x140)],_0x2d3bb3,MessageType[_0x4e3156(0x22e)],{'mimetype':Mimetype[_0x4e3156(0x135)],'ptt':!![]});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1d9),'fromMe':!![],'desc':Lang[_0x3728b6(0xa3)]},async(_0x10ae7b,_0x845605)=>{const _0x4f7061=_0x3728b6;if(_0x845605[0x1]==='')return await _0x10ae7b[_0x4f7061(0x1ed)][_0x4f7061(0x23c)](_0x10ae7b[_0x4f7061(0x140)],Lang['NEED_TEXT_SONG'],MessageType['text']);let _0x267050=await yts(_0x845605[0x1]);_0x267050=_0x267050[_0x4f7061(0x196)];if(_0x267050[_0x4f7061(0xc3)]<0x1)return await _0x10ae7b[_0x4f7061(0x1ed)][_0x4f7061(0x23c)](_0x10ae7b[_0x4f7061(0x140)],Lang[_0x4f7061(0x15e)],MessageType[_0x4f7061(0xbb)]);var _0x25756b=await _0x10ae7b[_0x4f7061(0x1ed)]['sendMessage'](_0x10ae7b[_0x4f7061(0x140)],Lang[_0x4f7061(0x145)],MessageType[_0x4f7061(0xbb)]);let _0x55c75c=_0x267050[0x0]['title'][_0x4f7061(0x1f9)]('\x20','+'),_0xb948aa=ytdl(_0x267050[0x0]['videoId'],{'quality':_0x4f7061(0x214)});got[_0x4f7061(0xd1)](_0x267050[0x0][_0x4f7061(0x13e)])[_0x4f7061(0x10a)](fs['createWriteStream'](_0x55c75c+'.jpg')),ffmpeg(_0xb948aa)[_0x4f7061(0x1ee)](0x80)[_0x4f7061(0x227)]('./'+_0x55c75c+'.mp3')['on'](_0x4f7061(0x146),async()=>{const _0x2018fc=_0x4f7061,_0x8b0b67=new ID3Writer(fs[_0x2018fc(0x12b)]('./'+_0x55c75c+_0x2018fc(0xe8)));_0x8b0b67[_0x2018fc(0x22a)](_0x2018fc(0x111),_0x267050[0x0]['title'])['setFrame']('TPE1',[_0x267050[0x0][_0x2018fc(0xb7)][_0x2018fc(0x1b0)]])[_0x2018fc(0x22a)](_0x2018fc(0x194),{'type':0x3,'data':fs[_0x2018fc(0x12b)](_0x55c75c+_0x2018fc(0x22d)),'description':_0x267050[0x0][_0x2018fc(0x1da)]}),_0x8b0b67[_0x2018fc(0xec)](),_0x25756b=await _0x10ae7b['client'][_0x2018fc(0x23c)](_0x10ae7b['jid'],Lang[_0x2018fc(0x217)],MessageType[_0x2018fc(0xbb)]),await _0x10ae7b[_0x2018fc(0x1ed)][_0x2018fc(0x23c)](_0x10ae7b[_0x2018fc(0x140)],Buffer['from'](_0x8b0b67[_0x2018fc(0x10f)]),MessageType[_0x2018fc(0x22e)],{'mimetype':Mimetype[_0x2018fc(0x135)],'ptt':![]});});}),Garfield['addXnodes']({'pattern':_0x3728b6(0x244),'fromMe':![],'desc':Lang[_0x3728b6(0x182)]},async(_0x389a3b,_0x2f6026)=>{const _0x40213b=_0x3728b6,_0x2fa55a=_0x40213b(0x246)+_0x40213b(0x234)+_0x40213b(0x12f)+xv364[_0x40213b(0x1a0)]+'\x0a'+_0x40213b(0x1d2)+'TEL;type=CELL;type=VOICE;waid='+xv364[_0x40213b(0x121)]+':'+xv364['PHONE']+'\x20\x0a'+_0x40213b(0x119);await _0x389a3b[_0x40213b(0x1ed)][_0x40213b(0x23c)](_0x389a3b['jid'],{'displayname':_0x40213b(0xf2),'vcard':_0x2fa55a},MessageType[_0x40213b(0xf9)]);}),Garfield['addXnodes']({'pattern':_0x3728b6(0xd6),'fromMe':!![],'desc':Lang[_0x3728b6(0x23f)]},async(_0x22c670,_0x4dddbe)=>{const _0x453e26=_0x3728b6;if(_0x4dddbe[0x1]==='')return await _0x22c670['client']['sendMessage'](_0x22c670[_0x453e26(0x140)],Lang['NEED_VIDEO'],MessageType['text']);var _0x54d47c='';try{if(_0x4dddbe[0x1][_0x453e26(0x1ce)](_0x453e26(0xa0))){var _0x2813a7=_0x4dddbe[0x1][_0x453e26(0x1f9)](_0x453e26(0xdb),''),_0x5d0c44=_0x2813a7[_0x453e26(0x159)]('/')[0x3];_0x54d47c=_0x5d0c44;}else _0x54d47c=_0x4dddbe[0x1][_0x453e26(0x159)]('/')[0x3];}catch{return await _0x22c670[_0x453e26(0x1ed)][_0x453e26(0x23c)](_0x22c670[_0x453e26(0x140)],Lang[_0x453e26(0x15e)],MessageType[_0x453e26(0xbb)]);}var _0x45e9a1=await _0x22c670['client']['sendMessage'](_0x22c670[_0x453e26(0x140)],Lang[_0x453e26(0xd5)],MessageType[_0x453e26(0xbb)]),_0x9eb088=ytdl(_0x54d47c,{'filter':_0xa7ec7e=>_0xa7ec7e['container']===_0x453e26(0xe7)&&[_0x453e26(0x149),'360p',_0x453e26(0x20c),_0x453e26(0x101)][_0x453e26(0xc0)](()=>!![])});_0x9eb088[_0x453e26(0x10a)](fs[_0x453e26(0x21a)]('./'+_0x54d47c+_0x453e26(0x1f2))),_0x9eb088['on'](_0x453e26(0x146),async()=>{const _0x364516=_0x453e26;_0x45e9a1=await _0x22c670['client'][_0x364516(0x23c)](_0x22c670[_0x364516(0x140)],Lang[_0x364516(0x235)],MessageType[_0x364516(0xbb)]),await _0x22c670['client'][_0x364516(0x23c)](_0x22c670[_0x364516(0x140)],fs[_0x364516(0x12b)]('./'+_0x54d47c+_0x364516(0x1f2)),MessageType[_0x364516(0x21d)],{'mimetype':Mimetype[_0x364516(0xe7)]});});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1ff),'fromMe':!![],'desc':Lang[_0x3728b6(0x206)]},async(_0x1440e8,_0x5ebc6c)=>{const _0x2aebda=_0x3728b6;if(_0x5ebc6c[0x1]==='')return await _0x1440e8[_0x2aebda(0x1ed)][_0x2aebda(0x23c)](_0x1440e8[_0x2aebda(0x140)],Lang[_0x2aebda(0x166)],MessageType[_0x2aebda(0xbb)]);var _0x35faa9=await _0x1440e8[_0x2aebda(0x1ed)][_0x2aebda(0x23c)](_0x1440e8[_0x2aebda(0x140)],Lang[_0x2aebda(0x1d6)],MessageType[_0x2aebda(0xbb)]);try{var _0x2fff2f=await yts(_0x5ebc6c[0x1]);}catch{return await _0x1440e8[_0x2aebda(0x1ed)]['sendMessage'](_0x1440e8[_0x2aebda(0x140)],Lang[_0x2aebda(0xd0)],MessageType['text']);}var _0x15044b='';_0x2fff2f[_0x2aebda(0x196)][_0x2aebda(0xc0)](_0x2dab04=>{const _0x3664a2=_0x2aebda;_0x15044b+='*'+_0x2dab04['title']+'*\x20-\x20'+_0x2dab04[_0x3664a2(0x1db)]+'\x0a';}),await _0x1440e8[_0x2aebda(0x1ed)]['sendMessage'](_0x1440e8[_0x2aebda(0x140)],_0x15044b,MessageType[_0x2aebda(0xbb)]),await _0x35faa9[_0x2aebda(0x1ba)]();}),Garfield[_0x3728b6(0x1b8)]({'pattern':'wiki\x20?(.*)','fromMe':!![],'desc':Lang['WIKI_DESC']},async(_0x29ebee,_0x5f7a67)=>{const _0x3bdaff=_0x3728b6;if(_0x5f7a67[0x1]==='')return await _0x29ebee[_0x3bdaff(0x1ed)][_0x3bdaff(0x23c)](_0x29ebee['jid'],Lang[_0x3bdaff(0x166)],MessageType[_0x3bdaff(0xbb)]);var _0x2eb212=await _0x29ebee['client'][_0x3bdaff(0x23c)](_0x29ebee[_0x3bdaff(0x140)],Lang[_0x3bdaff(0xa1)],MessageType['text']),_0x16ec8c=await wiki({'apiUrl':_0x3bdaff(0xaf)+config[_0x3bdaff(0x1ef)]+_0x3bdaff(0xd2)})['page'](_0x5f7a67[0x1]),_0x2c227e=await _0x16ec8c[_0x3bdaff(0x186)]();await _0x29ebee['client'][_0x3bdaff(0x23c)](_0x29ebee[_0x3bdaff(0x140)],_0x2c227e,MessageType[_0x3bdaff(0xbb)]),await _0x2eb212[_0x3bdaff(0x1ba)]();}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x104),'fromMe':!![],'desc':Lang[_0x3728b6(0x167)]},async(_0x18f74b,_0x43dde3)=>{const _0xc8eed4=_0x3728b6;if(_0x43dde3[0x1]==='')return await _0x18f74b[_0xc8eed4(0x1ed)][_0xc8eed4(0x23c)](_0x18f74b[_0xc8eed4(0x140)],Lang[_0xc8eed4(0x166)],MessageType[_0xc8eed4(0xbb)]);gis(_0x43dde3[0x1],async(_0x1be1b5,_0x598c18)=>{const _0x106472=_0xc8eed4;for(var _0x751af4=0x0;_0x751af4<(_0x598c18[_0x106472(0xc3)]<0x5?_0x598c18[_0x106472(0xc3)]:0x5);_0x751af4++){var _0x1fec5a=got(_0x598c18[_0x751af4][_0x106472(0x1db)],{'https':{'rejectUnauthorized':![]}}),_0x2cc0cf=_0x1fec5a[_0x106472(0x10b)]();_0x2cc0cf[_0x106472(0x178)](async _0x164b95=>{const _0x592d79=_0x106472;await _0x18f74b[_0x592d79(0x1ed)][_0x592d79(0x23c)](_0x18f74b[_0x592d79(0x140)],_0x164b95,MessageType[_0x592d79(0x13e)]);});}_0x18f74b[_0x106472(0x1b9)](Lang['IMG'][_0x106472(0xe0)](_0x598c18[_0x106472(0xc3)]<0x5?_0x598c18['length']:0x5,_0x43dde3[0x1]));});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x228),'fromMe':!![],'desc':Glang[_0x3728b6(0x1d3)]},async(_0x140e78,_0x9d8670)=>{const _0x3883f1=_0x3728b6,_0x1eac8d=_0x9d8670[0x1];if(_0x1eac8d==='')return await _0x140e78[_0x3883f1(0x1ed)][_0x3883f1(0x23c)](_0x140e78[_0x3883f1(0x140)],Glang[_0x3883f1(0x16e)],MessageType[_0x3883f1(0xbb)]);await axios[_0x3883f1(0xe1)](_0x3883f1(0x9d)+_0x1eac8d)['then'](async _0x6b32ec=>{const _0x1a46bf=_0x3883f1,{hireable:_0x256026,company:_0x53d5db,profile_pic:_0x21f1da,username:_0xbe7964,fullname:_0x3d5ae7,blog:_0x4d4851,location:_0x47f760,email:_0x16a768,public_repository:_0x28115e,biografi:_0x5ad6b2,following:_0x1fe8bd,followers:_0x5ebd41,public_gists:_0x4ff047,profile_url:_0xe08707,last_updated:_0x180fae,joined_on:_0x529d8d}=_0x6b32ec[_0x1a46bf(0x10d)]['result'],_0x285aaa=await axios[_0x1a46bf(0xe1)](_0x21f1da,{'responseType':_0x1a46bf(0x12e)}),_0x3483e6='*'+Glang['USERNAME']+'*\x20'+_0xbe7964+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x1be)]+'*\x20'+_0x3d5ae7+_0x1a46bf(0xee)+Glang['FOLLOWERS']+'*\x20'+_0x5ebd41+_0x1a46bf(0xee)+Glang['FOLLOWİNG']+'*\x20'+_0x1fe8bd+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x105)]+'*\x20'+_0x5ad6b2+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x13c)]+'*\x20'+_0x28115e+_0x1a46bf(0xee)+Glang[_0x1a46bf(0xc1)]+'*\x20'+_0x4ff047+_0x1a46bf(0xee)+Glang[_0x1a46bf(0xcc)]+'*\x20'+_0x47f760+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x11c)]+'*\x20'+_0x16a768+_0x1a46bf(0xee)+Glang['BLOG']+'*\x20'+_0x4d4851+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x18f)]+'*\x20'+_0x53d5db+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x22b)]+'*\x20'+(_0x256026===_0x1a46bf(0x20d)?Glang[_0x1a46bf(0x238)]:Glang[_0x1a46bf(0x1b4)])+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x1f7)]+'*\x20'+_0x529d8d+_0x1a46bf(0xee)+Glang[_0x1a46bf(0x1f3)]+'*\x20'+_0x180fae+'\x20\x0a*'+Glang['URL']+'*\x20'+_0xe08707;await _0x140e78[_0x1a46bf(0x23c)](Buffer[_0x1a46bf(0x21b)](_0x285aaa[_0x1a46bf(0x10d)]),MessageType[_0x1a46bf(0x13e)],{'caption':_0x3483e6});})[_0x3883f1(0x1fa)](async _0x51b2c7=>await _0x140e78['client'][_0x3883f1(0x23c)](_0x140e78['jid'],Glang[_0x3883f1(0xdc)],MessageType[_0x3883f1(0xbb)]));}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x202),'fromMe':!![],'desc':Slang['LY_DESC']},async(_0x57768f,_0xdbb429)=>{const _0x2aa7dd=_0x3728b6;if(_0xdbb429[0x1]==='')return await _0x57768f['client'][_0x2aa7dd(0x23c)](_0x57768f[_0x2aa7dd(0x140)],Slang[_0x2aa7dd(0x118)],MessageType[_0x2aa7dd(0xbb)]);var _0x6af019=await solenolyrics['requestLyricsFor'](''+_0xdbb429[0x1]),_0x3e7f88=await solenolyrics[_0x2aa7dd(0x21e)](''+_0xdbb429[0x1]),_0x56e8d5=await solenolyrics[_0x2aa7dd(0x20a)](''+_0xdbb429[0x1]),_0xa60bbd=await solenolyrics[_0x2aa7dd(0x1e8)](''+_0xdbb429[0x1]),_0x210743=await axios[_0x2aa7dd(0xe1)](_0x56e8d5,{'responseType':'arraybuffer'});await _0x57768f[_0x2aa7dd(0x1ed)][_0x2aa7dd(0x23c)](_0x57768f[_0x2aa7dd(0x140)],Buffer[_0x2aa7dd(0x21b)](_0x210743[_0x2aa7dd(0x10d)]),MessageType[_0x2aa7dd(0x13e)],{'caption':'*'+Slang[_0x2aa7dd(0x1c2)]+'*\x20'+_0x2aa7dd(0xe3)+(''+_0xdbb429[0x1])+'```'+('\x0a*'+Slang[_0x2aa7dd(0x152)]+'*\x20')+_0x2aa7dd(0xe3)+_0xa60bbd+_0x2aa7dd(0xe3)+('\x0a*'+Slang['AUT']+'*\x20')+_0x2aa7dd(0xe3)+_0x3e7f88+_0x2aa7dd(0xe3)+('\x0a*'+Slang[_0x2aa7dd(0x12a)]+_0x2aa7dd(0x1e2))+_0x6af019});}),Garfield['addXnodes']({'pattern':_0x3728b6(0x1ec),'fromMe':!![],'desc':Clang[_0x3728b6(0x1d8)]},async(_0x3b1c78,_0xc46288)=>{const _0x896f6f=_0x3728b6;if(_0xc46288[0x1]==='')try{const _0x5363f9=await got('https://coronavirus-19-api.herokuapp.com/all')[_0x896f6f(0x178)](async _0x27681c=>{const _0x26694a=_0x896f6f,_0x46cc14=JSON['parse'](_0x27681c['body']);await _0x3b1c78[_0x26694a(0x1b9)](_0x26694a(0x165)+_0x46cc14[_0x26694a(0xf4)]+'\x0a☠️\x20*Total\x20Deaths:*\x20'+_0x46cc14[_0x26694a(0x230)]+_0x26694a(0x123)+_0x46cc14[_0x26694a(0x150)]);});}catch(_0x56f667){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x158)+_0x56f667[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='tr'||_0xc46288[0x1]==='Tr'||_0xc46288[0x1]==='TR'||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0x142))||_0xc46288[0x1][_0x896f6f(0x1ce)]('türkiye')||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0x11b)))try{const _0x3ab6a6=await got(_0x896f6f(0x1d7))['then'](async _0x55243a=>{const _0x30057d=_0x896f6f;resp=JSON['parse'](_0x55243a[_0x30057d(0x1e3)]),await _0x3b1c78[_0x30057d(0x1b9)](_0x30057d(0x197)+resp['cases']+'\x0a🏥\x20*Günlük\x20Hasta:*\x20'+resp[_0x30057d(0x1a4)]+_0x30057d(0x1f5)+resp[_0x30057d(0x230)]+_0x30057d(0xff)+resp[_0x30057d(0x19d)]+_0x30057d(0x114)+resp['recovered']+_0x30057d(0x15f)+resp[_0x30057d(0x215)]+_0x30057d(0xb4)+resp['critical']+'\x0a🧪\x20*Toplam\x20Test:*\x20'+resp['totalTests']);});}catch(_0x31eab4){await _0x3b1c78['reply'](_0x896f6f(0x24c)+_0x31eab4[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='usa'||_0xc46288[0x1]===_0x896f6f(0xa2)||_0xc46288[0x1]==='USA'||_0xc46288[0x1]===_0x896f6f(0x1dd)||_0xc46288[0x1]===_0x896f6f(0xd4))try{const _0x56518d=await got(_0x896f6f(0x16d))[_0x896f6f(0x178)](async _0x3b1c36=>{const _0x105a8b=_0x896f6f;resp=JSON[_0x105a8b(0x233)](_0x3b1c36[_0x105a8b(0x1e3)]),await _0x3b1c78[_0x105a8b(0x1b9)]('🇺🇲\x20*Datas\x20for\x20USA:*\x0a😷\x20*Total\x20Cases:*\x20'+resp[_0x105a8b(0xf4)]+_0x105a8b(0x11a)+resp[_0x105a8b(0x1a4)]+'\x0a⚰️\x20*Total\x20Deaths:*\x20'+resp[_0x105a8b(0x230)]+'\x0a☠️\x20*Daily\x20Deaths:*\x20'+resp['todayDeaths']+_0x105a8b(0x1ae)+resp[_0x105a8b(0x150)]+'\x0a😷\x20*Active\x20Cases:*\x20'+resp['active']+_0x105a8b(0x1de)+resp[_0x105a8b(0x1bf)]+_0x105a8b(0xe9)+resp[_0x105a8b(0x153)]);});}catch(_0x4553a5){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x4553a5[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='de'||_0xc46288[0x1]==='De'||_0xc46288[0x1]==='DE'||_0xc46288[0x1]===_0x896f6f(0x1cc)||_0xc46288[0x1]===_0x896f6f(0x125)||_0xc46288[0x1]['includes'](_0x896f6f(0x110)))try{const _0x59d190=await got(_0x896f6f(0xdd))['then'](async _0xf36552=>{const _0x2c6c87=_0x896f6f;resp=JSON[_0x2c6c87(0x233)](_0xf36552[_0x2c6c87(0x1e3)]),await _0x3b1c78[_0x2c6c87(0x1b9)](_0x2c6c87(0xba)+resp['cases']+_0x2c6c87(0x1d5)+resp[_0x2c6c87(0x1a4)]+'\x0a⚰️\x20*Totale\x20Todesfälle:*\x20'+resp[_0x2c6c87(0x230)]+_0x2c6c87(0x1a2)+resp[_0x2c6c87(0x19d)]+_0x2c6c87(0x177)+resp[_0x2c6c87(0x150)]+_0x2c6c87(0x17f)+resp[_0x2c6c87(0x215)]+_0x2c6c87(0x126)+resp[_0x2c6c87(0x1bf)]+_0x2c6c87(0xfe)+resp[_0x2c6c87(0x153)]);});}catch(_0x478027){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x478027[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='az'||_0xc46288[0x1]==='AZ'||_0xc46288[0x1]==='Az'||_0xc46288[0x1][_0x896f6f(0x1ce)]('azerbaycan')||_0xc46288[0x1]['includes']('azeri'))try{const _0x187800=await got('https://coronavirus-19-api.herokuapp.com/countries/Azerbaijan')[_0x896f6f(0x178)](async _0x518f8d=>{const _0x11b80d=_0x896f6f;resp=JSON[_0x11b80d(0x233)](_0x518f8d[_0x11b80d(0x1e3)]),await _0x3b1c78[_0x11b80d(0x1b9)]('🇦🇿\x20*Azərbaycan\x20üçün\x20məlumatlar:*\x0a😷\x20*Ümumi\x20Baş\x20Tutan\x20Hadisə:*\x20'+resp[_0x11b80d(0xf4)]+_0x11b80d(0xf0)+resp[_0x11b80d(0x1a4)]+_0x11b80d(0xf8)+resp[_0x11b80d(0x230)]+_0x11b80d(0x1eb)+resp[_0x11b80d(0x19d)]+_0x11b80d(0x136)+resp[_0x11b80d(0x150)]+_0x11b80d(0x130)+resp[_0x11b80d(0x215)]+_0x11b80d(0x109)+resp[_0x11b80d(0x1bf)]+_0x11b80d(0x13a)+resp[_0x11b80d(0x153)]);});}catch(_0x3f5a07){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x3f5a07[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='uk'||_0xc46288[0x1]==='Uk'||_0xc46288[0x1]==='UK'||_0xc46288[0x1]===_0x896f6f(0xde)||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0x208)))try{const _0x49fb7a=await got(_0x896f6f(0x1bd))[_0x896f6f(0x178)](async _0x3f83c0=>{const _0x3332cc=_0x896f6f;resp=JSON[_0x3332cc(0x233)](_0x3f83c0[_0x3332cc(0x1e3)]),await _0x3b1c78['reply'](_0x3332cc(0xa7)+resp['cases']+_0x3332cc(0x11a)+resp['todayCases']+_0x3332cc(0x1fd)+resp['deaths']+_0x3332cc(0x189)+resp[_0x3332cc(0x19d)]+_0x3332cc(0x1ae)+resp[_0x3332cc(0x150)]+'\x0a😷\x20*Active\x20Cases:*\x20'+resp[_0x3332cc(0x215)]+_0x3332cc(0x1de)+resp['critical']+_0x3332cc(0xe9)+resp[_0x3332cc(0x153)]);});}catch(_0x19cf9d){await _0x3b1c78[_0x896f6f(0x1b9)]('Error\x20:\x20\x0a'+_0x19cf9d[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='in'||_0xc46288[0x1]==='ın'||_0xc46288[0x1]==='In'||_0xc46288[0x1]==='İn'||_0xc46288[0x1]==='IN'||_0xc46288[0x1]==='İN'||_0xc46288[0x1]===_0x896f6f(0xdf)||_0xc46288[0x1]===_0x896f6f(0x200)||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0xef)))try{const _0x698313=await got('https://coronavirus-19-api.herokuapp.com/countries/India')[_0x896f6f(0x178)](async _0x5c1131=>{const _0xf0b1ac=_0x896f6f;resp=JSON['parse'](_0x5c1131[_0xf0b1ac(0x1e3)]),await _0x3b1c78['reply'](_0xf0b1ac(0x1b1)+resp['cases']+_0xf0b1ac(0x164)+resp[_0xf0b1ac(0x1a4)]+_0xf0b1ac(0x21c)+resp[_0xf0b1ac(0x230)]+_0xf0b1ac(0x169)+resp['todayDeaths']+_0xf0b1ac(0x16f)+resp[_0xf0b1ac(0x150)]+_0xf0b1ac(0x188)+resp['active']+_0xf0b1ac(0x22c)+resp[_0xf0b1ac(0x1bf)]+_0xf0b1ac(0xa8)+resp[_0xf0b1ac(0x153)]);});}catch(_0x29a381){await _0x3b1c78[_0x896f6f(0x1b9)]('Error\x20:\x20\x0a'+_0x29a381[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='cn'||_0xc46288[0x1]==='Cn'||_0xc46288[0x1]==='CN'||_0xc46288[0x1][_0x896f6f(0x1ce)]('china'))try{const _0x44ea06=await got(_0x896f6f(0x113))[_0x896f6f(0x178)](async _0x2d7dd5=>{const _0x3dec72=_0x896f6f;resp=JSON[_0x3dec72(0x233)](_0x2d7dd5[_0x3dec72(0x1e3)]),await _0x3b1c78[_0x3dec72(0x1b9)](_0x3dec72(0x1e4)+resp[_0x3dec72(0xf4)]+_0x3dec72(0x11a)+resp[_0x3dec72(0x1a4)]+'\x0a⚰️\x20*Total\x20Deaths:*\x20'+resp[_0x3dec72(0x230)]+_0x3dec72(0x189)+resp['todayDeaths']+_0x3dec72(0x1ae)+resp['recovered']+'\x0a😷\x20*Active\x20Cases:*\x20'+resp[_0x3dec72(0x215)]+_0x3dec72(0x1de)+resp[_0x3dec72(0x1bf)]+'\x0a🧪\x20*Total\x20Test:*\x20'+resp[_0x3dec72(0x153)]);});}catch(_0x3c78da){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x3c78da[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='gr'||_0xc46288[0x1]==='Gr'||_0xc46288[0x1]==='GR'||_0xc46288[0x1][_0x896f6f(0x1ce)]('greek'))try{const _0x2b3189=await got(_0x896f6f(0xa4))['then'](async _0x6e62b0=>{const _0x13f4ac=_0x896f6f;resp=JSON[_0x13f4ac(0x233)](_0x6e62b0['body']),await _0x3b1c78[_0x13f4ac(0x1b9)](_0x13f4ac(0x1df)+resp[_0x13f4ac(0xf4)]+_0x13f4ac(0x11a)+resp[_0x13f4ac(0x1a4)]+'\x0a⚰️\x20*Total\x20Deaths:*\x20'+resp[_0x13f4ac(0x230)]+_0x13f4ac(0x189)+resp[_0x13f4ac(0x19d)]+_0x13f4ac(0x1ae)+resp[_0x13f4ac(0x150)]+'\x0a😷\x20*Active\x20Cases:*\x20'+resp[_0x13f4ac(0x215)]+_0x13f4ac(0x1de)+resp[_0x13f4ac(0x1bf)]+_0x13f4ac(0xe9)+resp[_0x13f4ac(0x153)]);});}catch(_0x22ebae){await _0x3b1c78[_0x896f6f(0x1b9)]('Error\x20:\x20\x0a'+_0x22ebae[_0x896f6f(0x180)],MessageType['text']);}else{if(_0xc46288[0x1]==='fr'||_0xc46288[0x1]==='Fr'||_0xc46288[0x1]==='FR'||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0x20f)))try{const _0xfbb0e5=await got('https://coronavirus-19-api.herokuapp.com/countries/France')[_0x896f6f(0x178)](async _0x3d2053=>{const _0x3b8758=_0x896f6f;resp=JSON['parse'](_0x3d2053[_0x3b8758(0x1e3)]),await _0x3b1c78['reply']('🇫🇷\x20*Datas\x20for\x20France:*\x0a😷\x20*Total\x20Cases:*\x20'+resp['cases']+_0x3b8758(0x11a)+resp[_0x3b8758(0x1a4)]+_0x3b8758(0x1fd)+resp[_0x3b8758(0x230)]+_0x3b8758(0x189)+resp['todayDeaths']+_0x3b8758(0x1ae)+resp[_0x3b8758(0x150)]+_0x3b8758(0xd8)+resp[_0x3b8758(0x215)]+_0x3b8758(0x1de)+resp[_0x3b8758(0x1bf)]+_0x3b8758(0xe9)+resp[_0x3b8758(0x153)]);});}catch(_0x4fbde3){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x4fbde3[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='jp'||_0xc46288[0x1]==='Jp'||_0xc46288[0x1]==='JP'||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0x218)))try{const _0x23395e=await got(_0x896f6f(0x187))[_0x896f6f(0x178)](async _0x4bf646=>{const _0x3ad605=_0x896f6f;resp=JSON[_0x3ad605(0x233)](_0x4bf646[_0x3ad605(0x1e3)]),await _0x3b1c78[_0x3ad605(0x1b9)](_0x3ad605(0xea)+resp[_0x3ad605(0xf4)]+_0x3ad605(0x11a)+resp[_0x3ad605(0x1a4)]+'\x0a⚰️\x20*Total\x20Deaths:*\x20'+resp[_0x3ad605(0x230)]+_0x3ad605(0x189)+resp[_0x3ad605(0x19d)]+_0x3ad605(0x1ae)+resp[_0x3ad605(0x150)]+_0x3ad605(0xd8)+resp[_0x3ad605(0x215)]+_0x3ad605(0x1de)+resp[_0x3ad605(0x1bf)]+_0x3ad605(0xe9)+resp[_0x3ad605(0x153)]);});}catch(_0x1bbdb3){await _0x3b1c78['reply'](_0x896f6f(0x1cd)+_0x1bbdb3[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='kz'||_0xc46288[0x1]==='Kz'||_0xc46288[0x1]==='KZ'||_0xc46288[0x1][_0x896f6f(0x1ce)]('kazakistan'))try{const _0x3170a1=await got(_0x896f6f(0xb8))['then'](async _0x17ba60=>{const _0x25db84=_0x896f6f;resp=JSON['parse'](_0x17ba60['body']),await _0x3b1c78[_0x25db84(0x1b9)]('🇰🇿\x20*Datas\x20for\x20Kazakhstan:*\x0a😷\x20*Total\x20Cases:*\x20'+resp['cases']+_0x25db84(0x11a)+resp[_0x25db84(0x1a4)]+_0x25db84(0x1fd)+resp[_0x25db84(0x230)]+_0x25db84(0x189)+resp['todayDeaths']+_0x25db84(0x1ae)+resp['recovered']+_0x25db84(0xd8)+resp[_0x25db84(0x215)]+'\x0a🆘\x20*Critical\x20Cases:*\x20'+resp[_0x25db84(0x1bf)]+_0x25db84(0xe9)+resp[_0x25db84(0x153)]);});}catch(_0x5abe6c){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x5abe6c[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='pk'||_0xc46288[0x1]==='Pk'||_0xc46288[0x1]==='PK'||_0xc46288[0x1]['includes']('pakistan'))try{const _0xe523b1=await got('https://coronavirus-19-api.herokuapp.com/countries/Pakistan')['then'](async _0xe7d6f0=>{const _0x51ee65=_0x896f6f;resp=JSON[_0x51ee65(0x233)](_0xe7d6f0[_0x51ee65(0x1e3)]),await _0x3b1c78[_0x51ee65(0x1b9)]('🇵🇰\x20*Datas\x20for\x20Pakistan:*\x0a😷\x20*Total\x20Cases:*\x20'+resp['cases']+'\x0a🏥\x20*Daily\x20Cases:*\x20'+resp['todayCases']+_0x51ee65(0x1fd)+resp[_0x51ee65(0x230)]+_0x51ee65(0x189)+resp[_0x51ee65(0x19d)]+'\x0a💊\x20*Total\x20Recovered:*\x20'+resp['recovered']+_0x51ee65(0xd8)+resp[_0x51ee65(0x215)]+_0x51ee65(0x1de)+resp[_0x51ee65(0x1bf)]+_0x51ee65(0xe9)+resp[_0x51ee65(0x153)]);});}catch(_0x69aa07){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x69aa07['message'],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='ru'||_0xc46288[0x1]==='Ru'||_0xc46288[0x1]==='RU'||_0xc46288[0x1][_0x896f6f(0x1ce)](_0x896f6f(0x100)))try{const _0x580892=await got(_0x896f6f(0x132))[_0x896f6f(0x178)](async _0x326151=>{const _0x3b76be=_0x896f6f;resp=JSON[_0x3b76be(0x233)](_0x326151[_0x3b76be(0x1e3)]),await _0x3b1c78[_0x3b76be(0x1b9)](_0x3b76be(0x13d)+resp[_0x3b76be(0xf4)]+_0x3b76be(0x11a)+resp[_0x3b76be(0x1a4)]+_0x3b76be(0x1fd)+resp[_0x3b76be(0x230)]+_0x3b76be(0x189)+resp[_0x3b76be(0x19d)]+_0x3b76be(0x1ae)+resp[_0x3b76be(0x150)]+_0x3b76be(0xd8)+resp[_0x3b76be(0x215)]+_0x3b76be(0x1de)+resp[_0x3b76be(0x1bf)]+'\x0a🧪\x20*Total\x20Test:*\x20'+resp[_0x3b76be(0x153)]);});}catch(_0x422751){await _0x3b1c78[_0x896f6f(0x1b9)](_0x896f6f(0x1cd)+_0x422751[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else{if(_0xc46288[0x1]==='id'||_0xc46288[0x1]==='İd'||_0xc46288[0x1]==='İD'||_0xc46288[0x1]==='ıd'||_0xc46288[0x1]==='Id'||_0xc46288[0x1]==='ID'||_0xc46288[0x1]['includes'](_0x896f6f(0x1d1)))try{const _0x4b1e1f=await got(_0x896f6f(0x195))[_0x896f6f(0x178)](async _0x31416d=>{const _0x21c594=_0x896f6f;resp=JSON[_0x21c594(0x233)](_0x31416d[_0x21c594(0x1e3)]),await _0x3b1c78[_0x21c594(0x1b9)](_0x21c594(0x1f1)+resp[_0x21c594(0xf4)]+_0x21c594(0x11a)+resp[_0x21c594(0x1a4)]+_0x21c594(0x1fd)+resp[_0x21c594(0x230)]+_0x21c594(0x189)+resp[_0x21c594(0x19d)]+'\x0a💊\x20*Total\x20Recovered:*\x20'+resp['recovered']+_0x21c594(0xd8)+resp[_0x21c594(0x215)]+_0x21c594(0x1de)+resp['critical']+_0x21c594(0xe9)+resp[_0x21c594(0x153)]);});}catch(_0x2a54a5){await _0x3b1c78['reply'](_0x896f6f(0x1cd)+_0x2a54a5[_0x896f6f(0x180)],MessageType['text']);}else{if(_0xc46288[0x1]==='nl'||_0xc46288[0x1]==='Nl'||_0xc46288[0x1]==='NL'||_0xc46288[0x1]['includes']('netherland'))try{const _0x1ad64a=await got(_0x896f6f(0x1c4))[_0x896f6f(0x178)](async _0x5c1825=>{const _0x104858=_0x896f6f;resp=JSON['parse'](_0x5c1825[_0x104858(0x1e3)]),await _0x3b1c78[_0x104858(0x1b9)](_0x104858(0x239)+resp['cases']+_0x104858(0x11a)+resp['todayCases']+_0x104858(0x1fd)+resp[_0x104858(0x230)]+_0x104858(0x189)+resp['todayDeaths']+_0x104858(0x1ae)+resp['recovered']+_0x104858(0xd8)+resp['active']+_0x104858(0x1de)+resp['critical']+_0x104858(0xe9)+resp['totalTests']);});}catch(_0x139732){await _0x3b1c78[_0x896f6f(0x1b9)]('Error\x20:\x20\x0a'+_0x139732[_0x896f6f(0x180)],MessageType[_0x896f6f(0xbb)]);}else return await _0x3b1c78['client']['sendMessage'](_0x3b1c78['jid'],Clang[_0x896f6f(0xdc)],MessageType[_0x896f6f(0xbb)]);}}}}}}}}}}}}}}}});}else config[_0x3728b6(0x1f4)]==_0x3728b6(0xf6)&&(Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x190),'desc':Lang[_0x3728b6(0x1af)],'usage':Lang[_0x3728b6(0x115)],'fromMe':![]},async(_0x21809e,_0x346968)=>{const _0x2c72b5=_0x3728b6;if(!_0x21809e[_0x2c72b5(0x137)])return await _0x21809e[_0x2c72b5(0x1ed)][_0x2c72b5(0x23c)](_0x21809e[_0x2c72b5(0x140)],Lang[_0x2c72b5(0x9e)],MessageType[_0x2c72b5(0xbb)]);return ceviri=await translatte(_0x21809e[_0x2c72b5(0x137)]['message'],{'from':_0x346968[0x1]===''?_0x2c72b5(0x147):_0x346968[0x1],'to':_0x346968[0x2]===''?config[_0x2c72b5(0x1ef)]:_0x346968[0x2]}),_0x2c72b5(0xbb)in ceviri?await _0x21809e['reply'](_0x2c72b5(0x1e6)+Lang[_0x2c72b5(0x1ef)]+':*\x20```'+(_0x346968[0x1]===''?'auto':_0x346968[0x1])+'```\x0a'+_0x2c72b5(0xf5)+Lang[_0x2c72b5(0x193)]+_0x2c72b5(0x1b7)+(_0x346968[0x2]===''?config[_0x2c72b5(0x1ef)]:_0x346968[0x2])+_0x2c72b5(0xbe)+_0x2c72b5(0x11e)+Lang['RESULT']+_0x2c72b5(0xc8)+ceviri[_0x2c72b5(0xbb)]+_0x2c72b5(0xe3)):await _0x21809e[_0x2c72b5(0x1ed)][_0x2c72b5(0x23c)](_0x21809e[_0x2c72b5(0x140)],Lang[_0x2c72b5(0x162)],MessageType['text']);}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x172),'fromMe':![],'desc':dlang_dsc},async(_0x34a4b3,_0xa62450)=>{const _0xd8bafb=_0x3728b6;if(!_0x34a4b3[_0xd8bafb(0x137)])return await _0x34a4b3['client'][_0xd8bafb(0x23c)](_0x34a4b3[_0xd8bafb(0x140)],Lang[_0xd8bafb(0x9e)],MessageType[_0xd8bafb(0xbb)]);const _0xfe7b60=_0x34a4b3[_0xd8bafb(0x137)]['text'];var _0x436bd3=lngDetector[_0xd8bafb(0x1cb)](_0xfe7b60);async function _0x38a4d9(_0x167a67){const _0x339572=_0xd8bafb;return _0x167a67[_0x339572(0x175)](0x0)[_0x339572(0x127)]()+_0x167a67['slice'](0x1)[_0x339572(0x173)]();}var _0x5679be=await _0x38a4d9(_0x436bd3[0x0][0x0]),_0x460305=_0x436bd3[0x0][0x1]['toString'](),_0x16dec5=await _0x38a4d9(_0x436bd3[0x1][0x0]),_0xdf74e1=_0x436bd3[0x1][0x1][_0xd8bafb(0x1a7)](),_0x22dc4e=await _0x38a4d9(_0x436bd3[0x2][0x0]),_0x3ba36d=_0x436bd3[0x2][0x1][_0xd8bafb(0x1a7)](),_0x1242c8=await _0x38a4d9(_0x436bd3[0x3][0x0]),_0x415275=_0x436bd3[0x3][0x1][_0xd8bafb(0x1a7)]();const _0x1f0ba0='*'+dlang_input+'*\x20'+'_'+_0xfe7b60+_0xd8bafb(0x151),_0x22b3a5='*'+closer_res+'*\x20'+'_'+_0x5679be+_0xd8bafb(0x221)+dlang_similarity+'*\x20'+'_'+_0x460305+_0xd8bafb(0xce),_0x55cfdb=_0xd8bafb(0x18d)+dlang_other+_0xd8bafb(0x131),_0x1a5534='#2\x20*'+dlang_lang+'*\x20'+'_'+_0x16dec5+'_\x0a*'+dlang_similarity+'*\x20'+'_'+_0xdf74e1+_0xd8bafb(0x151),_0x3ba94b=_0xd8bafb(0x148)+dlang_lang+'*\x20'+'_'+_0x22dc4e+_0xd8bafb(0x221)+dlang_similarity+'*\x20'+'_'+_0x3ba36d+_0xd8bafb(0x151),_0x329a46=_0xd8bafb(0xcf)+dlang_lang+'*\x20'+'_'+_0x1242c8+_0xd8bafb(0x221)+dlang_similarity+'*\x20'+'_'+_0x415275+'_',_0x41ba32=_0x1f0ba0+_0x22b3a5+_0x55cfdb+_0x1a5534+_0x3ba94b+_0x329a46;await _0x34a4b3[_0xd8bafb(0x1ed)][_0xd8bafb(0x23c)](_0x34a4b3['jid'],_0x41ba32,MessageType[_0xd8bafb(0xbb)],{'quoted':_0x34a4b3[_0xd8bafb(0x10d)]});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1d0),'fromMe':![]},async(_0x3955f6,_0x2cb193)=>{const _0x325dd1=_0x3728b6;if(_0x2cb193[0x1]===undefined||_0x2cb193[0x2]==undefined||_0x2cb193[0x3]==undefined)return await _0x3955f6[_0x325dd1(0x1ed)][_0x325dd1(0x23c)](_0x3955f6['jid'],Lang[_0x325dd1(0x17e)],MessageType['text']);let _0x530e57={'amount':parseFloat(_0x2cb193[0x1])['toFixed'](0x2)['replace'](/\.0+$/,''),'from':_0x2cb193[0x2][_0x325dd1(0x127)](),'to':_0x2cb193[0x3][_0x325dd1(0x127)]()};try{result=await exchangeRates()[_0x325dd1(0x17c)]()[_0x325dd1(0x171)]([_0x530e57['to']])[_0x325dd1(0xc2)](_0x530e57[_0x325dd1(0x21b)])[_0x325dd1(0xbf)](),result=parseFloat(result)[_0x325dd1(0xbc)](0x2)[_0x325dd1(0x1f9)](/\.0+$/,''),await _0x3955f6[_0x325dd1(0x1b9)]('```'+_0x530e57[_0x325dd1(0x237)]+'\x20'+_0x530e57['from']+_0x325dd1(0x17a)+result+'\x20'+_0x530e57['to']+_0x325dd1(0xe3));}catch(_0x150dd1){if(_0x150dd1 instanceof ExchangeRatesError)await _0x3955f6['client'][_0x325dd1(0x23c)](_0x3955f6[_0x325dd1(0x140)],Lang['INVALID_CURRENCY'],MessageType[_0x325dd1(0xbb)]);else await _0x3955f6[_0x325dd1(0x1ed)]['sendMessage'](_0x3955f6[_0x325dd1(0x140)],Lang[_0x325dd1(0x124)],MessageType['text']),console[_0x325dd1(0x1c3)](_0x150dd1);}}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1b5),'fromMe':![],'desc':Lang[_0x3728b6(0x19f)]},async(_0x58d174,_0x1dfae9)=>{const _0x5bc414=_0x3728b6;if(_0x1dfae9[0x1]===undefined||_0x1dfae9[0x1]=='')return;let _0x3bc2cb='si',_0x1a440a=_0x1dfae9[0x1],_0x91dbea=0x1;(langMatch=_0x1dfae9[0x1][_0x5bc414(0xed)]('\x5c{([a-z]{2})\x5c}'))&&(_0x3bc2cb=langMatch[0x1],_0x1a440a=_0x1a440a[_0x5bc414(0x1f9)](langMatch[0x0],''));(speedMatch=_0x1dfae9[0x1]['match'](_0x5bc414(0x1c9)))&&(_0x91dbea=parseFloat(speedMatch[0x1]),_0x1a440a=_0x1a440a['replace'](speedMatch[0x0],''));var _0xbe975a=await googleTTS['synthesize']({'text':_0x1a440a,'voice':_0x3bc2cb});await _0x58d174[_0x5bc414(0x1ed)][_0x5bc414(0x23c)](_0x58d174[_0x5bc414(0x140)],_0xbe975a,MessageType[_0x5bc414(0x22e)],{'mimetype':Mimetype[_0x5bc414(0x135)],'quoted':_0x58d174[_0x5bc414(0x10d)],'ptt':!![]});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x133),'fromMe':![],'desc':Lang[_0x3728b6(0xa3)]},async(_0x4f8afd,_0x543e4d)=>{const _0x251e37=_0x3728b6;if(_0x4f8afd[_0x251e37(0x140)]===_0x251e37(0xcd))return;if(_0x543e4d[0x1]==='')return await _0x4f8afd[_0x251e37(0x1ed)][_0x251e37(0x23c)](_0x4f8afd[_0x251e37(0x140)],Lang[_0x251e37(0xb3)],MessageType[_0x251e37(0xbb)]);let _0x1c7b00=await yts(_0x543e4d[0x1]);_0x1c7b00=_0x1c7b00[_0x251e37(0x196)];if(_0x1c7b00[_0x251e37(0xc3)]<0x1)return await _0x4f8afd[_0x251e37(0x1ed)][_0x251e37(0x23c)](_0x4f8afd[_0x251e37(0x140)],Lang['NO_RESULT'],MessageType[_0x251e37(0xbb)]);var _0x5e3498=await _0x4f8afd[_0x251e37(0x1ed)][_0x251e37(0x23c)](_0x4f8afd[_0x251e37(0x140)],Lang[_0x251e37(0x145)],MessageType[_0x251e37(0xbb)]);let _0x1db53b=_0x1c7b00[0x0][_0x251e37(0x1ca)][_0x251e37(0x1f9)]('\x20','+'),_0x28060e=ytdl(_0x1c7b00[0x0]['videoId'],{'quality':_0x251e37(0x168)});got[_0x251e37(0xd1)](_0x1c7b00[0x0][_0x251e37(0x13e)])[_0x251e37(0x10a)](fs['createWriteStream'](_0x1db53b+_0x251e37(0x22d))),ffmpeg(_0x28060e)[_0x251e37(0x1ee)](0x80)[_0x251e37(0x227)]('./'+_0x1db53b+_0x251e37(0xe8))['on'](_0x251e37(0x146),async()=>{const _0x10a81a=_0x251e37,_0xe410fd=new ID3Writer(fs[_0x10a81a(0x12b)]('./'+_0x1db53b+'.mp3'));_0xe410fd[_0x10a81a(0x22a)](_0x10a81a(0x111),_0x1c7b00[0x0][_0x10a81a(0x1ca)])['setFrame']('TPE1',[_0x1c7b00[0x0][_0x10a81a(0xb7)][_0x10a81a(0x1b0)]])[_0x10a81a(0x22a)](_0x10a81a(0x194),{'type':0x3,'data':fs[_0x10a81a(0x12b)](_0x1db53b+_0x10a81a(0x22d)),'description':_0x1c7b00[0x0][_0x10a81a(0x1da)]}),_0xe410fd[_0x10a81a(0xec)](),_0x5e3498=await _0x4f8afd[_0x10a81a(0x1ed)][_0x10a81a(0x23c)](_0x4f8afd['jid'],fs[_0x10a81a(0x12b)]('./'+_0x1db53b+_0x10a81a(0x22d)),MessageType[_0x10a81a(0x13e)],{'caption':'\x0a```Title\x20-```\x0a*'+_0x1db53b+_0x10a81a(0xfc)}),await _0x4f8afd[_0x10a81a(0x1ed)][_0x10a81a(0x23c)](_0x4f8afd[_0x10a81a(0x140)],Buffer[_0x10a81a(0x21b)](_0xe410fd[_0x10a81a(0x10f)]),MessageType[_0x10a81a(0x22e)],{'mimetype':Mimetype[_0x10a81a(0x135)],'contextInfo':{'forwardingScore':0x1,'isForwarded':![]},'quoted':_0x4f8afd[_0x10a81a(0x10d)],'ptt':![]});});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1d9),'fromMe':![],'desc':Lang[_0x3728b6(0xa3)]},async(_0xde801e,_0x16bf57)=>{const _0x41484f=_0x3728b6;if(_0x16bf57[0x1]==='')return await _0xde801e[_0x41484f(0x1ed)][_0x41484f(0x23c)](_0xde801e[_0x41484f(0x140)],Lang[_0x41484f(0xb3)],MessageType[_0x41484f(0xbb)]);let _0x44269c=await yts(_0x16bf57[0x1]);_0x44269c=_0x44269c[_0x41484f(0x196)];if(_0x44269c[_0x41484f(0xc3)]<0x1)return await _0xde801e[_0x41484f(0x1ed)][_0x41484f(0x23c)](_0xde801e[_0x41484f(0x140)],Lang['NO_RESULT'],MessageType[_0x41484f(0xbb)]);var _0x1902c0=await _0xde801e[_0x41484f(0x1ed)]['sendMessage'](_0xde801e[_0x41484f(0x140)],Lang[_0x41484f(0x145)],MessageType[_0x41484f(0xbb)]);let _0x33df74=_0x44269c[0x0][_0x41484f(0x1ca)][_0x41484f(0x1f9)]('\x20','+'),_0x6287de=ytdl(_0x44269c[0x0][_0x41484f(0x184)],{'quality':_0x41484f(0x168)});got[_0x41484f(0xd1)](_0x44269c[0x0]['image'])[_0x41484f(0x10a)](fs[_0x41484f(0x21a)](_0x33df74+_0x41484f(0x22d))),ffmpeg(_0x6287de)[_0x41484f(0x1ee)](0x140)['save']('./'+_0x33df74+_0x41484f(0xe8))['on'](_0x41484f(0x146),async()=>{const _0x460997=_0x41484f,_0x28a9cc=new ID3Writer(fs[_0x460997(0x12b)]('./'+_0x33df74+_0x460997(0xe8)));_0x28a9cc[_0x460997(0x22a)](_0x460997(0x111),_0x44269c[0x0][_0x460997(0x1ca)])[_0x460997(0x22a)](_0x460997(0xb9),[_0x44269c[0x0][_0x460997(0xb7)][_0x460997(0x1b0)]])[_0x460997(0x22a)]('APIC',{'type':0x3,'data':fs[_0x460997(0x12b)](_0x33df74+_0x460997(0x22d)),'description':_0x44269c[0x0][_0x460997(0x1da)]}),_0x28a9cc['addTag'](),_0x1902c0=await _0xde801e[_0x460997(0x1ed)][_0x460997(0x23c)](_0xde801e[_0x460997(0x140)],fs[_0x460997(0x12b)]('./'+_0x33df74+_0x460997(0x22d)),MessageType[_0x460997(0x13e)],{'caption':_0x460997(0xaa)+_0x33df74+'*\x0a```Wait\x20Uploading```'}),await _0xde801e[_0x460997(0x1ed)][_0x460997(0x23c)](_0xde801e['jid'],Buffer['from'](_0x28a9cc['arrayBuffer']),MessageType[_0x460997(0x22e)],{'mimetype':Mimetype['mp4Audio'],'ptt':![]});});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0xd6),'fromMe':![],'desc':Lang['VIDEO_DESC']},async(_0x500aad,_0x376d4e)=>{const _0x1ade11=_0x3728b6;if(_0x500aad[_0x1ade11(0x140)]===_0x1ade11(0xcd))return;if(_0x376d4e[0x1]==='')return await _0x500aad[_0x1ade11(0x1ed)]['sendMessage'](_0x500aad[_0x1ade11(0x140)],Lang['NEED_VIDEO'],MessageType[_0x1ade11(0xbb)]);try{var _0x3b602e=await yts({'videoId':ytdl[_0x1ade11(0xc5)](_0x376d4e[0x1])});}catch{return await _0x500aad[_0x1ade11(0x1ed)][_0x1ade11(0x23c)](_0x500aad[_0x1ade11(0x140)],Lang['NO_RESULT'],MessageType[_0x1ade11(0xbb)]);}var _0x3707a5=await _0x500aad[_0x1ade11(0x1ed)][_0x1ade11(0x23c)](_0x500aad['jid'],Lang[_0x1ade11(0xd5)],MessageType[_0x1ade11(0xbb)]),_0x3f078a=ytdl(_0x3b602e[_0x1ade11(0x184)],{'filter':_0x6ad5af=>_0x6ad5af[_0x1ade11(0x134)]===_0x1ade11(0xe7)&&[_0x1ade11(0x11f),_0x1ade11(0x149),_0x1ade11(0x223),_0x1ade11(0x20c),_0x1ade11(0x101)]['map'](()=>!![])});_0x3f078a[_0x1ade11(0x10a)](fs[_0x1ade11(0x21a)]('./'+_0x3b602e[_0x1ade11(0x184)]+_0x1ade11(0x1f2))),_0x3f078a['on']('end',async()=>{const _0x3b3dc1=_0x1ade11;_0x3707a5=await _0x500aad['client']['sendMessage'](_0x500aad[_0x3b3dc1(0x140)],Lang['UPLOADING_VIDEO'],MessageType[_0x3b3dc1(0xbb)]),await _0x500aad[_0x3b3dc1(0x1ed)]['sendMessage'](_0x500aad['jid'],fs[_0x3b3dc1(0x12b)]('./'+_0x3b602e[_0x3b3dc1(0x184)]+_0x3b3dc1(0x1f2)),MessageType['video'],{'mimetype':Mimetype[_0x3b3dc1(0xe7)],'contextInfo':{'forwardingScore':0x1,'isForwarded':![]},'quoted':_0x500aad[_0x3b3dc1(0x10d)],'caption':_0x3b3dc1(0xaa)+_0x3b602e[_0x3b3dc1(0x1ca)]+'*\x0a'});});}),Garfield['addXnodes']({'pattern':'yt\x20?(.*)','fromMe':![],'desc':Lang['YT_DESC']},async(_0x33b527,_0x49729b)=>{const _0x3e21f3=_0x3728b6;if(_0x49729b[0x1]==='')return await _0x33b527[_0x3e21f3(0x1ed)]['sendMessage'](_0x33b527[_0x3e21f3(0x140)],Lang[_0x3e21f3(0x166)],MessageType[_0x3e21f3(0xbb)]);var _0x3fb7ac=await _0x33b527[_0x3e21f3(0x1ed)][_0x3e21f3(0x23c)](_0x33b527[_0x3e21f3(0x140)],Lang[_0x3e21f3(0x1d6)],MessageType[_0x3e21f3(0xbb)]);try{var _0x2a1578=await yts(_0x49729b[0x1]);}catch{return await _0x33b527[_0x3e21f3(0x1ed)][_0x3e21f3(0x23c)](_0x33b527[_0x3e21f3(0x140)],Lang[_0x3e21f3(0xd0)],MessageType[_0x3e21f3(0xbb)]);}var _0x49b159='';_0x2a1578['all']['map'](_0x47c5b2=>{const _0x2417ba=_0x3e21f3;_0x49b159+='*'+_0x47c5b2['title']+_0x2417ba(0x205)+_0x47c5b2[_0x2417ba(0x1db)]+'\x0a';}),await _0x33b527[_0x3e21f3(0x1ed)]['sendMessage'](_0x33b527[_0x3e21f3(0x140)],_0x49b159,MessageType[_0x3e21f3(0xbb)]),await _0x3fb7ac[_0x3e21f3(0x1ba)]();}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0xfd),'fromMe':![],'desc':Lang[_0x3728b6(0xab)]},async(_0x482710,_0xfecb69)=>{const _0x2bd2f4=_0x3728b6;if(_0xfecb69[0x1]==='')return await _0x482710[_0x2bd2f4(0x1ed)][_0x2bd2f4(0x23c)](_0x482710[_0x2bd2f4(0x140)],Lang[_0x2bd2f4(0x166)],MessageType[_0x2bd2f4(0xbb)]);var _0x584d3e=await _0x482710['client'][_0x2bd2f4(0x23c)](_0x482710['jid'],Lang[_0x2bd2f4(0xa1)],MessageType['text']),_0x5d7773=await wiki({'apiUrl':_0x2bd2f4(0xaf)+config[_0x2bd2f4(0x1ef)]+_0x2bd2f4(0xd2)})[_0x2bd2f4(0xb1)](_0xfecb69[0x1]),_0xa1e34a=await _0x5d7773[_0x2bd2f4(0x186)]();await _0x482710['client']['sendMessage'](_0x482710[_0x2bd2f4(0x140)],_0xa1e34a,MessageType['text']),await _0x584d3e[_0x2bd2f4(0x1ba)]();}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x104),'fromMe':![],'desc':Lang[_0x3728b6(0x167)]},async(_0x50340c,_0x3b8e5d)=>{const _0x9f5092=_0x3728b6;if(_0x3b8e5d[0x1]==='')return await _0x50340c[_0x9f5092(0x1ed)][_0x9f5092(0x23c)](_0x50340c[_0x9f5092(0x140)],Lang[_0x9f5092(0x166)],MessageType[_0x9f5092(0xbb)]);if(!_0x3b8e5d[0x1][_0x9f5092(0x1ce)](_0x9f5092(0x14d)))return await _0x50340c[_0x9f5092(0x1ed)][_0x9f5092(0x23c)](_0x50340c[_0x9f5092(0x140)],'\x20```please\x20enter\x20the\x20number\x20of\x20images\x20you\x20need\x20\x0a\x0a\x20example\x20:```\x20*name\x20of\x20image*\x20&\x20*number\x20of\x20image*\x20',MessageType['text']);if(_0x3b8e5d[0x1]['includes'](_0x9f5092(0x14d))){var _0x31d9f5=_0x3b8e5d[0x1][_0x9f5092(0x159)](_0x9f5092(0x14d)),_0x3f8f75=_0x31d9f5[0x1],_0x58441d=_0x31d9f5[0x0];if(_0x3f8f75>0xa)return await _0x50340c[_0x9f5092(0x1ed)][_0x9f5092(0x23c)](_0x50340c[_0x9f5092(0x140)],_0x9f5092(0xfa),MessageType['text']);gis(_0x58441d,async(_0x17566c,_0x32100e)=>{const _0x33df5e=_0x9f5092;for(var _0x3e56ce=0x0;_0x3e56ce<(_0x32100e[_0x33df5e(0xc3)]<_0x3f8f75?_0x32100e[_0x33df5e(0xc3)]:_0x3f8f75);_0x3e56ce++){var _0x38e6d7=got(_0x32100e[_0x3e56ce][_0x33df5e(0x1db)],{'https':{'rejectUnauthorized':![]}}),_0x5f4826=_0x38e6d7[_0x33df5e(0x10b)]();_0x5f4826['then'](async _0xbca92d=>{const _0x1ded1f=_0x33df5e;await _0x50340c['client'][_0x1ded1f(0x23c)](_0x50340c[_0x1ded1f(0x140)],_0xbca92d,MessageType['image']);});}_0x50340c[_0x33df5e(0x1b9)](Lang[_0x33df5e(0x16b)][_0x33df5e(0xe0)](_0x32100e['length']<_0x3f8f75?_0x32100e['length']:_0x3f8f75,_0x58441d));});}}),Garfield['addXnodes']({'pattern':_0x3728b6(0x154),'fromMe':![],'desc':Lang['ISONG_DESC']},async(_0x1becf9,_0x38a282)=>{const _0x5d1f6e=_0x3728b6;if(_0x38a282[0x1]==='')return await _0x1becf9[_0x5d1f6e(0x1ed)][_0x5d1f6e(0x23c)](_0x1becf9['jid'],Lang[_0x5d1f6e(0xb3)],MessageType[_0x5d1f6e(0xbb)]);let _0x359f01=await yts(_0x38a282[0x1]);_0x359f01=_0x359f01['all'];if(_0x359f01[_0x5d1f6e(0xc3)]<0x1)return await _0x1becf9[_0x5d1f6e(0x1ed)][_0x5d1f6e(0x23c)](_0x1becf9['jid'],Lang[_0x5d1f6e(0x15e)],MessageType[_0x5d1f6e(0xbb)]);var _0x4231fe=await _0x1becf9[_0x5d1f6e(0x1ed)][_0x5d1f6e(0x23c)](_0x1becf9[_0x5d1f6e(0x140)],Lang[_0x5d1f6e(0x145)],MessageType[_0x5d1f6e(0xbb)]);let _0x6feebb=_0x359f01[0x0][_0x5d1f6e(0x1ca)][_0x5d1f6e(0x1f9)]('\x20','+'),_0x28a7bf=ytdl(_0x359f01[0x0][_0x5d1f6e(0x184)],{'quality':_0x5d1f6e(0x214)});got[_0x5d1f6e(0xd1)](_0x359f01[0x0]['image'])[_0x5d1f6e(0x10a)](fs[_0x5d1f6e(0x21a)](_0x6feebb+'.jpg')),ffmpeg(_0x28a7bf)[_0x5d1f6e(0x1ee)](0x40)[_0x5d1f6e(0x227)]('./'+_0x6feebb+_0x5d1f6e(0xe8))['on'](_0x5d1f6e(0x146),async()=>{const _0x266fda=_0x5d1f6e,_0x37ba11=new ID3Writer(fs[_0x266fda(0x12b)]('./'+_0x6feebb+_0x266fda(0xe8)));_0x37ba11['setFrame'](_0x266fda(0x111),_0x359f01[0x0][_0x266fda(0x1ca)])[_0x266fda(0x22a)](_0x266fda(0xb9),[_0x359f01[0x0]['author'][_0x266fda(0x1b0)]])[_0x266fda(0x22a)](_0x266fda(0x194),{'type':0x3,'data':fs[_0x266fda(0x12b)](_0x6feebb+_0x266fda(0x22d)),'description':_0x359f01[0x0]['description']}),_0x37ba11[_0x266fda(0xec)](),_0x4231fe=await _0x1becf9[_0x266fda(0x1ed)][_0x266fda(0x23c)](_0x1becf9[_0x266fda(0x140)],fs[_0x266fda(0x12b)]('./'+_0x6feebb+_0x266fda(0x22d)),MessageType[_0x266fda(0x13e)],{'caption':_0x266fda(0x216)+_0x6feebb+_0x266fda(0x211)+Lang[_0x266fda(0x217)]+'\x0a'}),await _0x1becf9['client']['sendMessage'](_0x1becf9[_0x266fda(0x140)],Buffer[_0x266fda(0x21b)](_0x37ba11[_0x266fda(0x10f)]),MessageType[_0x266fda(0x1b6)],{'filename':_0x266fda(0x19a)+'.mp3','mimetype':_0x266fda(0x212),'quoted':_0x1becf9['data']});});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x108),'fromMe':![],'desc':Glang[_0x3728b6(0x1d3)]},async(_0x53f4f2,_0x1dd4ad)=>{const _0x57055a=_0x3728b6,_0x1aaf46=_0x1dd4ad[0x1];if(_0x1aaf46==='')return await _0x53f4f2[_0x57055a(0x1ed)][_0x57055a(0x23c)](_0x53f4f2['jid'],Glang[_0x57055a(0x16e)],MessageType[_0x57055a(0xbb)]);await axios[_0x57055a(0xe1)]('https://videfikri.com/api/github/?username='+_0x1aaf46)[_0x57055a(0x178)](async _0x59d973=>{const _0x1f51c1=_0x57055a,{hireable:_0x47eadd,company:_0x362b93,profile_pic:_0x29aad3,username:_0x1559b,fullname:_0x300f69,blog:_0x5e0bd5,location:_0x34f09d,email:_0x5189c1,public_repository:_0x5ba930,biografi:_0x2444fa,following:_0x3fce33,followers:_0x220b94,public_gists:_0x44c652,profile_url:_0x1e4ffa,last_updated:_0x50e73e,joined_on:_0x449199}=_0x59d973[_0x1f51c1(0x10d)][_0x1f51c1(0x17b)],_0xb5d864=await axios[_0x1f51c1(0xe1)](_0x29aad3,{'responseType':_0x1f51c1(0x12e)}),_0x37df58='*'+Glang[_0x1f51c1(0x203)]+'*\x20'+_0x1559b+_0x1f51c1(0xee)+Glang['NAME']+'*\x20'+_0x300f69+'\x20\x0a*'+Glang[_0x1f51c1(0x210)]+'*\x20'+_0x220b94+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x1b2)]+'*\x20'+_0x3fce33+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x105)]+'*\x20'+_0x2444fa+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x13c)]+'*\x20'+_0x5ba930+_0x1f51c1(0xee)+Glang[_0x1f51c1(0xc1)]+'*\x20'+_0x44c652+_0x1f51c1(0xee)+Glang[_0x1f51c1(0xcc)]+'*\x20'+_0x34f09d+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x11c)]+'*\x20'+_0x5189c1+_0x1f51c1(0xee)+Glang['BLOG']+'*\x20'+_0x5e0bd5+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x18f)]+'*\x20'+_0x362b93+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x22b)]+'*\x20'+(_0x47eadd===_0x1f51c1(0x20d)?Glang['HİRE_TRUE']:Glang[_0x1f51c1(0x1b4)])+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x1f7)]+'*\x20'+_0x449199+_0x1f51c1(0xee)+Glang[_0x1f51c1(0x1f3)]+'*\x20'+_0x50e73e+_0x1f51c1(0xee)+Glang['URL']+'*\x20'+_0x1e4ffa;await _0x53f4f2[_0x1f51c1(0x23c)](Buffer['from'](_0xb5d864['data']),MessageType[_0x1f51c1(0x13e)],{'caption':_0x37df58});})['catch'](async _0x2362c8=>await _0x53f4f2[_0x57055a(0x1ed)][_0x57055a(0x23c)](_0x53f4f2[_0x57055a(0x140)],Glang[_0x57055a(0xdc)],MessageType[_0x57055a(0xbb)]));}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x244),'fromMe':![],'desc':Lang[_0x3728b6(0x182)]},async(_0x562a42,_0x3eca22)=>{const _0x2692a3=_0x3728b6,_0x1942a8=_0x2692a3(0x246)+_0x2692a3(0x234)+_0x2692a3(0x12f)+xv364[_0x2692a3(0x1a0)]+'\x0a'+'ORG:Coded\x20By\x20Tharindu\x20Liyanage;\x0a'+_0x2692a3(0x18a)+xv364[_0x2692a3(0x121)]+':'+xv364[_0x2692a3(0x121)]+'\x20\x0a'+'END:VCARD';await _0x562a42[_0x2692a3(0x1ed)][_0x2692a3(0x23c)](_0x562a42['jid'],{'displayname':_0x2692a3(0xf2),'vcard':_0x1942a8},MessageType[_0x2692a3(0xf9)]);}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1c0),'fromMe':![],'desc':Slang[_0x3728b6(0x231)]},async(_0x19af52,_0xcc44e1)=>{const _0x40fa10=_0x3728b6;if(_0xcc44e1[0x1]==='')return await _0x19af52[_0x40fa10(0x1ed)][_0x40fa10(0x23c)](_0x19af52[_0x40fa10(0x140)],Slang[_0x40fa10(0x118)],MessageType['text']);var _0xe08b9e=await solenolyrics['requestLyricsFor'](''+_0xcc44e1[0x1]),_0x341d30=await solenolyrics['requestAuthorFor'](''+_0xcc44e1[0x1]),_0x4acb1e=await solenolyrics[_0x40fa10(0x20a)](''+_0xcc44e1[0x1]),_0x1256ba=await solenolyrics[_0x40fa10(0x1e8)](''+_0xcc44e1[0x1]),_0x24b6af=await axios[_0x40fa10(0xe1)](_0x4acb1e,{'responseType':_0x40fa10(0x12e)});await _0x19af52['client'][_0x40fa10(0x23c)](_0x19af52[_0x40fa10(0x140)],Buffer['from'](_0x24b6af[_0x40fa10(0x10d)]),MessageType[_0x40fa10(0x13e)],{'caption':'*'+Slang[_0x40fa10(0x1c2)]+'*\x20'+_0x40fa10(0xe3)+(''+_0xcc44e1[0x1])+_0x40fa10(0xe3)+('\x0a*'+Slang[_0x40fa10(0x152)]+'*\x20')+'```'+_0x1256ba+'```'+('\x0a*'+Slang[_0x40fa10(0x1a1)]+'*\x20')+_0x40fa10(0xe3)+_0x341d30+_0x40fa10(0xe3)+('\x0a*'+Slang[_0x40fa10(0x12a)]+_0x40fa10(0x1e2))+_0xe08b9e});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0xe4),'fromMe':![],'desc':Lang[_0x3728b6(0xa3)]},async(_0x1dcb68,_0x818808)=>{const _0x137926=_0x3728b6;if(_0x818808[0x1]==='')return await _0x1dcb68[_0x137926(0x1ed)][_0x137926(0x23c)](_0x1dcb68[_0x137926(0x140)],Lang[_0x137926(0xb3)],MessageType[_0x137926(0xbb)]);let _0x5d9de9=await yts(_0x818808[0x1]);_0x5d9de9=_0x5d9de9['all'];if(_0x5d9de9[_0x137926(0xc3)]<0x1)return await _0x1dcb68[_0x137926(0x1ed)][_0x137926(0x23c)](_0x1dcb68[_0x137926(0x140)],Lang[_0x137926(0x15e)],MessageType[_0x137926(0xbb)]);var _0x3242ae=await _0x1dcb68[_0x137926(0x1ed)][_0x137926(0x23c)](_0x1dcb68[_0x137926(0x140)],Lang[_0x137926(0x145)],MessageType[_0x137926(0xbb)]);let _0x4c3b8c=_0x5d9de9[0x0][_0x137926(0x1ca)]['replace']('\x20','+'),_0x4fc828=ytdl(_0x5d9de9[0x0][_0x137926(0x184)],{'quality':_0x137926(0x214)});got[_0x137926(0xd1)](_0x5d9de9[0x0][_0x137926(0x13e)])[_0x137926(0x10a)](fs[_0x137926(0x21a)](_0x4c3b8c+_0x137926(0x22d))),ffmpeg(_0x4fc828)[_0x137926(0x1ee)](0x40)[_0x137926(0x227)]('./'+_0x4c3b8c+_0x137926(0xe8))['on'](_0x137926(0x146),async()=>{const _0x5bbdf7=_0x137926,_0x2de4e6=new ID3Writer(fs['readFileSync']('./'+_0x4c3b8c+_0x5bbdf7(0xe8)));_0x2de4e6[_0x5bbdf7(0x22a)](_0x5bbdf7(0x111),_0x5d9de9[0x0]['title'])[_0x5bbdf7(0x22a)](_0x5bbdf7(0xb9),[_0x5d9de9[0x0][_0x5bbdf7(0xb7)][_0x5bbdf7(0x1b0)]])[_0x5bbdf7(0x22a)](_0x5bbdf7(0x194),{'type':0x3,'data':fs['readFileSync'](_0x4c3b8c+_0x5bbdf7(0x22d)),'description':_0x5d9de9[0x0][_0x5bbdf7(0x1da)]}),_0x2de4e6[_0x5bbdf7(0xec)](),_0x3242ae=await _0x1dcb68[_0x5bbdf7(0x1ed)][_0x5bbdf7(0x23c)](_0x1dcb68['jid'],Lang[_0x5bbdf7(0x217)],MessageType[_0x5bbdf7(0xbb)]),await _0x1dcb68[_0x5bbdf7(0x1ed)]['sendMessage'](_0x1dcb68[_0x5bbdf7(0x140)],Buffer[_0x5bbdf7(0x21b)](_0x2de4e6[_0x5bbdf7(0x10f)]),MessageType[_0x5bbdf7(0x22e)],{'mimetype':Mimetype['mp4Audio'],'ptt':!![]});});}),Garfield[_0x3728b6(0x1b8)]({'pattern':_0x3728b6(0x1ec),'fromMe':![],'desc':Clang[_0x3728b6(0x1d8)]},async(_0x48f698,_0xb727f1)=>{const _0x1dec02=_0x3728b6;if(_0xb727f1[0x1]==='')try{const _0x17dbe5=await got(_0x1dec02(0x10e))[_0x1dec02(0x178)](async _0x20e94c=>{const _0x1de4f0=_0x1dec02,_0x5a15e5=JSON[_0x1de4f0(0x233)](_0x20e94c[_0x1de4f0(0x1e3)]);await _0x48f698[_0x1de4f0(0x1b9)](_0x1de4f0(0x165)+_0x5a15e5[_0x1de4f0(0xf4)]+_0x1de4f0(0x19e)+_0x5a15e5[_0x1de4f0(0x230)]+'\x0a⚕️\x20*Total\x20Recovered:*\x20'+_0x5a15e5[_0x1de4f0(0x150)]);});}catch(_0x349f9f){await _0x48f698[_0x1dec02(0x1b9)]('Error\x20:\x0a'+_0x349f9f[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='tr'||_0xb727f1[0x1]==='Tr'||_0xb727f1[0x1]==='TR'||_0xb727f1[0x1]['includes'](_0x1dec02(0x142))||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0xe2))||_0xb727f1[0x1]['includes'](_0x1dec02(0x11b)))try{const _0x58d954=await got(_0x1dec02(0x1d7))[_0x1dec02(0x178)](async _0x443c51=>{const _0x1040b0=_0x1dec02;resp=JSON[_0x1040b0(0x233)](_0x443c51[_0x1040b0(0x1e3)]),await _0x48f698[_0x1040b0(0x1b9)](_0x1040b0(0x197)+resp[_0x1040b0(0xf4)]+_0x1040b0(0x23a)+resp[_0x1040b0(0x1a4)]+'\x0a⚰️\x20*Toplam\x20Ölü:*\x20'+resp[_0x1040b0(0x230)]+_0x1040b0(0xff)+resp[_0x1040b0(0x19d)]+_0x1040b0(0x114)+resp[_0x1040b0(0x150)]+_0x1040b0(0x15f)+resp[_0x1040b0(0x215)]+_0x1040b0(0xb4)+resp[_0x1040b0(0x1bf)]+_0x1040b0(0x229)+resp['totalTests']);});}catch(_0x5f1e09){await _0x48f698[_0x1dec02(0x1b9)]('Bir\x20Hata\x20Oluştu,\x20İşte\x20Hata\x20:\x20\x0a'+_0x5f1e09[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]===_0x1dec02(0xeb)||_0xb727f1[0x1]==='Usa'||_0xb727f1[0x1]===_0x1dec02(0x23d)||_0xb727f1[0x1]===_0x1dec02(0x1dd)||_0xb727f1[0x1]===_0x1dec02(0xd4))try{const _0x23c268=await got('https://coronavirus-19-api.herokuapp.com/countries/USA')[_0x1dec02(0x178)](async _0x3b2839=>{const _0x239d6a=_0x1dec02;resp=JSON[_0x239d6a(0x233)](_0x3b2839[_0x239d6a(0x1e3)]),await _0x48f698[_0x239d6a(0x1b9)](_0x239d6a(0x1f8)+resp['cases']+_0x239d6a(0x11a)+resp[_0x239d6a(0x1a4)]+_0x239d6a(0x1fd)+resp[_0x239d6a(0x230)]+_0x239d6a(0x189)+resp['todayDeaths']+'\x0a💊\x20*Total\x20Recovered:*\x20'+resp[_0x239d6a(0x150)]+_0x239d6a(0xd8)+resp['active']+_0x239d6a(0x1de)+resp[_0x239d6a(0x1bf)]+'\x0a🧪\x20*Total\x20Test:*\x20'+resp[_0x239d6a(0x153)]);});}catch(_0x2b0bed){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x2b0bed[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='de'||_0xb727f1[0x1]==='De'||_0xb727f1[0x1]==='DE'||_0xb727f1[0x1]===_0x1dec02(0x1cc)||_0xb727f1[0x1]===_0x1dec02(0x125)||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0x110)))try{const _0x1b57d2=await got(_0x1dec02(0xdd))['then'](async _0x16dc67=>{const _0x26e6d2=_0x1dec02;resp=JSON[_0x26e6d2(0x233)](_0x16dc67['body']),await _0x48f698[_0x26e6d2(0x1b9)](_0x26e6d2(0xba)+resp[_0x26e6d2(0xf4)]+_0x26e6d2(0x1d5)+resp['todayCases']+_0x26e6d2(0xda)+resp[_0x26e6d2(0x230)]+_0x26e6d2(0x1a2)+resp[_0x26e6d2(0x19d)]+_0x26e6d2(0x177)+resp[_0x26e6d2(0x150)]+_0x26e6d2(0x17f)+resp[_0x26e6d2(0x215)]+'\x0a🆘\x20*Kritische\x20Fälle:*\x20'+resp['critical']+_0x26e6d2(0xfe)+resp[_0x26e6d2(0x153)]);});}catch(_0x2092f3){await _0x48f698['reply'](_0x1dec02(0x1cd)+_0x2092f3[_0x1dec02(0x180)],MessageType['text']);}else{if(_0xb727f1[0x1]==='az'||_0xb727f1[0x1]==='AZ'||_0xb727f1[0x1]==='Az'||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0x24b))||_0xb727f1[0x1]['includes'](_0x1dec02(0x247)))try{const _0x24f17e=await got(_0x1dec02(0x10c))[_0x1dec02(0x178)](async _0x3d3d40=>{const _0x590fc5=_0x1dec02;resp=JSON['parse'](_0x3d3d40[_0x590fc5(0x1e3)]),await _0x48f698[_0x590fc5(0x1b9)](_0x590fc5(0x20b)+resp['cases']+_0x590fc5(0xf0)+resp[_0x590fc5(0x1a4)]+'\x0a⚰️\x20*Ümumi\x20Ölüm:*\x20'+resp['deaths']+_0x590fc5(0x1eb)+resp['todayDeaths']+_0x590fc5(0x136)+resp[_0x590fc5(0x150)]+_0x590fc5(0x130)+resp['active']+_0x590fc5(0x109)+resp[_0x590fc5(0x1bf)]+_0x590fc5(0x13a)+resp['totalTests']);});}catch(_0x4c26c5){await _0x48f698['reply']('Error\x20:\x20\x0a'+_0x4c26c5[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='uk'||_0xb727f1[0x1]==='Uk'||_0xb727f1[0x1]==='UK'||_0xb727f1[0x1]===_0x1dec02(0xde)||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0x208)))try{const _0x5f03f4=await got(_0x1dec02(0x1bd))['then'](async _0x5e852c=>{const _0x18216c=_0x1dec02;resp=JSON[_0x18216c(0x233)](_0x5e852c[_0x18216c(0x1e3)]),await _0x48f698['reply'](_0x18216c(0xa7)+resp[_0x18216c(0xf4)]+'\x0a🏥\x20*Daily\x20Cases:*\x20'+resp[_0x18216c(0x1a4)]+'\x0a⚰️\x20*Total\x20Deaths:*\x20'+resp[_0x18216c(0x230)]+'\x0a☠️\x20*Daily\x20Deaths:*\x20'+resp[_0x18216c(0x19d)]+_0x18216c(0x1ae)+resp[_0x18216c(0x150)]+'\x0a😷\x20*Active\x20Cases:*\x20'+resp[_0x18216c(0x215)]+_0x18216c(0x1de)+resp[_0x18216c(0x1bf)]+_0x18216c(0xe9)+resp[_0x18216c(0x153)]);});}catch(_0x3ac66e){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x3ac66e['message'],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='in'||_0xb727f1[0x1]==='ın'||_0xb727f1[0x1]==='In'||_0xb727f1[0x1]==='İn'||_0xb727f1[0x1]==='İN'||_0xb727f1[0x1]==='IN'||_0xb727f1[0x1]===_0x1dec02(0xdf)||_0xb727f1[0x1]==='India'||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0xef)))try{const _0x23722f=await got('https://coronavirus-19-api.herokuapp.com/countries/India')['then'](async _0x1b45fb=>{const _0x1de3dd=_0x1dec02;resp=JSON[_0x1de3dd(0x233)](_0x1b45fb[_0x1de3dd(0x1e3)]),await _0x48f698[_0x1de3dd(0x1b9)](_0x1de3dd(0x1b1)+resp[_0x1de3dd(0xf4)]+_0x1de3dd(0x164)+resp[_0x1de3dd(0x1a4)]+_0x1de3dd(0x21c)+resp[_0x1de3dd(0x230)]+_0x1de3dd(0x169)+resp[_0x1de3dd(0x19d)]+_0x1de3dd(0x16f)+resp['recovered']+_0x1de3dd(0x188)+resp[_0x1de3dd(0x215)]+'\x0a🆘\x20*गंभीर\x20मामले:*\x20'+resp['critical']+'\x0a🧪\x20*कुल\x20टेस्ट:*\x20'+resp[_0x1de3dd(0x153)]);});}catch(_0x18d1d8){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x18d1d8[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='cn'||_0xb727f1[0x1]==='Cn'||_0xb727f1[0x1]==='CN'||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0x176)))try{const _0x3e1d2b=await got(_0x1dec02(0x113))[_0x1dec02(0x178)](async _0x355a9e=>{const _0x58b74d=_0x1dec02;resp=JSON[_0x58b74d(0x233)](_0x355a9e[_0x58b74d(0x1e3)]),await _0x48f698[_0x58b74d(0x1b9)](_0x58b74d(0x1e4)+resp[_0x58b74d(0xf4)]+_0x58b74d(0x11a)+resp[_0x58b74d(0x1a4)]+_0x58b74d(0x1fd)+resp[_0x58b74d(0x230)]+_0x58b74d(0x189)+resp[_0x58b74d(0x19d)]+_0x58b74d(0x1ae)+resp['recovered']+_0x58b74d(0xd8)+resp[_0x58b74d(0x215)]+'\x0a🆘\x20*Critical\x20Cases:*\x20'+resp[_0x58b74d(0x1bf)]+_0x58b74d(0xe9)+resp[_0x58b74d(0x153)]);});}catch(_0x125398){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x125398['message'],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='gr'||_0xb727f1[0x1]==='Gr'||_0xb727f1[0x1]==='GR'||_0xb727f1[0x1][_0x1dec02(0x1ce)]('greek'))try{const _0x143cf3=await got('https://coronavirus-19-api.herokuapp.com/countries/Greece')['then'](async _0x1acd9e=>{const _0x1bb1e6=_0x1dec02;resp=JSON[_0x1bb1e6(0x233)](_0x1acd9e[_0x1bb1e6(0x1e3)]),await _0x48f698[_0x1bb1e6(0x1b9)]('🇬🇷\x20*Datas\x20for\x20Greece:*\x0a😷\x20*Total\x20Cases:*\x20'+resp[_0x1bb1e6(0xf4)]+_0x1bb1e6(0x11a)+resp[_0x1bb1e6(0x1a4)]+_0x1bb1e6(0x1fd)+resp[_0x1bb1e6(0x230)]+_0x1bb1e6(0x189)+resp[_0x1bb1e6(0x19d)]+_0x1bb1e6(0x1ae)+resp[_0x1bb1e6(0x150)]+'\x0a😷\x20*Active\x20Cases:*\x20'+resp[_0x1bb1e6(0x215)]+_0x1bb1e6(0x1de)+resp[_0x1bb1e6(0x1bf)]+'\x0a🧪\x20*Total\x20Test:*\x20'+resp['totalTests']);});}catch(_0x30f880){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x30f880[_0x1dec02(0x180)],MessageType['text']);}else{if(_0xb727f1[0x1]==='fr'||_0xb727f1[0x1]==='Fr'||_0xb727f1[0x1]==='FR'||_0xb727f1[0x1]['includes'](_0x1dec02(0x20f)))try{const _0x521588=await got(_0x1dec02(0x1e1))[_0x1dec02(0x178)](async _0x30626e=>{const _0x4d0ee7=_0x1dec02;resp=JSON[_0x4d0ee7(0x233)](_0x30626e[_0x4d0ee7(0x1e3)]),await _0x48f698[_0x4d0ee7(0x1b9)](_0x4d0ee7(0x129)+resp[_0x4d0ee7(0xf4)]+_0x4d0ee7(0x11a)+resp['todayCases']+_0x4d0ee7(0x1fd)+resp[_0x4d0ee7(0x230)]+_0x4d0ee7(0x189)+resp['todayDeaths']+'\x0a💊\x20*Total\x20Recovered:*\x20'+resp[_0x4d0ee7(0x150)]+_0x4d0ee7(0xd8)+resp[_0x4d0ee7(0x215)]+_0x4d0ee7(0x1de)+resp['critical']+_0x4d0ee7(0xe9)+resp[_0x4d0ee7(0x153)]);});}catch(_0x250ac2){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x250ac2[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='jp'||_0xb727f1[0x1]==='Jp'||_0xb727f1[0x1]==='JP'||_0xb727f1[0x1]['includes'](_0x1dec02(0x218)))try{const _0x18979d=await got(_0x1dec02(0x187))[_0x1dec02(0x178)](async _0x3be9c8=>{const _0x362b31=_0x1dec02;resp=JSON[_0x362b31(0x233)](_0x3be9c8['body']),await _0x48f698[_0x362b31(0x1b9)]('🇯🇵\x20*Datas\x20for\x20Japan:*\x0a😷\x20*Total\x20Cases:*\x20'+resp[_0x362b31(0xf4)]+'\x0a🏥\x20*Daily\x20Cases:*\x20'+resp['todayCases']+_0x362b31(0x1fd)+resp['deaths']+_0x362b31(0x189)+resp[_0x362b31(0x19d)]+_0x362b31(0x1ae)+resp['recovered']+'\x0a😷\x20*Active\x20Cases:*\x20'+resp['active']+'\x0a🆘\x20*Critical\x20Cases:*\x20'+resp['critical']+_0x362b31(0xe9)+resp[_0x362b31(0x153)]);});}catch(_0x45264c){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x45264c[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='kz'||_0xb727f1[0x1]==='Kz'||_0xb727f1[0x1]==='KZ'||_0xb727f1[0x1][_0x1dec02(0x1ce)]('kazakistan'))try{const _0x4c791e=await got(_0x1dec02(0xb8))['then'](async _0x255d57=>{const _0x38e4c1=_0x1dec02;resp=JSON[_0x38e4c1(0x233)](_0x255d57[_0x38e4c1(0x1e3)]),await _0x48f698[_0x38e4c1(0x1b9)](_0x38e4c1(0xe6)+resp[_0x38e4c1(0xf4)]+_0x38e4c1(0x11a)+resp[_0x38e4c1(0x1a4)]+_0x38e4c1(0x1fd)+resp[_0x38e4c1(0x230)]+_0x38e4c1(0x189)+resp[_0x38e4c1(0x19d)]+_0x38e4c1(0x1ae)+resp[_0x38e4c1(0x150)]+'\x0a😷\x20*Active\x20Cases:*\x20'+resp[_0x38e4c1(0x215)]+_0x38e4c1(0x1de)+resp[_0x38e4c1(0x1bf)]+_0x38e4c1(0xe9)+resp[_0x38e4c1(0x153)]);});}catch(_0x29a780){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x29a780[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='pk'||_0xb727f1[0x1]==='Pk'||_0xb727f1[0x1]==='PK'||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0xad)))try{const _0x329bed=await got(_0x1dec02(0x15a))[_0x1dec02(0x178)](async _0x45accd=>{const _0x1af15a=_0x1dec02;resp=JSON[_0x1af15a(0x233)](_0x45accd[_0x1af15a(0x1e3)]),await _0x48f698[_0x1af15a(0x1b9)](_0x1af15a(0x19b)+resp[_0x1af15a(0xf4)]+_0x1af15a(0x11a)+resp[_0x1af15a(0x1a4)]+_0x1af15a(0x1fd)+resp['deaths']+_0x1af15a(0x189)+resp[_0x1af15a(0x19d)]+_0x1af15a(0x1ae)+resp[_0x1af15a(0x150)]+_0x1af15a(0xd8)+resp[_0x1af15a(0x215)]+'\x0a🆘\x20*Critical\x20Cases:*\x20'+resp[_0x1af15a(0x1bf)]+_0x1af15a(0xe9)+resp[_0x1af15a(0x153)]);});}catch(_0x449a47){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x449a47[_0x1dec02(0x180)],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='ru'||_0xb727f1[0x1]==='Ru'||_0xb727f1[0x1]==='RU'||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0x100)))try{const _0x20e204=await got('https://coronavirus-19-api.herokuapp.com/countries/Russia')[_0x1dec02(0x178)](async _0x2bef59=>{const _0x57679f=_0x1dec02;resp=JSON['parse'](_0x2bef59[_0x57679f(0x1e3)]),await _0x48f698['reply'](_0x57679f(0x13d)+resp[_0x57679f(0xf4)]+_0x57679f(0x11a)+resp['todayCases']+'\x0a⚰️\x20*Total\x20Deaths:*\x20'+resp[_0x57679f(0x230)]+_0x57679f(0x189)+resp['todayDeaths']+_0x57679f(0x1ae)+resp['recovered']+_0x57679f(0xd8)+resp[_0x57679f(0x215)]+'\x0a🆘\x20*Critical\x20Cases:*\x20'+resp['critical']+_0x57679f(0xe9)+resp[_0x57679f(0x153)]);});}catch(_0x1ca517){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x1ca517['message'],MessageType['text']);}else{if(_0xb727f1[0x1]==='id'||_0xb727f1[0x1]==='İd'||_0xb727f1[0x1]==='İD'||_0xb727f1[0x1]==='ıd'||_0xb727f1[0x1]==='Id'||_0xb727f1[0x1]==='ID'||_0xb727f1[0x1][_0x1dec02(0x1ce)](_0x1dec02(0x1d1)))try{const _0x276641=await got(_0x1dec02(0x195))[_0x1dec02(0x178)](async _0x20c57d=>{const _0x128f1b=_0x1dec02;resp=JSON['parse'](_0x20c57d[_0x128f1b(0x1e3)]),await _0x48f698[_0x128f1b(0x1b9)]('🇮🇩\x20*Datas\x20for\x20Indonesia:*\x0a😷\x20*Total\x20Cases:*\x20'+resp['cases']+_0x128f1b(0x11a)+resp[_0x128f1b(0x1a4)]+_0x128f1b(0x1fd)+resp['deaths']+_0x128f1b(0x189)+resp['todayDeaths']+_0x128f1b(0x1ae)+resp[_0x128f1b(0x150)]+_0x128f1b(0xd8)+resp['active']+_0x128f1b(0x1de)+resp[_0x128f1b(0x1bf)]+'\x0a🧪\x20*Total\x20Test:*\x20'+resp[_0x128f1b(0x153)]);});}catch(_0x38686b){await _0x48f698[_0x1dec02(0x1b9)]('Error\x20:\x20\x0a'+_0x38686b['message'],MessageType[_0x1dec02(0xbb)]);}else{if(_0xb727f1[0x1]==='lk'||_0xb727f1[0x1]==='Lk'||_0xb727f1[0x1]==='LK'||_0xb727f1[0x1]['includes']('Sri\x20lanka'))try{const _0x52903d=await got(_0x1dec02(0x18e))['then'](async _0x5de2b2=>{const _0x28dd64=_0x1dec02;resp=JSON['parse'](_0x5de2b2[_0x28dd64(0x1e3)]),await _0x48f698['reply'](_0x28dd64(0x224)+resp[_0x28dd64(0xf4)]+'\x0a🏥\x20*Daily\x20Cases:*\x20'+resp['todayCases']+_0x28dd64(0x1fd)+resp[_0x28dd64(0x230)]+_0x28dd64(0x189)+resp[_0x28dd64(0x19d)]+'\x0a💊\x20*Total\x20Recovered:*\x20'+resp['recovered']+_0x28dd64(0xd8)+resp[_0x28dd64(0x215)]+_0x28dd64(0x1de)+resp['critical']+_0x28dd64(0xe9)+resp['totalTests']);});}catch(_0x4f9d8a){await _0x48f698[_0x1dec02(0x1b9)](_0x1dec02(0x1cd)+_0x4f9d8a['message'],MessageType[_0x1dec02(0xbb)]);}else return await _0x48f698['client'][_0x1dec02(0x23c)](_0x48f698[_0x1dec02(0x140)],Clang[_0x1dec02(0xdc)],MessageType[_0x1dec02(0xbb)]);}}}}}}}}}}}}}}}}));}
+
+const Garfield = require('../events');
+const {MessageType,Mimetype} = require('@adiwajshing/baileys');
+const translatte = require('translatte');
+const config = require('../config');
+const xv364 = require('../X-364');
+const LanguageDetect = require('languagedetect');
+const lngDetector = new LanguageDetect();
+const Heroku = require('heroku-client');
+const heroku = new Heroku({
+    token: config.HEROKU.API_KEY
+});
+let baseURI = '/apps/' + config.HEROKU.APP_NAME;
+//============================== LYRICS =============================================
+const axios = require('axios');
+const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
+const solenolyrics= require("solenolyrics"); 
+//============================== CURRENCY =============================================
+const { exchangeRates } = require('exchange-rates-api');
+const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
+//============================== TTS ==================================================
+const fs = require('fs');
+const https = require('https');
+const googleTTS = require('google-translate-tts');
+//=====================================================================================
+//============================== YOUTUBE ==============================================
+const ytdl = require('ytdl-core');
+const ffmpeg = require('fluent-ffmpeg');
+const yts = require( 'yt-search' )
+const got = require("got");
+const ID3Writer = require('browser-id3-writer');
+const SpotifyWebApi = require('spotify-web-api-node');
+
+const spotifyApi = new SpotifyWebApi({
+    clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
+    clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009'
+});
+//=====================================================================================
+const Language = require('../language');
+const Lang = Language.getString('scrapers');
+const Glang = Language.getString('github');
+const Slang = Language.getString('lyrics');
+const Clang = Language.getString('covid');
+
+const wiki = require('wikijs').default;
+var gis = require('g-i-s');
+
+var dlang_dsc = ''
+var closer_res = ''
+var dlang_lang = ''
+var dlang_similarity = ''
+var dlang_other = ''
+var dlang_input = ''
+
+if (config.LANG == 'TR') {
+    dlang_dsc = 'Yanıtlanan mesajın dilini tahmin eder.'
+    closer_res = 'En Yakın Sonuç:'
+    dlang_lang = 'Dil:'
+    dlang_similarity = 'Benzerlik:'
+    dlang_other = 'Diğer Diller'
+    dlang_input = 'İşlenen Metin:'
+}
+if (config.LANG == 'EN') {
+    dlang_dsc = 'Guess the language of the replied message.'
+    closer_res = 'Closest Result:'
+    dlang_lang = 'Language:'
+    dlang_similarity = 'Similarity:'
+    dlang_other = 'Other Languages'
+    dlang_input = 'Processed Text:'
+}
+if (config.LANG == 'AZ') {
+    dlang_dsc = 'Cavablanan mesajın dilini təxmin edin.'
+    closer_res = 'Ən yaxın nəticə:'
+    dlang_lang = 'Dil:'
+    dlang_similarity = 'Bənzərlik:'
+    dlang_other = 'Başqa Dillər'
+    dlang_input = 'İşlənmiş Mətn:'
+}
+if (config.LANG == 'ML') {
+    dlang_dsc = 'മറുപടി നൽകിയ സന്ദേശത്തിന്റെ ഭാഷ ess ഹിക്കുക.'
+    closer_res = 'ഏറ്റവും അടുത്ത ഫലം:'
+    dlang_lang = 'നാവ്:'
+    dlang_similarity = 'സമാനത:'
+    dlang_other = 'മറ്റ് ഭാഷകൾ'
+    dlang_input = 'പ്രോസസ്സ് ചെയ്ത വാചകം:'
+}
+if (config.LANG == 'HI') {
+    dlang_dsc = 'उत्तर दिए गए संदेश की भाषा का अनुमान लगाएं'
+    closer_res = 'निकटतम परिणाम:'
+    dlang_lang = 'जुबान:'
+    dlang_similarity = 'समानता:'
+    dlang_other = 'अन्य भाषाएँ'
+    dlang_input = 'संसाधित पाठ:'
+}
+if (config.LANG == 'ES') {
+    dlang_dsc = 'Adivina el idioma del mensaje respondido.'
+    closer_res = 'Resultado más cercano:'
+    dlang_lang = 'Lengua:'
+    dlang_similarity = 'Semejanza:'
+    dlang_other = 'Otros idiomas:'
+    dlang_input = 'Texto procesado:'
+}
+if (config.LANG == 'PT') {
+    dlang_dsc = 'Adivinhe o idioma da mensagem respondida.'
+    closer_res = 'Resultado mais próximo:'
+    dlang_lang = 'Língua:'
+    dlang_similarity = 'Similaridade:'
+    dlang_other = 'Outras línguas'
+    dlang_input = 'Texto Processado:'
+}
+if (config.LANG == 'ID') {
+    dlang_dsc = 'Tebak bahasa pesan yang dibalas.'
+    closer_res = 'Hasil Terdekat:'
+    dlang_lang = 'Lidah:'
+    dlang_similarity = 'Kesamaan:'
+    dlang_other = 'Bahasa Lainnya'
+    dlang_input = 'Teks yang Diproses:'
+}
+if (config.LANG == 'RU') {
+    dlang_dsc = 'Угадай язык ответного сообщения.'
+    closer_res = 'Ближайший результат:'
+    dlang_lang = 'Язык:'
+    dlang_similarity = 'Сходствo:'
+    dlang_other = 'Другие языки'
+    dlang_input = 'Обработанный текст:'
+}
+
+if (config.Auroraxc == 'off' || config.Auroraxc == 'OFF') {
+if (config.WORKTYPE == 'private') {
+
+    Garfield.addXnodes({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+
+        if (!message.reply_message) {
+            return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
+        }
+
+        ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
+        if ('text' in ceviri) {
+            return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+            + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
+        } else {
+            return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
+        }
+    }));
+    var auto_dsc = ''
+    var alr_on_bio = ''
+    var alr_off_bio = ''
+    var succ_on_bio = ''
+    var succ_off_bio = ''
+    if (config.LANG == 'TR') {
+        auto_dsc = 'Biyografinize canlı saat ekleyin!'
+        alr_on_bio = 'Autobio halihazırda açık!'
+        alr_off_bio = 'Autobio halihazırda kapalı!'
+        succ_on_bio = 'Autobio Başarıyla Açıldı!'
+        succ_off_bio = 'Autobio Başarıyla Kapatıldı!'
+    }
+    if (config.LANG == 'EN') {
+        auto_dsc = 'Add live clock to your bio!'
+        alr_on_bio = 'Autobio is already open!'
+        alr_off_bio = 'Autobio is currently closed!'
+        succ_on_bio = 'Autobio Opened Successfully!'
+        succ_off_bio = 'Autobio Closed Successfully!'
+    }
+    if (config.LANG == 'AZ') {
+        auto_dsc = 'Bio-ya canlı saat əlavə et!'
+        alr_on_bio = 'Autobio hazırda açıqdır!'
+        alr_off_bio = 'Autobio hazırda bağlıdır!'
+        succ_on_bio = 'Autobio Uğurla Açıldı!'
+        succ_off_bio = 'Autobio Uğurla Bağlandı!'
+    }
+    if (config.LANG == 'HI') {
+        auto_dsc = 'अपने बायो में लाइव घड़ी जोड़ें!'
+        alr_on_bio = 'Autobio पहले से ही खुला है!'
+        alr_off_bio = 'Autobio वर्तमान में बंद है!'
+        succ_on_bio = 'Autobio सफलतापूर्वक खोला गया!'
+        succ_off_bio = 'Autobio सफलतापूर्वक बंद!'
+    }
+    if (config.LANG == 'ML') {
+        auto_dsc = 'നിങ്ങളുടെ ബയോയിലേക്ക് തത്സമയ ക്ലോക്ക് ചേർക്കുക!'
+        alr_on_bio = 'Autobio ഇതിനകം തുറന്നു!'
+        alr_off_bio = 'Autobio നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on_bio = 'Autobio വിജയകരമായി തുറന്നു!'
+        succ_off_bio = 'Autobio വിജയകരമായി അടച്ചു!'
+    }
+    if (config.LANG == 'PT') {
+        auto_dsc = 'Adicione um relógio ao vivo à sua biografia!'
+        alr_on_bio = 'O Autobio já está aberto!'
+        alr_off_bio = 'Autobio está fechado no momento!'
+        succ_on_bio = 'Autobio aberto com sucesso!'
+        succ_off_bio = 'Autobio fechado com sucesso!'
+    }
+    if (config.LANG == 'RU') {
+        auto_dsc = 'Добавьте живые часы в свою биографию!'
+        alr_on_bio = 'Autobio уже открыт!'
+        alr_off_bio = 'Autobio сейчас закрыт!'
+        succ_on_bio = 'Autobio успешно открыт!'
+        succ_off_bio = 'Autobio успешно закрыт!'
+    }
+    if (config.LANG == 'ES') {
+        auto_dsc = '¡Agrega un reloj en vivo a tu biografía!'
+        alr_on_bio = '¡Autobio ya está abierto!'
+        alr_off_bio = '¡Autobio está cerrado actualmente!'
+        succ_on_bio = '¡Autobio se abrió con éxito!'
+        succ_off_bio = 'Autobio cerrado correctamente!'
+    }
+    if (config.LANG == 'ID') {
+        auto_dsc = 'Tambahkan jam langsung ke bio Anda!'
+        alr_on_bio = 'Autobio sudah terbuka!'
+        alr_off_bio = 'Autobio saat ini ditutup!'
+        succ_on_bio = 'Autobio Berhasil Dibuka!'
+        succ_off_bio = 'Autobio Berhasil Ditutup!'
+    }
+    Garfield.addXnodes({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
+        const bio_status = `${config.AUTOBİO}`
+        if (match[1] == 'on') {
+            if (bio_status == 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_on_bio + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['AUTO_BİO']: 'true'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_on_bio + '*', MessageType.text)
+            }
+        }
+        else if (match[1] == 'off') {
+            if (bio_status !== 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_off_bio + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['AUTO_BİO']: 'false'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
+            }
+        }
+    }));
+    Garfield.addXnodes({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
+
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
+        const msg = message.reply_message.text
+        var ldet = lngDetector.detect(msg)
+        async function upperfirstLetter(letter) {
+            return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
+        }
+        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls2 = ldet[0][1].toString()
+        var cls3 = await upperfirstLetter(ldet[1][0])
+        var cls4 = ldet[1][1].toString()
+        var cls5 = await upperfirstLetter(ldet[2][0])
+        var cls6 = ldet[2][1].toString()
+        var cls7 = await upperfirstLetter(ldet[3][0])
+        var cls8 = ldet[3][1].toString()
+        const res_1 = '*' + dlang_input + '* ' + '_' + msg + '_ \n'
+        const res_2 = '*' + closer_res + '* ' + '_' + cls1 + '_\n*' + dlang_similarity + '* ' + '_' + cls2 + '_ \n\n'
+        const res_3 = '```[ ' + dlang_other + ' ]```\n\n'
+        const res_4 = '#2 *' + dlang_lang + '* ' + '_' + cls3 + '_\n*' + dlang_similarity + '* ' + '_' + cls4 + '_ \n'
+        const res_5 = '#3 *' + dlang_lang + '* ' + '_' + cls5 + '_\n*' + dlang_similarity + '* ' + '_' + cls6 + '_ \n'
+        const res_6 = '#4 *' + dlang_lang + '* ' + '_' + cls7 + '_\n*' + dlang_similarity + '* ' + '_' + cls8 + '_'
+        const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
+        await message.client.sendMessage(message.jid,rep_7,MessageType.text);
+    }));
+    Garfield.addXnodes({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
+
+        if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
+            return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
+        }
+        let opts = {
+            amount: parseFloat(match[1]).toFixed(2).replace(/\.0+$/,''),
+            from: match[2].toUpperCase(),
+            to: match[3].toUpperCase()
+        }
+        try {
+            result = await exchangeRates().latest().symbols([opts.to]).base(opts.from).fetch()
+            result = parseFloat(result).toFixed(2).replace(/\.0+$/,'')
+            await message.reply(`\`\`\`${opts.amount} ${opts.from} = ${result} ${opts.to}\`\`\``)
+        }
+        catch(err) {
+            if (err instanceof ExchangeRatesError) 
+                await message.client.sendMessage(message.jid,Lang.INVALID_CURRENCY,MessageType.text)
+            else {
+                await message.client.sendMessage(message.jid,Lang.UNKNOWN_ERROR,MessageType.text)
+                console.log(err)
+            }
+        }
+    }));
+
+    if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+        Garfield.addXnodes({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+
+            if(match[1] === undefined || match[1] == "")
+                return;
+    
+            let 
+                LANG = 'si',
+                ttsMessage = match[1],
+                SPEED = 1.0
+
+            if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+                LANG = langMatch[1]
+                ttsMessage = ttsMessage.replace(langMatch[0], "")
+            } 
+            if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+                SPEED = parseFloat(speedMatch[1])
+                ttsMessage = ttsMessage.replace(speedMatch[0], "")
+            }
+    
+            var buffer = await googleTTS.synthesize({
+                text: ttsMessage,
+                voice: LANG
+            });
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+        }));
+    }
+    else {
+        Garfield.addXnodes({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+
+            if(match[1] === undefined || match[1] == "")
+                return;
+    
+            let 
+                LANG = 'si',
+                ttsMessage = match[1],
+                SPEED = 1.0
+
+            if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+                LANG = langMatch[1]
+                ttsMessage = ttsMessage.replace(langMatch[0], "")
+            } 
+            if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+                SPEED = parseFloat(speedMatch[1])
+                ttsMessage = ttsMessage.replace(speedMatch[0], "")
+            }
+    
+            var buffer = await googleTTS.synthesize({
+                text: ttsMessage,
+                voice: LANG
+            });
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+        }));
+    }
+    Garfield.addXnodes({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        let arama = await yts(match[1]);
+        arama = arama.all;
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'lowestaudio',
+        });
+    
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(128)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            });
+    }));
+    
+    Garfield.addXnodes({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+
+            const p_lk = 'BEGIN:VCARD\n'
+            + 'VERSION:6.0\n' 
+            + 'FN:' + xv364.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'ORG:Coded by Tharindu Liyanage;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=' + xv364.PHONE + ':' + xv364.PHONE + ' \n'
+            + 'END:VCARD'
+await message.client.sendMessage(message.jid, {displayname: "Garfield", vcard: p_lk}, MessageType.contact);
+
+  }));    
+
+    Garfield.addXnodes({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
+    
+        var VID = '';
+        try {
+            if (match[1].includes('watch')) {
+                var tsts = match[1].replace('watch?v=', '')
+                var alal = tsts.split('/')[3]
+                VID = alal
+            } else {     
+                VID = match[1].split('/')[3]
+            }
+        } catch {
+            return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        }
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
+
+        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['480p', '360p', '240p', '144p'].map(() => true)});
+        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
+
+        yt.on('end', async () => {
+            reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
+        });
+    }));
+
+    Garfield.addXnodes({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
+        var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
+
+        try {
+            var arama = await yts(match[1]);
+        } catch {
+            return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text);
+        }
+    
+        var mesaj = '';
+        arama.all.map((video) => {
+            mesaj += '*' + video.title + '* - ' + video.url + '\n'
+        });
+
+        await message.client.sendMessage(message.jid,mesaj,MessageType.text);
+        await reply.delete();
+    }));
+
+    Garfield.addXnodes({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
+        var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
+
+        var arama = await wiki({ apiUrl: 'https://' + config.LANG + '.wikipedia.org/w/api.php' })
+            .page(match[1]);
+
+        var info = await arama.rawContent();
+        await message.client.sendMessage(message.jid, info, MessageType.text);
+        await reply.delete();
+    }));
+
+    Garfield.addXnodes({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
+        gis(match[1], async (error, result) => {
+            for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
+                var get = got(result[i].url, {https: {rejectUnauthorized: false}});
+                var stream = get.buffer();
+                
+                stream.then(async (image) => {
+                    await message.client.sendMessage(message.jid,image, MessageType.image);
+                });
+            }
+
+            message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
+        });
+    }));
+
+    Garfield.addXnodes({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+
+        const userName = match[1]
+ 
+        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+
+        await axios
+          .get(`https://videfikri.com/api/github/?username=${userName}`)
+          .then(async (response) => {
+
+            const {
+              hireable,
+              company,
+              profile_pic,
+              username,
+              fullname, 
+              blog, 
+              location,
+              email,
+              public_repository,
+              biografi,
+              following,
+              followers,
+              public_gists,
+              profile_url,
+              last_updated,
+              joined_on,
+            } = response.data.result
+
+            const githubscrap = await axios.get(profile_pic, 
+              {responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
+
+            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+          )
+      },
+    )
+
+    Garfield.addXnodes({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
+
+        var aut = await solenolyrics.requestLyricsFor(`${match[1]}`); 
+        var son = await solenolyrics.requestAuthorFor(`${match[1]}`);
+        var cov = await solenolyrics.requestIconFor(`${match[1]}`);
+        var tit = await solenolyrics.requestTitleFor(`${match[1]}`);
+
+        var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
+
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+
+    }));
+
+    Garfield.addXnodes({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+        if (match[1] === "") {
+            try{
+                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
+                    const resp = JSON.parse(ok.body);
+                    await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);
+ 
+                });
+
+            } catch (err) {
+                await message.reply(`Error :\n${err.message}`, MessageType.text)
+            }
+
+        }
+        else if (match[1] === "tr" || match[1] === "Tr" || match[1] === "TR" || match[1].includes('turkiye') || match[1].includes('türkiye') || match[1].includes('türk') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Turkey").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇹🇷 *Türkiye İçin Sonuçlar:*\n😷 *Toplam Vaka:* ${resp.cases}\n🏥 *Günlük Hasta:* ${resp.todayCases}\n⚰️ *Toplam Ölü:* ${resp.deaths}\n☠️ *Günlük Ölü:* ${resp.todayDeaths}\n💊 *Toplam İyileşen:* ${resp.recovered}\n😷 *Aktif Vaka:* ${resp.active}\n🆘 *Ağır Hasta:* ${resp.critical}\n🧪 *Toplam Test:* ${resp.totalTests}`);
+                });
+            } catch (err) {
+                await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
+            }
+
+        }
+        else if (match[1] === "usa" || match[1] === "Usa" || match[1] === "USA" || match[1] === "america" || match[1] === "America") {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇺🇲 *Datas for USA:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "de" || match[1] === "De" || match[1] === "DE" || match[1] === "Germany" || match[1] === "germany" || match[1].includes('deutschland') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Germany").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇩🇪 *Daten für Deutschland:*\n😷 *Fälle İnsgesamt:* ${resp.cases}\n🏥 *Tägliche Fälle:* ${resp.todayCases}\n⚰️ *Totale Todesfälle:* ${resp.deaths}\n☠️ *Tägliche Todesfälle:* ${resp.todayDeaths}\n💊 *Insgesamt Wiederhergestellt:* ${resp.recovered}\n😷 *Aktuelle Fälle:* ${resp.active}\n🆘 *Kritische Fälle:* ${resp.critical}\n🧪 *Gesamttests:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "az" || match[1] === "AZ" || match[1] === "Az" || match[1].includes('azerbaycan') || match[1].includes('azeri') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Azerbaijan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇦🇿 *Azərbaycan üçün məlumatlar:*\n😷 *Ümumi Baş Tutan Hadisə:* ${resp.cases}\n🏥 *Günlük Xəstə:* ${resp.todayCases}\n⚰️ *Ümumi Ölüm:* ${resp.deaths}\n☠️ *Günlük Ölüm:* ${resp.todayDeaths}\n💊 *Ümumi Sağalma:* ${resp.recovered}\n😷 *Aktiv Xəstə Sayı:* ${resp.active}\n🆘 *Ağır Xəstə Sayı:* ${resp.critical}\n🧪 *Ümumi Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "uk" || match[1] === "Uk" || match[1] === "UK" || match[1] === "United" || match[1].includes('kingdom') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/UK").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇬🇧 *Datas for UK:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "in" || match[1] === "ın" || match[1] === "In" || match[1] === "İn" || match[1] === "IN" ||  match[1] === "İN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "cn" || match[1] === "Cn" || match[1] === "CN" || match[1].includes('china') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/China").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇨🇳 *Datas for China:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "gr" || match[1] === "Gr" || match[1] === "GR" || match[1].includes('greek') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Greece").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇬🇷 *Datas for Greece:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "fr" || match[1] === "Fr" || match[1] === "FR" || match[1].includes('france') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/France").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇫🇷 *Datas for France:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "jp" || match[1] === "Jp" || match[1] === "JP" || match[1].includes('japan') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Japan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇯🇵 *Datas for Japan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+ 
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "kz" || match[1] === "Kz" || match[1] === "KZ" || match[1].includes('kazakistan') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Kazakhstan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇰🇿 *Datas for Kazakhstan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "pk" || match[1] === "Pk" || match[1] === "PK" || match[1].includes('pakistan') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Pakistan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇵🇰 *Datas for Pakistan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else if (match[1] === "ru" || match[1] === "Ru" || match[1] === "RU" || match[1].includes('russia') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Russia").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇷🇺 *Datas for Russia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else if (match[1] === "id" || match[1] === "İd" || match[1] === "İD" || match[1] === "ıd" || match[1] === "Id" || match[1] === "ID" || match[1].includes('ındonesia') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Indonesia").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇮🇩 *Datas for Indonesia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else if (match[1] === "nl" || match[1] === "Nl" || match[1] === "NL" || match[1].includes('netherland') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Netherlands").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇳🇱 *Datas for Netherlands:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else {
+            return await message.client.sendMessage(
+                message.jid,
+                Clang.NOT,
+                MessageType.text
+            );
+        }
+    }));
+
+}
+else if (config.WORKTYPE == 'public') {
+
+    Garfield.addXnodes({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
+
+        if (!message.reply_message) {
+            return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
+        }
+
+        ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
+        if ('text' in ceviri) {
+            return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+            + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
+        } else {
+            return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
+        }
+    }));
+    Garfield.addXnodes({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
+
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
+        const msg = message.reply_message.text
+        var ldet = lngDetector.detect(msg)
+        async function upperfirstLetter(letter) {
+            return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
+        }
+        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls2 = ldet[0][1].toString()
+        var cls3 = await upperfirstLetter(ldet[1][0])
+        var cls4 = ldet[1][1].toString()
+        var cls5 = await upperfirstLetter(ldet[2][0])
+        var cls6 = ldet[2][1].toString()
+        var cls7 = await upperfirstLetter(ldet[3][0])
+        var cls8 = ldet[3][1].toString()
+        const res_1 = '*' + dlang_input + '* ' + '_' + msg + '_ \n'
+        const res_2 = '*' + closer_res + '* ' + '_' + cls1 + '_\n*' + dlang_similarity + '* ' + '_' + cls2 + '_ \n\n'
+        const res_3 = '```[ ' + dlang_other + ' ]```\n\n'
+        const res_4 = '#2 *' + dlang_lang + '* ' + '_' + cls3 + '_\n*' + dlang_similarity + '* ' + '_' + cls4 + '_ \n'
+        const res_5 = '#3 *' + dlang_lang + '* ' + '_' + cls5 + '_\n*' + dlang_similarity + '* ' + '_' + cls6 + '_ \n'
+        const res_6 = '#4 *' + dlang_lang + '* ' + '_' + cls7 + '_\n*' + dlang_similarity + '* ' + '_' + cls8 + '_'
+        const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
+        await message.client.sendMessage(message.jid,rep_7,MessageType.text, { quoted: message.data });
+    }));
+    Garfield.addXnodes({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: false}, (async (message, match) => {
+
+        if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
+            return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
+        }
+        let opts = {
+            amount: parseFloat(match[1]).toFixed(2).replace(/\.0+$/,''),
+            from: match[2].toUpperCase(),
+            to: match[3].toUpperCase()
+        }
+        try {
+            result = await exchangeRates().latest().symbols([opts.to]).base(opts.from).fetch()
+            result = parseFloat(result).toFixed(2).replace(/\.0+$/,'')
+            await message.reply(`\`\`\`${opts.amount} ${opts.from} = ${result} ${opts.to}\`\`\``)
+        }
+        catch(err) {
+            if (err instanceof ExchangeRatesError) 
+                await message.client.sendMessage(message.jid,Lang.INVALID_CURRENCY,MessageType.text)
+            else {
+                await message.client.sendMessage(message.jid,Lang.UNKNOWN_ERROR,MessageType.text)
+                console.log(err)
+            }
+        }
+    }));
+    
+    Garfield.addXnodes({pattern: 'tts (.*)', fromMe: false, desc: Lang.TTS_DESC}, (async (message, match) => {
+
+        if(match[1] === undefined || match[1] == "")
+            return;
+    
+        let 
+            LANG = 'si',
+            ttsMessage = match[1],
+            SPEED = 1.0
+
+        if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+            LANG = langMatch[1]
+            ttsMessage = ttsMessage.replace(langMatch[0], "")
+        } 
+        if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+            SPEED = parseFloat(speedMatch[1])
+            ttsMessage = ttsMessage.replace(speedMatch[0], "")
+        }
+    
+        var buffer = await googleTTS.synthesize({
+            text: ttsMessage,
+            voice: LANG
+        });
+        await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio,quoted: message.data,  ptt: true});
+    }));
+
+    Garfield.addXnodes({pattern: 'play ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        let arama = await yts(match[1]);
+        arama = arama.all;
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'highestaudio',
+        });
+    
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(128)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Title -```\n*'+ title +'*\n```Wait Uploading```' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1, isForwarded: false }, quoted: message.data, ptt: false});
+            });
+    }));
+
+/*COPYRIGHT (C) 2022 CODED BY NOIZE */
+
+   const _0x3b1366=_0x2eac;function _0x2eac(_0x58ee21,_0x1abfac){const _0x4f47a8=_0x4f47();return _0x2eac=function(_0x2eac69,_0x46953a){_0x2eac69=_0x2eac69-0x96;let _0x36375a=_0x4f47a8[_0x2eac69];return _0x36375a;},_0x2eac(_0x58ee21,_0x1abfac);}(function(_0x1880d8,_0x986f0a){const _0xa2c8a4=_0x2eac,_0x30471f=_0x1880d8();while(!![]){try{const _0x2e98bf=-parseInt(_0xa2c8a4(0xac))/0x1*(-parseInt(_0xa2c8a4(0xa2))/0x2)+parseInt(_0xa2c8a4(0xb8))/0x3*(parseInt(_0xa2c8a4(0x98))/0x4)+-parseInt(_0xa2c8a4(0xab))/0x5+parseInt(_0xa2c8a4(0xb2))/0x6+parseInt(_0xa2c8a4(0x96))/0x7*(-parseInt(_0xa2c8a4(0xae))/0x8)+parseInt(_0xa2c8a4(0xad))/0x9*(-parseInt(_0xa2c8a4(0xa6))/0xa)+parseInt(_0xa2c8a4(0xb4))/0xb*(parseInt(_0xa2c8a4(0xa3))/0xc);if(_0x2e98bf===_0x986f0a)break;else _0x30471f['push'](_0x30471f['shift']());}catch(_0x3066e1){_0x30471f['push'](_0x30471f['shift']());}}}(_0x4f47,0x423a5),Garfield[_0x3b1366(0xbd)]({'pattern':_0x3b1366(0xb5),'fromMe':![],'desc':Lang[_0x3b1366(0xa7)]},async(_0x2ce98c,_0x2d2390)=>{const _0x180a4e=_0x3b1366;if(_0x2d2390[0x1]==='')return await _0x2ce98c[_0x180a4e(0xbf)][_0x180a4e(0xb9)](_0x2ce98c[_0x180a4e(0xb6)],Lang[_0x180a4e(0xa4)],MessageType[_0x180a4e(0x9d)]);let _0x4c8f3d=await yts(_0x2d2390[0x1]);_0x4c8f3d=_0x4c8f3d[_0x180a4e(0xa9)];if(_0x4c8f3d[_0x180a4e(0x9f)]<0x1)return await _0x2ce98c[_0x180a4e(0xbf)]['sendMessage'](_0x2ce98c[_0x180a4e(0xb6)],Lang[_0x180a4e(0x9a)],MessageType[_0x180a4e(0x9d)]);var _0x411bd5=await _0x2ce98c[_0x180a4e(0xbf)][_0x180a4e(0xb9)](_0x2ce98c[_0x180a4e(0xb6)],Lang['DOWNLOADING_SONG'],MessageType[_0x180a4e(0x9d)]);let _0x4ca555=_0x4c8f3d[0x0][_0x180a4e(0xba)][_0x180a4e(0x97)]('\x20','+'),_0xee100a=ytdl(_0x4c8f3d[0x0][_0x180a4e(0xb7)],{'quality':_0x180a4e(0xaa)});got[_0x180a4e(0xa0)](_0x4c8f3d[0x0]['image'])['pipe'](fs[_0x180a4e(0xbe)](_0x4ca555+'.jpg')),ffmpeg(_0xee100a)[_0x180a4e(0xbb)](0x140)['save']('./'+_0x4ca555+_0x180a4e(0x9e))['on'](_0x180a4e(0x9c),async()=>{const _0xf5201e=_0x180a4e,_0x4a0a08=new ID3Writer(fs[_0xf5201e(0xa5)]('./'+_0x4ca555+_0xf5201e(0x9e)));_0x4a0a08[_0xf5201e(0xb3)]('TIT2',_0x4c8f3d[0x0][_0xf5201e(0xba)])[_0xf5201e(0xb3)]('TPE1',[_0x4c8f3d[0x0]['author']['name']])[_0xf5201e(0xb3)]('APIC',{'type':0x3,'data':fs['readFileSync'](_0x4ca555+_0xf5201e(0xbc)),'description':_0x4c8f3d[0x0][_0xf5201e(0xaf)]}),_0x4a0a08[_0xf5201e(0xa1)](),_0x411bd5=await _0x2ce98c[_0xf5201e(0xbf)][_0xf5201e(0xb9)](_0x2ce98c['jid'],fs[_0xf5201e(0xa5)]('./'+_0x4ca555+_0xf5201e(0xbc)),MessageType['image'],{'caption':_0xf5201e(0x9b)+_0x4ca555+_0xf5201e(0xa8)}),await _0x2ce98c[_0xf5201e(0xbf)]['sendMessage'](_0x2ce98c[_0xf5201e(0xb6)],Buffer['from'](_0x4a0a08[_0xf5201e(0xb0)]),MessageType[_0xf5201e(0x99)],{'mimetype':Mimetype[_0xf5201e(0xb1)],'ptt':![]});});}));function _0x4f47(){const _0x568764=['stream','addTag','21644lkpIXJ','618984NEJYfi','NEED_TEXT_SONG','readFileSync','654180AFjlbM','SONG_DESC','*\x0a```Wait\x20Uploading```','all','highestaudio','2346765qquBlK','1mvNiDJ','27XgEEyg','8hSRTPG','description','arrayBuffer','mp4Audio','2158542WhZdJp','setFrame','132sLbvGE','song\x20?(.*)','jid','videoId','213QjILRI','sendMessage','title','audioBitrate','.jpg','addXnodes','createWriteStream','client','1542226BwYppr','replace','9444WoHcnh','audio','NO_RESULT','\x0a```Title\x20-```\x0a*','end','text','.mp3','length'];_0x4f47=function(){return _0x568764;};return _0x4f47();}
+   
+/*COPYRIGHT (C) 2022 CODED BY NOIZE */
+    var _0x11a2d4=_0x1576;function _0x1576(_0x209933,_0x21f3dc){var _0x159f14=_0x159f();return _0x1576=function(_0x157620,_0x20a0e8){_0x157620=_0x157620-0x16e;var _0x306b59=_0x159f14[_0x157620];return _0x306b59;},_0x1576(_0x209933,_0x21f3dc);}function _0x159f(){var _0x31d8f8=['text','1101995HLHpkQ','NEED_VIDEO','7423960CowyYN','readFileSync','7260673BcuFqr','144p','\x0a```Title\x20-```\x0a*','3AwbrVY','1WkhZGm','4586716apjZEk','container','240p','mp4','sendMessage','480p','VIDEO_DESC','data','360p','11xgpsBI','jid','getURLVideoID','394884mdXsYg','8cMriLt','createWriteStream','18dVqErn','22242936vuFefH','client','video','map','UPLOADING_VIDEO','pipe','video\x20?(.*)','.mp4','6603642CiByNb','title','videoId','end'];_0x159f=function(){return _0x31d8f8;};return _0x159f();}(function(_0x2e7f33,_0x76bbb8){var _0x51f024=_0x1576,_0x541ec0=_0x2e7f33();while(!![]){try{var _0x3ce7ec=-parseInt(_0x51f024(0x17d))/0x1*(parseInt(_0x51f024(0x18a))/0x2)+parseInt(_0x51f024(0x17c))/0x3*(-parseInt(_0x51f024(0x17e))/0x4)+parseInt(_0x51f024(0x175))/0x5*(-parseInt(_0x51f024(0x18d))/0x6)+-parseInt(_0x51f024(0x179))/0x7*(-parseInt(_0x51f024(0x18b))/0x8)+parseInt(_0x51f024(0x170))/0x9+parseInt(_0x51f024(0x177))/0xa*(-parseInt(_0x51f024(0x187))/0xb)+parseInt(_0x51f024(0x18e))/0xc;if(_0x3ce7ec===_0x76bbb8)break;else _0x541ec0['push'](_0x541ec0['shift']());}catch(_0xe5fa49){_0x541ec0['push'](_0x541ec0['shift']());}}}(_0x159f,0xd6129),Garfield['addXnodes']({'pattern':_0x11a2d4(0x16e),'fromMe':![],'desc':Lang[_0x11a2d4(0x184)]},async(_0x405b55,_0x304b35)=>{var _0x2d7802=_0x11a2d4;if(_0x405b55[_0x2d7802(0x188)]==='905524317852-1612300121@g.us')return;if(_0x304b35[0x1]==='')return await _0x405b55[_0x2d7802(0x18f)][_0x2d7802(0x182)](_0x405b55[_0x2d7802(0x188)],Lang[_0x2d7802(0x176)],MessageType[_0x2d7802(0x174)]);try{var _0x17df4b=await yts({'videoId':ytdl[_0x2d7802(0x189)](_0x304b35[0x1])});}catch{return await _0x405b55[_0x2d7802(0x18f)]['sendMessage'](_0x405b55[_0x2d7802(0x188)],Lang['NO_RESULT'],MessageType[_0x2d7802(0x174)]);}var _0x5e9054=await _0x405b55[_0x2d7802(0x18f)][_0x2d7802(0x182)](_0x405b55['jid'],Lang['DOWNLOADING_VIDEO'],MessageType['text']),_0x4ab884=ytdl(_0x17df4b['videoId'],{'filter':_0x459d49=>_0x459d49[_0x2d7802(0x17f)]===_0x2d7802(0x181)&&['720p',_0x2d7802(0x183),_0x2d7802(0x186),_0x2d7802(0x180),_0x2d7802(0x17a)][_0x2d7802(0x191)](()=>!![])});_0x4ab884[_0x2d7802(0x193)](fs[_0x2d7802(0x18c)]('./'+_0x17df4b[_0x2d7802(0x172)]+_0x2d7802(0x16f))),_0x4ab884['on'](_0x2d7802(0x173),async()=>{var _0x44397f=_0x2d7802;_0x5e9054=await _0x405b55[_0x44397f(0x18f)][_0x44397f(0x182)](_0x405b55[_0x44397f(0x188)],Lang[_0x44397f(0x192)],MessageType['text']),await _0x405b55[_0x44397f(0x18f)]['sendMessage'](_0x405b55[_0x44397f(0x188)],fs[_0x44397f(0x178)]('./'+_0x17df4b['videoId']+_0x44397f(0x16f)),MessageType[_0x44397f(0x190)],{'mimetype':Mimetype[_0x44397f(0x181)],'contextInfo':{'forwardingScore':0x1,'isForwarded':![]},'quoted':_0x405b55[_0x44397f(0x185)],'caption':_0x44397f(0x17b)+_0x17df4b[_0x44397f(0x171)]+'*\x0a'});});}));
+  
+
+    Garfield.addXnodes({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
+        var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
+
+        try {
+            var arama = await yts(match[1]);
+        } catch {
+            return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text);
+        }
+    
+        var mesaj = '';
+        arama.all.map((video) => {
+            mesaj += '*' + video.title + '* - ' + video.url + '\n'
+        });
+
+        await message.client.sendMessage(message.jid,mesaj,MessageType.text);
+        await reply.delete();
+    }));
+
+    Garfield.addXnodes({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
+        var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
+
+        var arama = await wiki({ apiUrl: 'https://' + config.LANG + '.wikipedia.org/w/api.php' })
+            .page(match[1]);
+
+        var info = await arama.rawContent();
+        await message.client.sendMessage(message.jid, info, MessageType.text);
+        await reply.delete();
+    }));
+
+     
+    Garfield.addXnodes({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
+        if (!match[1].includes(' & ')) return await message.client.sendMessage(message.jid,' ```please enter the number of images you need \n\n example :``` *name of image* & *number of image* ',MessageType.text);
+        if (match[1].includes(' & ')) { var split = match[1].split(' & '), afnn = split[1], plkk = split[0]
+        if (afnn > 10 ) return await message.client.sendMessage(message.jid,'```please decrease the number of images```',MessageType.text);
+            gis(plkk, async (error, result) => {
+            for (var i = 0; i < (result.length < afnn ? result.length : afnn); i++) {
+                var get = got(result[i].url, {https: {rejectUnauthorized: false}});
+                var stream = get.buffer();
+                
+                stream.then(async (image) => {
+                    await message.client.sendMessage(message.jid,image, MessageType.image);
+                }); //coded by Tharindu Liyanage 
+            }
+
+            message.reply(Lang.IMG.format((result.length < afnn ? result.length : afnn), plkk));
+        });
+      }                                   
+    }));
+
+    Garfield.addXnodes({pattern: 'isong ?(.*)', fromMe: false, desc: Lang.ISONG_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        let arama = await yts(match[1]);
+        arama = arama.all;
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'lowestaudio',
+        });
+
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(64)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n*Song Name -*\n*'+ title +' 🐼*\n\n' + Lang.UPLOADING_SONG +'\n' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'Garfield v6.0' + '.mp3', mimetype: 'audio/mpeg', quoted: message.data});
+            });
+    }));
+
+    Garfield.addXnodes({ pattern: 'githxjdjub ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+
+        const userName = match[1]
+ 
+        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+
+        await axios
+          .get(`https://videfikri.com/api/github/?username=${userName}`)
+          .then(async (response) => {
+
+            const {
+              hireable,
+              company,
+              profile_pic,
+              username,
+              fullname, 
+              blog, 
+              location,
+              email,
+              public_repository,
+              biografi,
+              following,
+              followers,
+              public_gists,
+              profile_url,
+              last_updated,
+              joined_on,
+            } = response.data.result
+
+            const githubscrap = await axios.get(profile_pic, 
+              {responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
+
+            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+          )
+      },
+    )
+      Garfield.addXnodes({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+
+            const p_lk = 'BEGIN:VCARD\n'
+            + 'VERSION:6.0\n' 
+            + 'FN:' + xv364.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'ORG:Coded By Tharindu Liyanage;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=' + xv364.PHONE + ':' + xv364.PHONE + ' \n'
+            + 'END:VCARD'
+await message.client.sendMessage(message.jid, {displayname: "Garfield", vcard: p_lk}, MessageType.contact);
+
+  }));    
+
+    Garfield.addXnodes({pattern: 'lyxjxjric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
+
+        var aut = await solenolyrics.requestLyricsFor(`${match[1]}`); 
+        var son = await solenolyrics.requestAuthorFor(`${match[1]}`);
+        var cov = await solenolyrics.requestIconFor(`${match[1]}`);
+        var tit = await solenolyrics.requestTitleFor(`${match[1]}`);
+
+        var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
+
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+
+    }));
+     Garfield.addXnodes({pattern: 'sing ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        let arama = await yts(match[1]);
+        arama = arama.all;
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'lowestaudio',
+        });
+    
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(64)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+            });
+    }));
+
+    Garfield.addXnodes({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
+        if (match[1] === "") {
+            try{
+                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
+                    const resp = JSON.parse(ok.body);
+                    await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);
+ 
+                });
+
+            } catch (err) {
+                await message.reply(`Error :\n${err.message}`, MessageType.text)
+            }
+
+        }
+        else if (match[1] === "tr" || match[1] === "Tr" || match[1] === "TR" || match[1].includes('turkiye') || match[1].includes('türkiye') || match[1].includes('türk') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Turkey").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇹🇷 *Türkiye İçin Sonuçlar:*\n😷 *Toplam Vaka:* ${resp.cases}\n🏥 *Günlük Hasta:* ${resp.todayCases}\n⚰️ *Toplam Ölü:* ${resp.deaths}\n☠️ *Günlük Ölü:* ${resp.todayDeaths}\n💊 *Toplam İyileşen:* ${resp.recovered}\n😷 *Aktif Vaka:* ${resp.active}\n🆘 *Ağır Hasta:* ${resp.critical}\n🧪 *Toplam Test:* ${resp.totalTests}`);
+                });
+            } catch (err) {
+                await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
+            }
+
+        }
+        else if (match[1] === "usa" || match[1] === "Usa" || match[1] === "USA" || match[1] === "america" || match[1] === "America") {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇺🇲 *Datas for USA:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "de" || match[1] === "De" || match[1] === "DE" || match[1] === "Germany" || match[1] === "germany" || match[1].includes('deutschland') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Germany").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇩🇪 *Daten für Deutschland:*\n😷 *Fälle İnsgesamt:* ${resp.cases}\n🏥 *Tägliche Fälle:* ${resp.todayCases}\n⚰️ *Totale Todesfälle:* ${resp.deaths}\n☠️ *Tägliche Todesfälle:* ${resp.todayDeaths}\n💊 *Insgesamt Wiederhergestellt:* ${resp.recovered}\n😷 *Aktuelle Fälle:* ${resp.active}\n🆘 *Kritische Fälle:* ${resp.critical}\n🧪 *Gesamttests:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "az" || match[1] === "AZ" || match[1] === "Az" || match[1].includes('azerbaycan') || match[1].includes('azeri') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Azerbaijan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇦🇿 *Azərbaycan üçün məlumatlar:*\n😷 *Ümumi Baş Tutan Hadisə:* ${resp.cases}\n🏥 *Günlük Xəstə:* ${resp.todayCases}\n⚰️ *Ümumi Ölüm:* ${resp.deaths}\n☠️ *Günlük Ölüm:* ${resp.todayDeaths}\n💊 *Ümumi Sağalma:* ${resp.recovered}\n😷 *Aktiv Xəstə Sayı:* ${resp.active}\n🆘 *Ağır Xəstə Sayı:* ${resp.critical}\n🧪 *Ümumi Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "uk" || match[1] === "Uk" || match[1] === "UK" || match[1] === "United" || match[1].includes('kingdom') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/UK").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇬🇧 *Datas for UK:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "in" || match[1] === "ın" || match[1] === "In" || match[1] === "İn" || match[1] === "İN" ||  match[1] === "IN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "cn" || match[1] === "Cn" || match[1] === "CN" || match[1].includes('china') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/China").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇨🇳 *Datas for China:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "gr" || match[1] === "Gr" || match[1] === "GR" || match[1].includes('greek') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Greece").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇬🇷 *Datas for Greece:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "fr" || match[1] === "Fr" || match[1] === "FR" || match[1].includes('france') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/France").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇫🇷 *Datas for France:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "jp" || match[1] === "Jp" || match[1] === "JP" || match[1].includes('japan') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Japan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇯🇵 *Datas for Japan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+ 
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "kz" || match[1] === "Kz" || match[1] === "KZ" || match[1].includes('kazakistan') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Kazakhstan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇰🇿 *Datas for Kazakhstan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else if (match[1] === "pk" || match[1] === "Pk" || match[1] === "PK" || match[1].includes('pakistan') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Pakistan").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇵🇰 *Datas for Pakistan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else if (match[1] === "ru" || match[1] === "Ru" || match[1] === "RU" || match[1].includes('russia') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Russia").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇷🇺 *Datas for Russia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else if (match[1] === "id" || match[1] === "İd" || match[1] === "İD" || match[1] === "ıd" || match[1] === "Id" || match[1] === "ID" || match[1].includes('ındonesia') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Indonesia").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇮🇩 *Datas for Indonesia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else if (match[1] === "lk" || match[1] === "Lk" || match[1] === "LK" || match[1].includes('Sri lanka') ) {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri%20Lanka").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+                });
+
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        } 
+        else {
+            return await message.client.sendMessage(
+                message.jid,
+                Clang.NOT,
+                MessageType.text
+            );
+        }
+    }));
+    
+}
+}
+
