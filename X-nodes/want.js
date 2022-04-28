@@ -43,9 +43,7 @@ const LOAD_ING = "```Downloading media...```"
         var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
 
         let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestvideo',
-        });
+        let stream = ytdl(arama[0].videoId,);
         
         var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
         yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
